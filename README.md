@@ -8,6 +8,7 @@ This repository is maintained to observe the quality of apps automatically gener
 
 | App Name | Description | Folder |
 |----------|-------------|--------|
+| [Zen Garden Match Three](category/games/2026/02-06-24-zen-garden-match-three/) | A relaxing match-three puzzle game with calm vibes. Swap flowers to match 3+ and score points in 60 seconds. | `category/games/2026/02-06-24-zen-garden-match-three/` |
 | [Galactic Dodge Classic](category/games/2026/02-06-23-galactic-dodge-classic/) | Dodge endless asteroids in this classic arcade survival game. Pilot your spaceship and achieve the highest survival score. | `category/games/2026/02-06-23-galactic-dodge-classic/` |
 | [Color Flood Puzzle](category/games/2026/02-06-23-color-flood-puzzle/) | An addictive strategy puzzle game to unify all tiles to one color in minimum moves. | `category/games/2026/02-06-23-color-flood-puzzle/` |
 | [Neon Snake Retro](category/games/2026/02-06-22-neon-snake-retro/) | Classic snake game with neon visual style. Navigate a snake to eat food while avoiding walls and your own body. | `category/games/2026/02-06-22-neon-snake-retro/` |
@@ -19,6 +20,9 @@ app-of-the-day/
 ├── category/
 │   ├── games/
 │   │   ├── 2026
+|   │   │   ├── 02-06-24-zen-garden-match-three/
+|   │   │   │   ├── index.html
+|   │   │   │   └── README.md
 |   │   │   ├── 02-06-23-galactic-dodge-classic/
 |   │   │   │   ├── index.html
 |   │   │   │   ├── style.css
