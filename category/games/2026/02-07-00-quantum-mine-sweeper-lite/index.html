@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Mine Sweeper Lite</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            color: #eee;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            font-size: 2rem;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+
+        .game-info {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .game-info span {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 16px;
+            border-radius: 20px;
+        }
+
+        #board {
+            display: grid;
+            grid-template-columns: repeat(10, 40px);
+            grid-template-rows: repeat(10, 40px);
+            gap: 2px;
+            background: #0a0a15;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+        }
+
+        .cell {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(145deg, #2a2a4a, #1a1a3a);
+            border: 1px solid #3a3a5a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.1s ease;
+        }
+
+        .cell:hover:not(.revealed):not(.flagged) {
+            background: linear-gradient(145deg, #3a3a5a, #2a2a4a);
+            transform: scale(1.05);
+        }
+
+        .cell.revealed {
+            background: #0f0f1f;
+            border-color: #1a1a3a;
+            cursor: default;
+        }
+
+        .cell.mine {
+            background: #ff3333;
+        }
+
+        .cell.flagged {
+            background: linear-gradient(145deg, #4a3a2a, #3a2a1a);
+        }
+
+        .cell.flagged::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 16px solid #ff6b35;
+        }
+
+        .cell[data-num="1"] { color: #00bfff; }
+        .cell[data-num="2"] { color: #00ff88; }
+        .cell[data-num="3"] { color: #ff6b6b; }
+        .cell[data-num="4"] { color: #bf00ff; }
+        .cell[data-num="5"] { color: #ff8800; }
+        .cell[data-num="6"] { color: #00ffff; }
+        .cell[data-num="7"] { color: #ff0088; }
+        .cell[data-num="8"] { color: #888; }
+
+        #message {
+            margin-top: 20px;
+            font-size: 1.3rem;
+            min-height: 30px;
+            text-align: center;
+        }
+
+        #message.win {
+            color: #00ff88;
+        }
+
+        #message.lose {
+            color: #ff6b6b;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 12px 30px;
+            font-size: 1rem;
+            background: linear-gradient(145deg, #00bfff, #0088cc);
+            border: none;
+            border-radius: 25px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
+        }
+
+        .instructions {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #888;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quantum Mine Sweeper Lite</h1>
+    <div class="game-info">
+        <span>Mines: <strong id="mine-count">15</strong></span>
+        <span>Time: <strong id="timer">0</strong>s</span>
+    </div>
+    <div id="board"></div>
+    <div id="message"></div>
+    <button class="btn" onclick="initGame()">New Game</button>
+    <div class="instructions">
+        Left-click to reveal | Right-click to flag
+    </div>
+
+    <script>
+        const ROWS = 10;
+        const COLS = 10;
+        const MINES = 15;
+
+        let board = [];
+        let revealed = [];
+        let flagged = [];
+        let gameOver = false;
+        let firstClick = true;
+        let minePositions = [];
+        let timer = 0;
+        let timerInterval = null;
+
+        function initGame() {
+            board = [];
+            revealed = [];
+            flagged = [];
+            gameOver = false;
+            firstClick = true;
+            minePositions = [];
+            timer = 0;
+
+            if (timerInterval) {
+                clearInterval(timerInterval);
+                timerInterval = null;
+            }
+
+            document.getElementById('timer').textContent = '0';
+            document.getElementById('mine-count').textContent = MINES;
+            document.getElementById('message').textContent = '';
+            document.getElementById('message').className = '';
+
+            for (let i = 0; i < ROWS; i++) {
+                board[i] = [];
+                revealed[i] = [];
+                flagged[i] = [];
+                for (let j = 0; j < COLS; j++) {
+                    board[i][j] = 0;
+                    revealed[i][j] = false;
+                    flagged[i][j] = false;
+                }
+            }
+
+            renderBoard();
+        }
+
+        function placeMines(excludeRow, excludeCol) {
+            let placed = 0;
+            while (placed < MINES) {
+                const row = Math.floor(Math.random() * ROWS);
+                const col = Math.floor(Math.random() * COLS);
+
+                if (board[row][col] !== -1 &&
+                    !(row === excludeRow && col === excludeCol)) {
+                    board[row][col] = -1;
+                    minePositions.push({ row, col });
+                    placed++;
+                }
+            }
+
+            for (let i = 0; i < ROWS; i++) {
+                for (let j = 0; j < COLS; j++) {
+                    if (board[i][j] !== -1) {
+                        board[i][j] = countAdjacentMines(i, j);
+                    }
+                }
+            }
+        }
+
+        function countAdjacentMines(row, col) {
+            let count = 0;
+            for (let i = -1; i <= 1; i++) {
+                for (let j = -1; j <= 1; j++) {
+                    const newRow = row + i;
+                    const newCol = col + j;
+                    if (newRow >= 0 && newRow < ROWS &&
+                        newCol >= 0 && newCol < COLS &&
+                        board[newRow][newCol] === -1) {
+                        count++;
+                    }
+                }
+            }
+            return count;
+        }
+
+        function renderBoard() {
+            const boardEl = document.getElementById('board');
+            boardEl.innerHTML = '';
+
+            for (let i = 0; i < ROWS; i++) {
+                for (let j = 0; j < COLS; j++) {
+                    const cell = document.createElement('div');
+                    cell.className = 'cell';
+                    cell.dataset.row = i;
+                    cell.dataset.col = j;
+
+                    if (revealed[i][j]) {
+                        cell.classList.add('revealed');
+                        if (board[i][j] === -1) {
+                            cell.classList.add('mine');
+                            cell.textContent = '';
+                        } else if (board[i][j] > 0) {
+                            cell.textContent = board[i][j];
+                            cell.dataset.num = board[i][j];
+                        }
+                    } else if (flagged[i][j]) {
+                        cell.classList.add('flagged');
+                    }
+
+                    cell.addEventListener('click', handleClick);
+                    cell.addEventListener('contextmenu', handleRightClick);
+
+                    boardEl.appendChild(cell);
+                }
+            }
+        }
+
+        function handleClick(e) {
+            if (gameOver) return;
+
+            const row = parseInt(e.target.dataset.row);
+            const col = parseInt(e.target.dataset.col);
+
+            if (flagged[row][col] || revealed[row][col]) return;
+
+            if (firstClick) {
+                firstClick = false;
+                placeMines(row, col);
+                startTimer();
+            }
+
+            reveal(row, col);
+            checkWin();
+            renderBoard();
+        }
+
+        function handleRightClick(e) {
+            e.preventDefault();
+            if (gameOver) return;
+
+            const row = parseInt(e.target.dataset.row);
+            const col = parseInt(e.target.dataset.col);
+
+            if (revealed[row][col]) return;
+
+            flagged[row][col] = !flagged[row][col];
+            updateFlagCount();
+            renderBoard();
+        }
+
+        function reveal(row, col) {
+            if (row < 0 || row >= ROWS || col < 0 || col >= COLS) return;
+            if (revealed[row][col] || flagged[row][col]) return;
+
+            revealed[row][col] = true;
+
+            if (board[row][col] === -1) {
+                gameOver = true;
+                revealAllMines();
+                document.getElementById('message').textContent = 'Game Over! You hit a mine!';
+                document.getElementById('message').className = 'lose';
+                stopTimer();
+                return;
+            }
+
+            if (board[row][col] === 0) {
+                for (let i = -1; i <= 1; i++) {
+                    for (let j = -1; j <= 1; j++) {
+                        reveal(row + i, col + j);
+                    }
+                }
+            }
+        }
+
+        function revealAllMines() {
+            minePositions.forEach(pos => {
+                revealed[pos.row][pos.col] = true;
+            });
+        }
+
+        function checkWin() {
+            let unrevealedSafe = 0;
+            for (let i = 0; i < ROWS; i++) {
+                for (let j = 0; j < COLS; j++) {
+                    if (!revealed[i][j] && board[i][j] !== -1) {
+                        unrevealedSafe++;
+                    }
+                }
+            }
+
+            if (unrevealedSafe === 0 && !gameOver) {
+                gameOver = true;
+                document.getElementById('message').textContent = 'Congratulations! You won!';
+                document.getElementById('message').className = 'win';
+                stopTimer();
+            }
+        }
+
+        function updateFlagCount() {
+            let flagCount = 0;
+            for (let i = 0; i < ROWS; i++) {
+                for (let j = 0; j < COLS; j++) {
+                    if (flagged[i][j]) flagCount++;
+                }
+            }
+            document.getElementById('mine-count').textContent = MINES - flagCount;
+        }
+
+        function startTimer() {
+            timerInterval = setInterval(() => {
+                timer++;
+                document.getElementById('timer').textContent = timer;
+            }, 1000);
+        }
+
+        function stopTimer() {
+            if (timerInterval) {
+                clearInterval(timerInterval);
+                timerInterval = null;
+            }
+        }
+
+        initGame();
+    </script>
+</body>
+</html>
