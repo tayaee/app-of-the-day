@@ -8,6 +8,7 @@ This repository is maintained to observe the quality of apps automatically gener
 
 | App Name | Description | Folder |
 |----------|-------------|--------|
+| [Circular Brick Breaker Classic](category/games/2026/02/1738886273-circular-brick-breaker-classic/) | 360-degree brick breaker with a ball spawning from center. Rotate the paddle to break circular brick layers. | `category/games/2026/02/1738886273-circular-brick-breaker-classic/` |
 | [Gravity Stack Balance](category/games/2026/02/07-13-gravity-stack-balance/) | Physics-based block stacking on a narrow platform. Blocks tilt and fall if unbalanced. | `category/games/2026/02/07-13-gravity-stack-balance/` |
 | [Neon Snake Retro](category/games/2026/02/07-12-neon-snake-retro/) | Classic snake game with neon visual style. Navigate a snake to eat food while avoiding walls and your own body. | `category/games/2026/02/07-12-neon-snake-retro/` |
 | [Rhythmic Tile Tap Classic](category/games/2026/02/07-01-rhythmic-tile-tap-classic/) | Tap black tiles falling to the beat in 4 lanes. Speed increases as you score higher - miss a tile or tap empty space and it's game over. | `category/games/2026/02/07-01-rhythmic-tile-tap-classic/` |
@@ -26,6 +27,7 @@ game-factory/
 │   ├── games/
 │   │   ├── 2026
 |   │   │   ├── 02
+|   |   │   │   ├── 1738886273-circular-brick-breaker-classic/
 |   |   │   │   ├── 07-13-gravity-stack-balance/
 |   |   │   │   ├── 07-12-neon-snake-retro/
 |   |   │   │   ├── 07-01-rhythmic-tile-tap-classic/

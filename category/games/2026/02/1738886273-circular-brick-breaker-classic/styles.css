@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0a0a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    overflow: hidden;
+}
+
+#game-container {
+    position: relative;
+    width: 100vmin;
+    height: 100vmin;
+    max-width: 800px;
+    max-height: 800px;
+}
+
+#gameCanvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#ui-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    pointer-events: none;
+    color: #fff;
+    font-size: 18px;
+    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+#score-display {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#score {
+    font-size: 28px;
+    font-weight: bold;
+    color: #4fc3f7;
+}
+
+#combo {
+    font-size: 16px;
+    color: #ffb74d;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#combo.active {
+    opacity: 1;
+}
+
+#lives-display {
+    display: flex;
+    gap: 8px;
+}
+
+.life {
+    width: 20px;
+    height: 20px;
+    background: #f44336;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #f44336;
+}
+
+.life.lost {
+    background: #333;
+    box-shadow: none;
+}
+
+#level-display {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: #81c784;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 26, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.overlay.hidden {
+    display: none;
+}
+
+.overlay h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, #4fc3f7, #e91e63);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.overlay p {
+    font-size: 16px;
+    margin: 8px 0;
+    color: #aaa;
+}
+
+.overlay button {
+    margin-top: 25px;
+    padding: 15px 40px;
+    font-size: 18px;
+    background: linear-gradient(45deg, #4fc3f7, #29b6f6);
+    border: none;
+    border-radius: 30px;
+    color: #0a0a1a;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.overlay button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(79, 195, 247, 0.5);
+}
