@@ -8,14 +8,14 @@ This repository is maintained to observe the quality of apps automatically gener
 
 | App Name | Description | Folder |
 |----------|-------------|--------|
-| [Neon Snake Retro](category/games/2026/02-07-12-neon-snake-retro/) | Classic snake game with neon visual style. Navigate a snake to eat food while avoiding walls and your own body. | `category/games/2026/02-07-12-neon-snake-retro/` |
-| [Rhythmic Tile Tap Classic](category/games/2026/02-07-01-rhythmic-tile-tap-classic/) | Tap black tiles falling to the beat in 4 lanes. Speed increases as you score higher - miss a tile or tap empty space and it's game over. | `category/games/2026/02-07-01-rhythmic-tile-tap-classic/` |
-| [Quantum Mine Sweeper Lite](category/games/2026/02-07-00-quantum-mine-sweeper-lite/) | Classic minesweeper with logical deduction. Find 15 mines on a 10x10 grid using number clues. | `category/games/2026/02-07-00-quantum-mine-sweeper-lite/` |
-| [Minimalist Falling Sand Box](category/games/2026/02-07-00-minimalist-falling-sand-box/) | Pixel art physics simulation with gravity and particle interactions. Draw sand, water, and walls to create falling experiments. | `category/games/2026/02-07-00-minimalist-falling-sand-box/` |
-| [Zen Garden Match Three](category/games/2026/02-06-24-zen-garden-match-three/) | A relaxing match-three puzzle game with calm vibes. Swap flowers to match 3+ and score points in 60 seconds. | `category/games/2026/02-06-24-zen-garden-match-three/` |
-| [Galactic Dodge Classic](category/games/2026/02-06-23-galactic-dodge-classic/) | Dodge endless asteroids in this classic arcade survival game. Pilot your spaceship and achieve the highest survival score. | `category/games/2026/02-06-23-galactic-dodge-classic/` |
-| [Color Flood Puzzle](category/games/2026/02-06-22-color-flood-puzzle/) | An addictive strategy puzzle game to unify all tiles to one color in minimum moves. | `category/games/2026/02-06-22-color-flood-puzzle/` |
-| [Neon Snake Retro](category/games/2026/02-06-21-neon-snake-retro/) | Classic snake game with neon visual style. Navigate a snake to eat food while avoiding walls and your own body. | `category/games/2026/02-06-21-neon-snake-retro/` |
+| [Neon Snake Retro](category/games/2026/02/07-12-neon-snake-retro/) | Classic snake game with neon visual style. Navigate a snake to eat food while avoiding walls and your own body. | `category/games/2026/02/07-12-neon-snake-retro/` |
+| [Rhythmic Tile Tap Classic](category/games/2026/02/07-01-rhythmic-tile-tap-classic/) | Tap black tiles falling to the beat in 4 lanes. Speed increases as you score higher - miss a tile or tap empty space and it's game over. | `category/games/2026/02/07-01-rhythmic-tile-tap-classic/` |
+| [Quantum Mine Sweeper Lite](category/games/2026/02/07-00-quantum-mine-sweeper-lite/) | Classic minesweeper with logical deduction. Find 15 mines on a 10x10 grid using number clues. | `category/games/2026/02/07-00-quantum-mine-sweeper-lite/` |
+| [Minimalist Falling Sand Box](category/games/2026/02/07-00-minimalist-falling-sand-box/) | Pixel art physics simulation with gravity and particle interactions. Draw sand, water, and walls to create falling experiments. | `category/games/2026/02/07-00-minimalist-falling-sand-box/` |
+| [Zen Garden Match Three](category/games/2026/02/06-24-zen-garden-match-three/) | A relaxing match-three puzzle game with calm vibes. Swap flowers to match 3+ and score points in 60 seconds. | `category/games/2026/02/06-24-zen-garden-match-three/` |
+| [Galactic Dodge Classic](category/games/2026/02/06-23-galactic-dodge-classic/) | Dodge endless asteroids in this classic arcade survival game. Pilot your spaceship and achieve the highest survival score. | `category/games/2026/02/06-23-galactic-dodge-classic/` |
+| [Color Flood Puzzle](category/games/2026/02/06-22-color-flood-puzzle/) | An addictive strategy puzzle game to unify all tiles to one color in minimum moves. | `category/games/2026/02/06-22-color-flood-puzzle/` |
+| [Neon Snake Retro](category/games/2026/02/06-21-neon-snake-retro/) | Classic snake game with neon visual style. Navigate a snake to eat food while avoiding walls and your own body. | `category/games/2026/02/06-21-neon-snake-retro/` |
 
 ## Project Structure
 
@@ -24,14 +24,15 @@ game-factory/
 ├── category/
 │   ├── games/
 │   │   ├── 2026
-|   │   │   ├── 02-07-12-neon-snake-retro/
-|   │   │   ├── 02-07-01-rhythmic-tile-tap-classic/
-|   │   │   ├── 02-07-00-quantum-mine-sweeper-lite/
-|   │   │   ├── 02-07-00-minimalist-falling-sand-box/
-|   │   │   ├── 02-06-24-zen-garden-match-three/
-|   │   │   ├── 02-06-23-galactic-dodge-classic/
-|   │   │   ├── 02-06-22-color-flood-puzzle/
-|   │   │   └── 02-06-21-neon-snake-retro/
+|   │   │   ├── 02
+|   |   │   │   ├── 07-12-neon-snake-retro/
+|   |   │   │   ├── 07-01-rhythmic-tile-tap-classic/
+|   |   │   │   ├── 07-00-quantum-mine-sweeper-lite/
+|   |   │   │   ├── 07-00-minimalist-falling-sand-box/
+|   |   │   │   ├── 06-24-zen-garden-match-three/
+|   |   │   │   ├── 06-23-galactic-dodge-classic/
+|   |   │   │   ├── 06-22-color-flood-puzzle/
+|   |   │   │   └── 06-21-neon-snake-retro/
 |   │   └── ... (more categories)
 └── README.md
 ```
