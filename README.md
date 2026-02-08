@@ -6,6 +6,7 @@ Can we break Mach 10 in software engineering? Breaking the Mach 10 barrier is a 
 
 ### Games
 
+* 2026-02-08 | [Vector Minesweeper Grid Logic](category/games/2026/02/20260208-174000-vector-minesweeper-grid-logic/) | Uncover safe zones while avoiding hidden mines in this classic logic puzzle.
 * 2026-02-08 | [Vector Snake Grid Survival](category/games/2026/02/20260208-172500-vector-snake-grid-survival/) | Navigate the grid and grow longer without hitting walls or your own tail in this minimalist arcade classic.
 * 2026-02-08 | [Vector Frogger Road Cross](category/games/2026/02/20260208-131132-vector-frogger-road-cross/) | Navigate a busy highway and rushing river to reach safety in this classic arcade reimagining.
 * 2026-02-08 | [Vector Tumble Tower Collapse](category/games/2026/02/20260208-130000-vector-tumble-tower-collapse/) | Strategic physics puzzle: carefully remove and stack blocks without toppling the 18-layer tower.

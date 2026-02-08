@@ -1,0 +1,18 @@
+[project]
+name = "vector-minesweeper-grid-logic"
+version = "1.0.0"
+description = "A minimalist logic puzzle game where you uncover safe zones while avoiding hidden mines"
+requires-python = ">=3.10"
+dependencies = [
+    "pygame>=2.0",
+]
+
+[project.scripts]
+vector-minesweeper-grid-logic = "main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

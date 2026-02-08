@@ -1,0 +1,28 @@
+{
+  "app_name": "vector-minesweeper-grid-logic",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260208-174000-vector-minesweeper-grid-logic",
+  "description": "A minimalist logic puzzle game where you uncover safe zones while avoiding hidden mines.",
+  "rationale": "Minesweeper is a timeless classic that tests deductive reasoning and pattern recognition. It provides a perfect environment for AI agents to learn decision-making under uncertainty and grid-based state estimation.",
+  "details": "The game consists of a 10x10 grid containing 10 randomly placed hidden mines. Each cell is initially covered. When a user reveals a cell, it either contains a mine (game over) or a number representing the count of mines in the 8 adjacent cells. If the number is 0, the surrounding cells are automatically revealed. The game is won when all non-mine cells are uncovered. The UI will use a high-contrast monochromatic design with professional gray and blue tones.",
+  "how_to_build": "uv venv && uv pip install pygame",
+  "how_to_start": "uv run python main.py",
+  "how_to_stop": "kill -9 $(pgrep -f 'python main.py') or close the pygame window",
+  "how_to_play": "Left click to reveal a cell. Right click to place a flag on suspected mines. The score is calculated based on the number of non-mine cells revealed. Win by revealing all 90 safe cells without hitting a mine. AI agents should use the revealed numbers as input state to calculate the probability of mines in adjacent cells.",
+  "how_to_cleanup": "rm -rf .venv __pycache__",
+  "technical_requirements": {
+    "language": "Python 3.12+",
+    "dependencies": [
+      "pygame"
+    ],
+    "display": "800x600 resolution",
+    "state_representation": "2D Array (10x10) with values -1 (hidden), 0-8 (revealed neighbor count), -2 (flagged)"
+  },
+  "agent_reward_structure": {
+    "safe_reveal": 1.0,
+    "game_win": 100.0,
+    "hit_mine": -100.0,
+    "invalid_move": -0.1
+  },
+  "screenshot": "assets/screenshots/minesweeper_preview.png"
+}
