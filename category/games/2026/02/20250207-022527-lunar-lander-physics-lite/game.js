@@ -12,8 +12,6 @@ class LunarLander {
         this.MAX_LANDING_SPEED = 2.0;
         this.FUEL_CONSUMPTION = 0.3;
 
-        this.reset();
-
         this.keys = {};
         this.thrusting = false;
         this.gameOver = false;
@@ -27,6 +25,8 @@ class LunarLander {
         this.resultTitle = document.getElementById('resultTitle');
         this.resultMessage = document.getElementById('resultMessage');
         this.resultScore = document.getElementById('resultScore');
+
+        this.reset();
 
         this.bindEvents();
         this.generateTerrain();
@@ -76,16 +76,34 @@ class LunarLander {
         });
         this.canvas.addEventListener('touchend', () => this.thrusting = false);
 
-        document.getElementById('startBtn').addEventListener('click', () => {
+        const startGame = () => {
             this.startScreen.classList.add('hidden');
             this.gameStarted = true;
             this.gameLoop();
+        };
+
+        document.getElementById('startBtn').addEventListener('click', startGame);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.code === 'Space' && !this.gameStarted) {
+                e.preventDefault();
+                startGame();
+            }
         });
 
-        document.getElementById('restartBtn').addEventListener('click', () => {
+        const restartGame = () => {
             this.gameOverScreen.classList.add('hidden');
             this.reset();
             this.gameStarted = true;
+        };
+
+        document.getElementById('restartBtn').addEventListener('click', restartGame);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.code === 'Space' && this.gameOver && !this.gameOverScreen.classList.contains('hidden')) {
+                e.preventDefault();
+                restartGame();
+            }
         });
     }
 
