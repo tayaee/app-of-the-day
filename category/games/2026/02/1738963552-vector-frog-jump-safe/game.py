@@ -14,9 +14,9 @@ class Game:
 
     def reset_game(self):
         self.frog = Frog(START_X, START_Y)
-        self.lanes = self.create_lanes()
         self.score = 0
         self.level = 1
+        self.lanes = self.create_lanes()
         self.game_over = False
         self.won = False
 
