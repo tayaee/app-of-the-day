@@ -1,0 +1,15 @@
+[project]
+name = "vector-battleship-strategic-fleet"
+version = "0.1.0"
+description = "Classic tactical naval warfare game against a smart AI opponent"
+requires-python = ">=3.10"
+dependencies = [
+    "pygame>=2.5.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
