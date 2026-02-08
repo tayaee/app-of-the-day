@@ -1,0 +1,11 @@
+[project]
+name = "vector-parking-valet-pro"
+version = "0.1.0"
+description = "Precision driving and navigation parking simulator"
+requires-python = ">=3.11"
+dependencies = [
+    "pygame-ce>=2.5.0",
+]
+
+[project.scripts]
+start = "main:main"

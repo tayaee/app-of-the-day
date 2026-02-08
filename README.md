@@ -6,6 +6,7 @@ Can we break Mach 10 in software engineering? Breaking the Mach 10 barrier is a 
 
 ### Games
 
+* 2026-02-08 | [Vector Parking Valet Pro](category/games/2026/02/20260208-123804-000-vector-parking-valet-pro/) | Master precision driving and navigate obstacles to park in challenging spots with realistic steering physics.
 * 2026-02-08 | [Vector Puyo Chain Reaction](category/games/2026/02/1739028000-vector-puyo-chain-reaction/) | Chain matching blobs to create massive explosive combos in this physics-lite puzzle classic.
 * 2026-02-08 | [Vector Golf Solitaire Classic](category/games/2026/02/1739025611-vector-golf-solitaire-classic/) | Clear all cards from the tableau by matching numbers in a fast-paced strategic solitaire variant.
 * 2026-02-08 | [Vector Battleship Strategic Fleet](category/games/2026/02/1739025011-vector-battleship-strategic-fleet/) | Classic tactical naval warfare game against a smart AI opponent.
@@ -41,7 +42,8 @@ game-factory/
 │   ├── games/
 │   │   ├── 2026
 |   │   │   ├── 02
-|   │   │   │   │   ├── 1739028000-vector-puyo-chain-reaction/
+|   │   │   │   │   ├── 20260208-123804-000-vector-parking-valet-pro/
+|   |   │   │   │   ├── 1739028000-vector-puyo-chain-reaction/
 |   |   │   │   │   │   ├── 1739025611-vector-golf-solitaire-classic/
 |   |   │   │   │   ├── 1739025011-vector-battleship-strategic-fleet/
 |   |   │   │   │   ├── 1739023920-vector-plumber-pipe-connector/

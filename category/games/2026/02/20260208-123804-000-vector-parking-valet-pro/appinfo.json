@@ -1,0 +1,24 @@
+{
+  "app_name": "vector-parking-valet-pro",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260208-123804-000-vector-parking-valet-pro",
+  "description": "Master the art of precision driving and navigation in this minimalist top-down parking simulator.",
+  "rationale": "This game focuses on spatial awareness and fine motor control, targeting casual gamers and AI agents learning precision pathfinding under constraints. It provides a unique challenge compared to typical racing games by rewarding patience and accuracy over raw speed.",
+  "details": "A 2D top-down parking game where the player controls a vehicle in a grid-based or open-area parking lot. The environment contains obstacles, other parked cars, and designated parking spots. The vehicle uses realistic steering physics (Ackermann-like steering) where the turn radius is dependent on movement. The game features multiple levels of increasing complexity, including tight corners, narrow passages, and reversing requirements. Collision with any object results in immediate failure.",
+  "technical_specs": {
+    "engine": "Pygame",
+    "physics": "Vector-based movement with momentum and rotation limits",
+    "input_type": "Discrete or Continuous for AI training",
+    "state_representation": "Car coordinates, heading angle, obstacle distance sensors (raycasting), and target coordinates"
+  },
+  "how_to_build": "uv sync",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "kill -9 $(pgrep -f 'uv run main.py') or press ESC in game",
+  "how_to_play": "The objective is to navigate the car from the starting position to the highlighted parking spot and come to a complete stop within the lines. Score is calculated based on time remaining, distance traveled (shorter is better), and alignment accuracy. Controls: UP arrow to accelerate, DOWN arrow to brake/reverse, LEFT/RIGHT arrows to steer the front wheels.",
+  "reward_function_for_ai": {
+    "positive_rewards": "Reaching target (+100), Aligning with parking angle (+50), Distance reduction to target (+0.1 per frame)",
+    "negative_rewards": "Collision (-100), Time penalty (-0.01 per frame), Excessive steering changes (-0.05)"
+  },
+  "how_to_cleanup": "rm -rf .venv && rm -rf __pycache__",
+  "screenshot": "assets/screenshots/preview.png"
+}
