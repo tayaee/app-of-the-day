@@ -10,7 +10,6 @@ Can we break Mach 10 in software engineering? Breaking the Mach 10 barrier is a 
 * 2026-02-08 | [Vector Tumble Tower Collapse](category/games/2026/02/20260208-130000-vector-tumble-tower-collapse/) | Strategic physics puzzle: carefully remove and stack blocks without toppling the 18-layer tower.
 * 2026-02-08 | [Vector Lemmings Path Bridge](category/games/2026/02/20260208-124720-vector-lemmings-path-bridge/) | Guide autonomous explorers to the exit by assigning critical path-finding roles in this Lemmings-inspired puzzle.
 * 2026-02-08 | [Vector Parking Valet Pro](category/games/2026/02/20260208-123804-vector-parking-valet-pro/) | Master precision driving and navigate obstacles to park in challenging spots with realistic steering physics.
-* 2026-02-08 | [Vector Puyo Chain Reaction](category/games/2026/02/20250208-162000-vector-puyo-chain-reaction/) | Chain matching blobs to create massive explosive combos in this physics-lite puzzle classic.
 * 2026-02-08 | [Vector Golf Solitaire Classic](category/games/2026/02/20250208-154011-vector-golf-solitaire-classic/) | Clear all cards from the tableau by matching numbers in a fast-paced strategic solitaire variant.
 * 2026-02-08 | [Vector Battleship Strategic Fleet](category/games/2026/02/20250208-153011-vector-battleship-strategic-fleet/) | Classic tactical naval warfare game against a smart AI opponent.
 * 2026-02-08 | [Vector Plumber Pipe Connector](category/games/2026/02/20250208-151200-vector-plumber-pipe-connector/) | Rotate and connect pipe segments to create a seamless flow from source to drain.
