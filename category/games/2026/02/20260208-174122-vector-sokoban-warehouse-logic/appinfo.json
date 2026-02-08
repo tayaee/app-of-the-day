@@ -1,0 +1,20 @@
+{
+  "app_name": "vector-sokoban-warehouse-logic",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260208-174122-vector-sokoban-warehouse-logic",
+  "description": "A minimalist puzzle game where you push boxes to designated storage locations in a crowded warehouse.",
+  "rationale": "Sokoban is a classic transport puzzle that challenges spatial reasoning and path planning. It provides a perfect environment for AI agents to practice reinforcement learning in discrete state spaces with irreversible moves.",
+  "details": "The game consists of a 2D grid containing walls, empty spaces, boxes, and storage targets. The player controls a warehouse worker. Key rules: 1. The worker can move up, down, left, and right to empty squares. 2. The worker can push a single box into an empty square or onto a target square. 3. The worker cannot pull boxes. 4. Boxes cannot be pushed into walls or other boxes. 5. The level is cleared when all boxes are positioned on target squares. The UI uses a clean vector style with dark gray for walls, light gray for floor, blue for boxes, and hollow circles for targets.",
+  "technical_specs": {
+    "language": "Python 3.10+",
+    "framework": "Pygame",
+    "state_representation": "2D Integer Array (0: Floor, 1: Wall, 2: Target, 3: Box, 4: Worker, 5: Box on Target)",
+    "action_space": "Discrete(4) - Up, Down, Left, Right"
+  },
+  "how_to_build": "uv sync",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "Press 'ESC' or close the window. For CLI agents, send SIGINT (Ctrl+C).",
+  "how_to_play": "Goal: Move all boxes onto the target circles. Controls: Use Arrow keys or WASD to move the worker. Scoring: +100 for each box placed on a target, -1 for each move (to encourage efficiency), +500 for level completion. If a box is pushed into a corner where it can no longer be moved, the game state is a 'deadlock'.",
+  "how_to_cleanup": "rm -rf .venv && rm -rf __pycache__",
+  "screenshot": "assets/screenshots/sokoban_preview.png"
+}
