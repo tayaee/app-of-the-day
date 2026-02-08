@@ -6,6 +6,7 @@ Can we break the speed of Mach 10? Let’s find out. This repo challenges the li
 
 ### Games
 
+* 2026-02-07 | [Vector Memory Pattern Match](category/games/2026/02/1738972630-vector-memory-pattern-match/) | Remember and reproduce increasingly long light patterns in this Simon-style memory game.
 * 2026-02-07 | [Vector Tic-Tac-Toe Strategic](category/games/2026/02/1738965018-vector-tictactoe-strategic-variant/) | Strategic tic-tac-toe with limited pieces and movement mechanics for deeper gameplay.
 * 2026-02-07 | [Vector Tower Defense Lite](category/games/2026/02/1738964309-vector-tower-defense-lite/) | Place geometric towers along a winding path to defend against waves of incoming enemies.
 * 2026-02-07 | [Vector Frog Jump Safe](category/games/2026/02/1738963552-vector-frog-jump-safe/) | Navigate a frog across roads and rivers to reach the safe goal zone at the top.
@@ -34,6 +35,7 @@ game-factory/
 │   ├── games/
 │   │   ├── 2026
 |   │   │   ├── 02
+|   |   │   │   │   ├── 1738972630-vector-memory-pattern-match/
 |   |   │   │   │   ├── 1738965018-vector-tictactoe-strategic-variant/
 |   |   │   │   │   ├── 1738964309-vector-tower-defense-lite/
 |   |   │   │   │   ├── 1738963552-vector-frog-jump-safe/

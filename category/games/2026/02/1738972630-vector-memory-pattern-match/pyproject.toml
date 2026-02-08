@@ -1,0 +1,11 @@
+[project]
+name = "vector-memory-pattern-match"
+version = "0.1.0"
+description = "A Simon-style memory pattern game with vector graphics"
+requires-python = ">=3.12"
+dependencies = [
+    "pygame>=2.5.0",
+]
+
+[project.scripts]
+start = "main:main"

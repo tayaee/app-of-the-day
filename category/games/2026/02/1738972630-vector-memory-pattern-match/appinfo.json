@@ -1,0 +1,27 @@
+{
+  "app_name": "vector-memory-pattern-match",
+  "category": "games",
+  "folder_name": "category/games/2026/02/1738972630-vector-memory-pattern-match",
+  "description": "점점 길어지는 빛의 패턴을 기억하고 완벽하게 재현하여 두뇌의 한계를 시험하세요.",
+  "rationale": "사이먼(Simon) 게임의 고전적 재미를 현대적인 벡터 그래픽으로 재해석했습니다. 단순한 규칙으로 남녀노소 누구나 즐길 수 있으며, AI 에이전트에게는 시퀀스 학습 및 상태 유지 능력을 테스트하기에 최적화된 환경을 제공합니다.",
+  "details": "게임 화면은 4개의 서로 다른 색상과 음을 가진 사각형 타일로 구성됩니다. 시스템이 무작위로 타일을 하나씩 추가하며 시퀀스를 보여주면, 플레이어는 동일한 순서로 타일을 클릭해야 합니다. 시퀀스는 매 라운드마다 1개씩 길어집니다. 파이썬의 Pygame 라이브러리를 사용하여 구현하며, 타일의 발광 효과와 사운드 피드백이 포함됩니다. 잘못된 타일을 누르면 게임이 즉시 종료됩니다.",
+  "how_to_build": "uv venv && uv pip install pygame",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "프로세스에 SIGINT(Ctrl+C) 신호를 보내거나 게임 창을 닫습니다.",
+  "how_to_play": "시스템이 보여주는 타일 점등 순서를 기억한 뒤, 마우스 왼쪽 버튼으로 타일을 클릭하세요. 순서를 맞출 때마다 스코어가 1점씩 상승하며 다음 라운드로 넘어갑니다. AI 에이전트의 경우, 화면의 픽셀 정보를 입력으로 받거나 현재 정답 시퀀스 상태 값을 관찰값으로 활용하여 클릭 액션을 수행합니다.",
+  "how_to_cleanup": "rm -rf .venv",
+  "technical_specs": {
+    "language": "Python 3.12+",
+    "dependencies": [
+      "pygame"
+    ],
+    "resolution": "800x600",
+    "input": "Mouse click / Sequence data"
+  },
+  "reward_structure": {
+    "correct_step": 0.1,
+    "round_complete": 1.0,
+    "game_over": -1.0
+  },
+  "screenshot": "assets/screenshots/preview.png"
+}
