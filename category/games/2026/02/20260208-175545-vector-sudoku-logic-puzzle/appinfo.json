@@ -1,0 +1,26 @@
+{
+  "app_name": "vector-sudoku-logic-puzzle",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260208-175545-vector-sudoku-logic-puzzle",
+  "description": "Challenge your mind with the ultimate logic-based number placement classic.",
+  "rationale": "Sudoku is a globally recognized puzzle that sharpens logical thinking and pattern recognition. It is an ideal environment for AI agents to practice constraint satisfaction problems and deductive reasoning within a structured grid.",
+  "details": "The game is a simplified 9x9 Sudoku grid. It features a minimalist UI with monochromatic styling. The grid is partially filled with numbers (1-9). The player must fill the empty cells such that each row, each column, and each of the nine 3x3 subgrids contain all of the digits from 1 to 9 without repetition. The game includes a basic validation system to check for conflicts and a completion trigger when the grid is successfully filled. It uses a seed-based generator to ensure reproducible boards for testing.",
+  "game_rules": {
+    "grid_size": "9x9",
+    "subgrid_size": "3x3",
+    "winning_condition": "All cells filled correctly according to Sudoku rules",
+    "losing_condition": "None (logic puzzle, no time limit by default)",
+    "constraints": "No duplicate numbers in any row, column, or 3x3 box"
+  },
+  "technical_stack": {
+    "language": "Python 3.12+",
+    "package_manager": "uv",
+    "library": "pygame"
+  },
+  "how_to_build": "uv venv && uv sync",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "kill the process or press the ESC key during the game loop",
+  "how_to_play": "Use the mouse to click on an empty cell to select it. Press numeric keys (1-9) to input a number into the selected cell. Press 'Backspace' or '0' to clear a cell. Score increases by 10 points for every correct number placed and decreases by 5 points for every invalid move (conflict). The goal is to reach the maximum score by completing the board perfectly.",
+  "how_to_cleanup": "rm -rf .venv && rm -rf __pycache__",
+  "screenshot": "assets/screenshots/sudoku_sample.png"
+}
