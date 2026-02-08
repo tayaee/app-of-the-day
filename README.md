@@ -6,6 +6,7 @@ Can we break Mach 10 in software engineering? Breaking the Mach 10 barrier is a 
 
 ### Games
 
+* 2026-02-08 | [Vector Tumble Tower Collapse](category/games/2026/02/20260208-130000-000-vector-tumble-tower-collapse/) | Strategic physics puzzle: carefully remove and stack blocks without toppling the 18-layer tower.
 * 2026-02-08 | [Vector Lemmings Path Bridge](category/games/2026/02/20260208-124720-000-vector-lemmings-path-bridge/) | Guide autonomous explorers to the exit by assigning critical path-finding roles in this Lemmings-inspired puzzle.
 * 2026-02-08 | [Vector Parking Valet Pro](category/games/2026/02/20260208-123804-000-vector-parking-valet-pro/) | Master precision driving and navigate obstacles to park in challenging spots with realistic steering physics.
 * 2026-02-08 | [Vector Puyo Chain Reaction](category/games/2026/02/1739028000-vector-puyo-chain-reaction/) | Chain matching blobs to create massive explosive combos in this physics-lite puzzle classic.
@@ -43,6 +44,7 @@ game-factory/
 │   ├── games/
 │   │   ├── 2026
 |   │   │   ├── 02
+|   │   │   │   │   ├── 20260208-130000-000-vector-tumble-tower-collapse/
 |   │   │   │   │   ├── 20260208-124720-000-vector-lemmings-path-bridge/
 |   |   │   │   │   ├── 20260208-123804-000-vector-parking-valet-pro/
 |   |   │   │   │   ├── 1739028000-vector-puyo-chain-reaction/

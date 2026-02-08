@@ -1,0 +1,18 @@
+{
+  "app_name": "vector-tumble-tower-collapse",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260208-130000-000-vector-tumble-tower-collapse",
+  "description": "Strategic precision physics puzzle inspired by the classic wooden block stacking challenge.",
+  "rationale": "This game targets players and AI agents interested in physics-based simulation and strategic risk-taking. It provides a controlled environment for testing spatial reasoning and stability prediction.",
+  "details": "The game simulates a tower consisting of 18 layers, each layer having 3 rectangular blocks placed perpendicularly to the layer below. The game uses a 2D physics engine (like Pygame with Pymunk or a custom simple gravity system). Blocks are rendered as rectangles. The goal is to remove one block at a time and place it on the top layer without causing the tower to fall. A 'fall' is defined when any block other than the one currently being moved touches the ground plane or if the tower's center of gravity shifts beyond the base limits. The game ends when the tower collapses.",
+  "how_to_build": "uv sync",
+  "how_to_start": "uv run python main.py",
+  "how_to_stop": "Press 'ESC' or close the window. For agents, send SIGINT.",
+  "how_to_play": "1. Use Mouse Left Click to select a block from any layer except the top-most layer. 2. Drag the block horizontally to pull it out of the tower. 3. Once removed, drag the block to the designated drop zone at the top of the tower. 4. Release Mouse Left Click to place it. Scoring: +10 points for every successfully relocated block. Game Over: Tower collapse (-100 penalty).",
+  "how_to_cleanup": "rm -rf .venv",
+  "physics_engine": "Pymunk or simple rigid body simulation",
+  "observation_space": "Coordinates (x, y) and rotation of all blocks, current tower height, and center of mass vector.",
+  "action_space": "Discrete(block_index) and Continuous(x_force, y_force) for movement.",
+  "reward_structure": "Positive reward for stability post-move, negative reward for tilt increment, heavy penalty for collapse.",
+  "screenshot": "N/A"
+}

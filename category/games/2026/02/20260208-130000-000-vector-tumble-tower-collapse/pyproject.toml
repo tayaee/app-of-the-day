@@ -1,0 +1,18 @@
+[project]
+name = "vector-tumble-tower-collapse"
+version = "1.0.0"
+description = "Strategic precision physics puzzle inspired by Jenga"
+requires-python = ">=3.10"
+dependencies = [
+    "pygame",
+]
+
+[project.scripts]
+vector-tumble-tower-collapse = "main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
