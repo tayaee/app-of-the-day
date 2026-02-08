@@ -1,0 +1,42 @@
+"""Game configuration constants."""
+
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
+FPS = 60
+
+# Colors (R, G, B)
+BLACK = (0, 0, 0)
+WHITE = (255, 255, 255)
+GRAY = (50, 50, 50)
+SKY_BLUE = (135, 206, 235)
+PIPE_GREEN = (34, 139, 34)
+PIPE_RIM = (24, 100, 24)
+BIRD_YELLOW = (255, 215, 0)
+BIRD_ORANGE = (255, 140, 0)
+GROUND_COLOR = (222, 184, 135)
+
+# Bird settings
+BIRD_X = 150
+BIRD_SIZE = 30
+BIRD_START_Y = SCREEN_HEIGHT // 2
+GRAVITY = 0.5
+JUMP_VELOCITY = -9
+MAX_FALL_SPEED = 15
+
+# Pipe settings
+PIPE_WIDTH = 70
+PIPE_GAP = 160
+PIPE_SPEED = 4
+PIPE_SPAWN_INTERVAL = 1500  # milliseconds
+
+# Ground settings
+GROUND_HEIGHT = 50
+
+# Reward structure for AI training
+REWARD_PER_FRAME = 0.1
+REWARD_PIPE_CLEARED = 1.0
+REWARD_COLLISION = -10.0
+
+# Fonts
+SCORE_FONT_SIZE = 48
+MESSAGE_FONT_SIZE = 36

@@ -6,6 +6,7 @@ Can we break Mach 10 in software engineering? Breaking the Mach 10 barrier is a 
 
 ### Games
 
+* 2026-02-08 | [Vector Flappy Bird Classic](category/games/2026/02/1738973200-vector-flappy-bird-classic/) | Navigate a minimalist bird through moving pipes in this physics-based vertical scroller.
 * 2026-02-07 | [Vector Memory Pattern Match](category/games/2026/02/1738972630-vector-memory-pattern-match/) | Remember and reproduce increasingly long light patterns in this Simon-style memory game.
 * 2026-02-07 | [Vector Tic-Tac-Toe Strategic](category/games/2026/02/1738965018-vector-tictactoe-strategic-variant/) | Strategic tic-tac-toe with limited pieces and movement mechanics for deeper gameplay.
 * 2026-02-07 | [Vector Tower Defense Lite](category/games/2026/02/1738964309-vector-tower-defense-lite/) | Place geometric towers along a winding path to defend against waves of incoming enemies.
@@ -35,6 +36,7 @@ game-factory/
 │   ├── games/
 │   │   ├── 2026
 |   │   │   ├── 02
+|   |   │   │   │   ├── 1738973200-vector-flappy-bird-classic/
 |   |   │   │   │   ├── 1738972630-vector-memory-pattern-match/
 |   |   │   │   │   ├── 1738965018-vector-tictactoe-strategic-variant/
 |   |   │   │   │   ├── 1738964309-vector-tower-defense-lite/

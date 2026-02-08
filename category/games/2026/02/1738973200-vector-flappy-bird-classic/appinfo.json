@@ -1,0 +1,17 @@
+{
+  "app_name": "vector-flappy-bird-classic",
+  "category": "games",
+  "folder_name": "category/games/2026/02/1738973200-vector-flappy-bird-classic",
+  "description": "Navigate a minimalist bird through moving pipes in this physics-based vertical scroller.",
+  "rationale": "Flappy Bird is a staple of simple yet addictive game mechanics. This version provides a clean, vector-based environment ideal for training reinforcement learning agents to master precise timing and collision avoidance.",
+  "details": "The game features a bird controlled by gravity and a jump action. Obstacles consist of vertical pipes with gaps that move from right to left. The bird must pass through the gaps without touching the pipes or the ground. Physics include a constant downward acceleration (gravity) and a fixed upward velocity burst on each jump. The game ends immediately upon collision.",
+  "how_to_build": "uv run python -m pip install pygame; uv run python -m pip install .",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "Press the ESC key or close the game window. For automation, send SIGINT (Ctrl+C).",
+  "how_to_play": "Score increases by 1 for every pipe gap successfully passed. Use the SPACE bar or LEFT-CLICK to jump. The agent must maintain the bird's altitude between the floor and ceiling while timing jumps to clear the gaps. Input observation includes bird Y-velocity, distance to the next pipe, and height of the pipe gap.",
+  "how_to_cleanup": "rm -rf .venv; rm -rf __pycache__; rm pyproject.toml",
+  "screenshot": "assets/screenshots/preview.png",
+  "state_space": "bird_y, bird_v, next_pipe_dist_x, next_pipe_top_y, next_pipe_bottom_y",
+  "action_space": "0: do nothing, 1: jump",
+  "reward_function": "+0.1 per frame alive, +1.0 per pipe cleared, -10.0 on collision"
+}
