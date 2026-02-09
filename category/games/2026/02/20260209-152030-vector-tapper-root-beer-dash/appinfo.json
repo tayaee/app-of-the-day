@@ -1,0 +1,21 @@
+{
+  "app_name": "vector-tapper-root-beer-dash",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260209-152030-vector-tapper-root-beer-dash",
+  "description": "Serve drinks to thirsty customers and collect empty mugs before they crash in this high-speed service simulation.",
+  "rationale": "This game focuses on multi-tasking and queue management. It targets players who enjoy retro arcade challenges that test reaction time and resource prioritization. It provides an excellent environment for AI agents to learn optimal pathing and state-based decision making.",
+  "details": "The game consists of four horizontal bars (aisles). Customers appear at the right end of each bar and slowly move toward the left. The player (bartender) can move between the left ends of the four bars. The player must fill a mug and send it sliding down the bar to reach a customer. If a customer receives a mug, they are pushed back or exit. The customer then eventually slides an empty mug back toward the left. The player must catch these empty mugs. The game ends if a customer reaches the left end of the bar, if a full mug is sent down a bar with no customer, or if the player fails to catch an empty mug returning to the left.",
+  "how_to_build": "uv sync",
+  "how_to_start": "uv run python main.py",
+  "how_to_stop": "killall python",
+  "how_to_play": "Use the UP and DOWN arrow keys to move the bartender between the four aisles. Press the SPACE bar to pour and send a drink. Score 100 points for every customer served and 50 points for every empty mug collected. Avoid letting customers reach the left side or letting mugs fall off the counter.",
+  "how_to_cleanup": "rm -rf .venv",
+  "technical_specs": {
+    "resolution": "800x600",
+    "fps": 60,
+    "input_type": "keyboard",
+    "state_space": "Customer positions, Bartender position, Mug positions",
+    "action_space": "UP, DOWN, SPACE, IDLE"
+  },
+  "screenshot": "N/A"
+}
