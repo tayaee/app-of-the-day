@@ -1,0 +1,28 @@
+{
+  "app_name": "vector-pacman-maze-escape",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260209-010050-vector-pacman-maze-escape",
+  "description": "Navigate a minimalist maze to collect points while outsmarting tactical AI pursuers.",
+  "rationale": "This app provides a core logic implementation of the classic maze-chase genre. It is targeted at AI agents learning pathfinding, spatial awareness, and decision-making under threat. It avoids complex assets to focus on the mathematical relationship between the player, the grid, and the ghosts.",
+  "details": "The game consists of a 2D grid-based maze. The player (Vector-Pac) must consume all dots scattered across the corridors. Four ghosts move through the maze with distinct behaviors: one pursues directly, one targets a position ahead of the player, and two move randomly. The game features a 'Power Pellet' system that temporarily reverses roles, allowing the player to consume ghosts for bonus points. The game state is represented as a matrix where 0 is empty, 1 is wall, 2 is dot, 3 is power pellet, and 4 is ghost spawn point.",
+  "technical_specs": {
+    "engine": "Pygame",
+    "grid_size": "20x20",
+    "state_space": "Discrete grid coordinates and entity directions",
+    "action_space": "Discrete (Up, Down, Left, Right)",
+    "frame_rate": "30 FPS"
+  },
+  "how_to_build": "uv run python -m pip install pygame",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "kill $(pgrep -f main.py) or press ESC",
+  "how_to_play": "Use Arrow Keys to move the player character. Points are earned by eating dots (+10) and power pellets (+50). Eating a ghost while energized grants +200. The game ends if a ghost touches the player while not energized. The goal is to maximize the score by clearing the maze efficiently without losing lives.",
+  "how_to_cleanup": "rm -rf .venv && find . -type d -name '__pycache__' -exec rm -rf {} +",
+  "reward_function_info": {
+    "dot_consumption": 0.1,
+    "ghost_collision_penalty": -1.0,
+    "ghost_consumption_reward": 0.5,
+    "maze_clear_bonus": 2.0,
+    "survival_per_frame": 0.001
+  },
+  "screenshot": "assets/screenshots/maze_escape_v1.png"
+}
