@@ -1,0 +1,6 @@
+[project]
+name = "20260209-024106-vector-commando-base-assault"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.11"
+dependencies = []

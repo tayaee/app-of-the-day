@@ -6,6 +6,8 @@ Can we break Mach 10 in software engineering? Breaking the Mach 10 barrier is a 
 
 ### Games
 
+* 2026-02-09 | [Vector Popeye Spinach Rescue](category/games/2026/02/20260209-024905-vector-popeye-spinach-rescue/) | Rescue Olive Oyl while avoiding Brutus and collecting spinach for a power boost.
+* 2026-02-09 | [Vector Commando: Base Assault](category/games/2026/02/20260209-024106-vector-commando-base-assault/) | Top-down tactical shooter where you eliminate enemies, navigate obstacles, and capture the enemy flag.
 * 2026-02-09 | [Vector Spy Hunter Road Combat](category/games/2026/02/20260209-023000-vector-spy-hunter-road-combat/) | Drive, shoot, and survive in this high-speed tactical road combat simulator.
 * 2026-02-09 | [Vector Track and Field Dash](category/games/2026/02/20260209-023100-vector-track-and-field-dash/) | A rhythm-based 100m sprint where alternating key presses build speed and stamina management determines victory.
 * 2026-02-09 | [Vector Circus Charlie Jump](category/games/2026/02/20260209-022200-vector-circus-charlie-jump/) | Master the timing of jumping through flaming hoops in this classic circus-themed arcade challenge.
