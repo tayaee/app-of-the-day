@@ -1,0 +1,20 @@
+{
+  "app_name": "vector-rampaging-gorilla-city",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260209-063052-vector-rampaging-gorilla-city",
+  "description": "Destroy high-rise buildings while dodging defense helicopters in this classic monster rampage simulation.",
+  "rationale": "This game targets fans of retro arcade monster-action titles. It provides a strategic environment for AI agents to balance destructive efficiency with survival tactics against aerial threats.",
+  "details": "A simplified tribute to classic monster rampage games. The player controls a giant gorilla on a 2D side-scrolling city plane. The city consists of procedurally generated buildings of varying heights. The gorilla can move left/right, climb buildings, and punch structures to destroy them. Destruction earns points. However, city defense helicopters spawn periodically and shoot projectiles at the gorilla. The game ends if the health bar reaches zero. High-performance agents will learn to prioritize building destruction while timing punches to intercept helicopters or dodging projectiles.",
+  "technical_specs": {
+    "engine": "Pygame",
+    "resolution": "800x600",
+    "state_space": "Player position (x, y), health, building coordinates, helicopter positions, projectile vectors",
+    "action_space": "Move Left, Move Right, Climb Up, Climb Down, Punch"
+  },
+  "how_to_build": "uv init && uv add pygame",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "killall python",
+  "how_to_play": "Goal: Maximize score by destroying building segments. Controls: Use Arrow Keys to move and climb. Press Spacebar to punch buildings or helicopters. Scoring: 10 points per building segment destroyed, 50 points per helicopter downed. Survival: Avoid red projectiles from helicopters to maintain health.",
+  "how_to_cleanup": "rm -rf .venv",
+  "screenshot": "No screenshot available"
+}
