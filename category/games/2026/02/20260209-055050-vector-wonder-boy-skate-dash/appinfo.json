@@ -1,0 +1,27 @@
+{
+  "app_name": "vector-wonder-boy-skate-dash",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260209-055050-vector-wonder-boy-skate-dash",
+  "description": "Master the momentum in this simplified side-scrolling skateboard platformer inspired by the arcade classic.",
+  "rationale": "This app focuses on momentum-based physics and timing, making it an excellent environment for RL agents to learn continuous movement control and object avoidance. It targets retro gaming fans and developers interested in platforming physics.",
+  "details": "The game is a 2D side-scrolling platformer. The player character constantly moves forward at a base speed. Key mechanics include: 1) Skateboard Physics: Jumping maintains forward momentum, while hitting obstacles causes a crash. 2) Vitality System: A constantly depleting health bar that must be replenished by collecting fruit items. 3) Terrain: Rolling hills (slopes) and pits. 4) Enemies: Static fire pits and moving rock obstacles. The game ends if vitality reaches zero or the player falls into a pit.",
+  "technical_specs": {
+    "resolution": "800x400",
+    "fps": 60,
+    "input_type": "Discrete (Jump, Duck)",
+    "state_representation": "Screen pixels or vector data (Player position, Vitality, Obstacle distances)"
+  },
+  "how_to_build": "uv venv && uv pip install pygame",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "kill -9 $(pgrep -f main.py) or close the window",
+  "how_to_play": "Score increases based on distance traveled and fruit collected. Controls: Press SPACE or UP ARROW to jump over obstacles and pits. Collect FRUIT to keep your vitality bar from emptying. Avoid FIRE and ROCKS which deplete vitality significantly or end the game.",
+  "how_to_cleanup": "rm -rf .venv && rm -rf __pycache__",
+  "reward_function": {
+    "survival_per_frame": 0.1,
+    "fruit_collection": 10.0,
+    "collision_penalty": -50.0,
+    "death_penalty": -100.0,
+    "distance_bonus": 1.0
+  },
+  "screenshot": "N/A"
+}

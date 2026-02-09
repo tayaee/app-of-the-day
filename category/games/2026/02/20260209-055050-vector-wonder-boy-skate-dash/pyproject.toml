@@ -1,0 +1,22 @@
+[project]
+name = "vector-wonder-boy-skate-dash"
+version = "0.1.0"
+description = "Master the momentum in this simplified side-scrolling skateboard platformer inspired by the arcade classic"
+requires-python = ">=3.11"
+dependencies = [
+    "pygame-ce>=2.5.0",
+]
+
+[project.scripts]
+vector-wonder-boy-skate-dash = "main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+exclude = [
+    "*.pyc",
+    "__pycache__",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
