@@ -1,0 +1,24 @@
+{
+  "app_name": "vector-adventure-island-jump",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260209-053051-vector-adventure-island-jump",
+  "description": "Navigate a prehistoric landscape by jumping over obstacles and collecting fruit to maintain stamina.",
+  "rationale": "Classic side-scrolling platformers provide an excellent environment for AI agents to learn timing, collision detection, and resource management. This game targets fans of retro platformers and developers interested in testing jumping mechanics in a constrained environment.",
+  "details": "A simplified version of the classic Adventure Island. The player controls a character moving from left to right across a continuously scrolling landscape. Obstacles include rocks (static) and snails (moving). The player has a stamina bar that constantly depletes; it can be replenished by collecting floating fruit. Touching an obstacle or running out of stamina results in a game over. The speed of the game increases slightly every 100 points.",
+  "entities": {
+    "player": "A square block that can jump and duck.",
+    "obstacles": "Triangular rocks and rectangular snails.",
+    "items": "Circular fruit icons that boost stamina."
+  },
+  "technical_specs": {
+    "resolution": "800x400",
+    "frame_rate": "60fps",
+    "physics": "Gravity-based jump curve with acceleration."
+  },
+  "how_to_build": "uv sync",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "pkill -f main.py",
+  "how_to_play": "Score increases by 1 every frame survived. Bonus points (+50) are awarded for collecting fruit. Controls: SPACE or UP ARROW to jump. Avoid hitting rocks or snails. Keep the stamina bar above zero by collecting fruit.",
+  "how_to_cleanup": "rm -rf .venv",
+  "screenshot": "category/games/2026/02/assets/vector-adventure-island-jump-preview.png"
+}

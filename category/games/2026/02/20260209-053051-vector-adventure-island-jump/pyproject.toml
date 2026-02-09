@@ -1,0 +1,22 @@
+[project]
+name = "vector-adventure-island-jump"
+version = "0.1.0"
+description = "Navigate a prehistoric landscape by jumping over obstacles and collecting fruit to maintain stamina"
+requires-python = ">=3.11"
+dependencies = [
+    "pygame-ce>=2.5.0",
+]
+
+[project.scripts]
+vector-adventure-island-jump = "main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+exclude = [
+    "*.pyc",
+    "__pycache__",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
