@@ -1,0 +1,19 @@
+{
+  "app_name": "vector-tunnels-obstacle-avoidance",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260209-080050-vector-tunnels-obstacle-avoidance",
+  "description": "Navigate a high-speed craft through a procedurally generated tunnel while avoiding deadly obstacles.",
+  "rationale": "This game focuses on reflex and spatial awareness. It is designed for users who enjoy high-speed twitch gameplay. For AI agents, it provides a challenging continuous control environment with dynamic obstacle generation and increasing difficulty curves.",
+  "details": "The game features a first-person or third-person perspective of a craft moving forward automatically. The player controls the rotation or horizontal/vertical position within a circular or rectangular tunnel. Obstacles of various shapes (bars, rings, moving blocks) appear and the player must find the gaps. Speed increases over time to maintain difficulty. The game ends upon any collision.",
+  "game_engine": "Pygame",
+  "resolution": "800x600",
+  "obs_space": "Pixel data or a vector of (obstacle_distance, obstacle_angle, craft_position, current_speed)",
+  "action_space": "Discrete(4) - Left, Right, Up, Down or Continuous(2) - X-axis and Y-axis movement",
+  "reward_structure": "+1 point for every second survived, +10 points for successfully passing an obstacle gate, -100 points on collision (Game Over).",
+  "how_to_build": "uv venv && uv pip install pygame",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "kill $(pgrep -f 'uv run main.py') or press ESC",
+  "how_to_play": "Use the Arrow Keys to navigate the craft. Avoid hitting the walls or the obstacles appearing from the center of the screen. Survival time and the number of obstacles passed determine your final score.",
+  "how_to_cleanup": "rm -rf .venv",
+  "screenshot": "No image available"
+}
