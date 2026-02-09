@@ -1,0 +1,20 @@
+{
+  "app_name": "vector-super-mario-world-physics",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260209-160000-vector-super-mario-world-physics",
+  "description": "Master the momentum and physics of a simplified side-scrolling world.",
+  "rationale": "This game focuses on the core platforming mechanics of momentum, jumping height, and enemy collision. It provides a clean environment for RL agents to learn the relationship between horizontal velocity and jump distance, which is a fundamental challenge in platforming AI.",
+  "details": "The game is a 2D side-scrolling platformer. The player controls a character that must navigate a level from left to right. Key features include: 1. Physics-based movement with acceleration and friction. 2. Variable jump height depending on how long the jump key is held. 3. Gravity constants that affect descent speed. 4. Enemy entities (Goomba-style) that move back and forth and damage the player on side contact but are defeated when jumped upon. 5. Gold coins for scoring. 6. A goal flag at the end of the level to trigger completion.",
+  "technical_specs": {
+    "resolution": "800x400",
+    "fps": 60,
+    "input_mode": "Discrete and Continuous support",
+    "state_space": "Player position, velocity, enemy positions, nearest platform coordinates"
+  },
+  "how_to_build": "uv sync",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "pkill -f main.py",
+  "how_to_play": "Goal: Reach the flag at the right end of the level while maximizing score. Controls: Left/Right Arrow keys to move, Spacebar to jump. Score: +100 for each coin collected, +500 for defeating an enemy, +1000 for reaching the flag. Penalty: -1000 if the player touches an enemy from the side or falls into a pit (Game Over).",
+  "how_to_cleanup": "rm -rf .venv && rm -rf __pycache__",
+  "screenshot": "https://raw.githubusercontent.com/example/vector-super-mario-world-physics/main/screenshot.png"
+}

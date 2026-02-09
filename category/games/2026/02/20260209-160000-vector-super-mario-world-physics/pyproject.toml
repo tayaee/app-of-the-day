@@ -1,0 +1,13 @@
+[project]
+name = "vector-super-mario-world-physics"
+version = "0.1.0"
+description = "Physics-based side-scrolling platformer with momentum and gravity"
+requires-python = ">=3.11,<3.14"
+dependencies = ["pygame>=2.5.0"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
