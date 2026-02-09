@@ -1,0 +1,33 @@
+{
+  "app_name": "vector-super-mario-bros-jump-infinite",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260209-143522-vector-super-mario-bros-jump-infinite",
+  "description": "A precision-based vertical platformer inspired by Super Mario's classic jump physics.",
+  "rationale": "This game focuses on the core mechanic of platformers: jump timing and horizontal control. It is designed for reinforcement learning agents to master momentum and collision detection in a dynamic environment.",
+  "details": "The game features a Mario-like character that must jump upwards through a series of procedurally generated platforms. Platforms have varying widths and move horizontally at higher difficulty levels. The gravity and jump velocity are modeled after 8-bit classics. The screen scrolls upward as the player ascends, and falling below the bottom of the screen results in a game over. Power-ups like a 'Super Mushroom' occasionally appear to increase the jump height for a single leap.",
+  "rules": {
+    "gravity": 0.8,
+    "jump_strength": -15.0,
+    "max_fall_speed": 10.0,
+    "platform_spawn_rate": 100,
+    "scoring_unit": 10
+  },
+  "technical_specs": {
+    "language": "Python 3.12+",
+    "library": "pygame-ce",
+    "resolution": "400x600",
+    "fps": 60
+  },
+  "how_to_build": "uv init && uv add pygame-ce",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "kill $(pgrep -f main.py) or press ESC",
+  "how_to_play": "Goal: Reach the highest altitude possible. Controls: Use LEFT and RIGHT arrow keys to move horizontally in mid-air. Press SPACE or UP to jump. Score: +10 points for every new platform reached. Penalties: Falling off the bottom of the screen ends the session.",
+  "how_to_cleanup": "rm -rf .venv && rm pyproject.toml uv.lock",
+  "reward_function": {
+    "on_platform_landing": 1.0,
+    "on_new_height_record": 0.5,
+    "on_death": -5.0,
+    "per_frame_survival": 0.01
+  },
+  "screenshot": "assets/screenshots/mario_jump_preview.png"
+}
