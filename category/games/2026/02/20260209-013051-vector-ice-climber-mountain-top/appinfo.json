@@ -1,0 +1,32 @@
+{
+  "app_name": "vector-ice-climber-mountain-top",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260209-013051-vector-ice-climber-mountain-top",
+  "description": "Ascend a multi-layered frozen mountain by breaking ice ceilings and dodging falling icicles.",
+  "rationale": "This game targets fans of retro vertical platformers and puzzle-action hybrids. It provides a structured environment for AI agents to learn vertical navigation, obstacle avoidance, and destructive environmental interaction.",
+  "details": "The game consists of 8 floors. Each floor is made of breakable ice blocks. The player character must jump and hit the ceiling to create a hole, then jump through that hole to reach the next floor. Obstacles include small creatures that repair holes (filling them back with ice) and falling icicles. The screen scrolls upward as the player reaches higher floors. A stage is cleared when the player reaches the summit and grabs the bonus item. The game uses a 2D grid-based physics system with gravity and collision detection.",
+  "game_mechanics": {
+    "gravity": 9.8,
+    "jump_velocity": 15.0,
+    "movement_speed": 5.0,
+    "floor_count": 8,
+    "ice_durability": 1
+  },
+  "technical_requirements": {
+    "language": "Python 3.11+",
+    "library": "Pygame",
+    "dependency_manager": "uv"
+  },
+  "how_to_build": "uv init && uv add pygame",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "Press 'ESC' or close the window.",
+  "how_to_play": "Goal: Reach the 8th floor and jump into the bonus area. Controls: Left/Right Arrow keys to move, Spacebar to jump. Score: +10 for breaking an ice block, +100 for each floor climbed, +1000 for clearing the stage. Game over if the player falls below the bottom screen edge or hits an icicle.",
+  "how_to_cleanup": "rm -rf .venv && rm pyproject.toml uv.lock",
+  "screenshot": "assets/screenshots/ice-climber-preview.png",
+  "state_space_for_rl": {
+    "player_pos": "[x, y]",
+    "nearest_hole": "[x, y]",
+    "nearest_enemy": "[x, y]",
+    "current_floor": "int"
+  }
+}
