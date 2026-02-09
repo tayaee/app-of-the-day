@@ -1,0 +1,22 @@
+{
+  "app_name": "vector-circus-charlie-jump",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260209-022101-vector-circus-charlie-jump",
+  "description": "Master the timing of jumping through flaming hoops in this classic circus-themed arcade challenge.",
+  "rationale": "This game focuses on precise timing and collision detection, which provides a high-quality environment for Reinforcement Learning agents to learn temporal spacing and obstacle avoidance in a 2D side-scrolling context.",
+  "details": "The game is a simplified 2D side-scroller inspired by the circus jumping level. The player controls a character riding a lion moving from left to right at a constant speed. Flaming hoops and ground obstacles (fire pots) appear from the right side of the screen. The goal is to reach the finish line by jumping over fire pots and through flaming hoops. Some hoops may contain bonus items. The game ends if the player touches a flame or an obstacle. Gravity and jump velocity are fixed to ensure deterministic behavior for training.",
+  "technical_specs": {
+    "language": "Python 3.12+",
+    "library": "pygame-ce",
+    "resolution": "800x400",
+    "frame_rate": 60,
+    "input_type": "Discrete (Jump/Idle)"
+  },
+  "how_to_build": "uv venv && uv pip install pygame-ce",
+  "how_to_start": "uv run python main.py",
+  "how_to_stop": "pkill -f 'python main.py'",
+  "how_to_play": "Objective: Reach the end of the stage without touching obstacles. Scoring: +100 points for jumping through a hoop, +50 points for jumping over a fire pot. Controls: Press 'SPACE' or 'UP ARROW' to jump. Horizontal movement is automatic. Game ends upon collision.",
+  "how_to_cleanup": "rm -rf .venv && rm -rf __pycache__",
+  "reward_function_logic": "Positive reward for distance traveled (+0.1 per frame) and passing obstacles (+10). Negative reward for collision (-100) and game over.",
+  "screenshot": "N/A"
+}

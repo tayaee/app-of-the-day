@@ -1,0 +1,22 @@
+{
+  "app_name": "vector-circus-charlie-jump",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260209-022200-vector-circus-charlie-jump",
+  "description": "Master the timing of jumping through flaming hoops in this classic circus-themed arcade challenge.",
+  "rationale": "This game targets casual gamers and developers interested in precision-based timing mechanics. It provides a perfect environment for Reinforcement Learning agents to learn collision avoidance and temporal spatial awareness.",
+  "details": "The game is a simplified 2D side-scrolling action game. The player controls a circus lion and a rider moving automatically from right to left. The background scrolls to simulate forward movement. Obstacles consist of flaming hoops and fire pots that appear at regular intervals. The player must jump over fire pots or through the center of flaming hoops. Each successful pass increases the score and speed incrementally. Collision with any fire element results in immediate game over. The game uses a minimalist vector art style with a high contrast color scheme (black, white, and red).",
+  "technical_specs": {
+    "language": "Python 3.12+",
+    "framework": "Pygame-ce",
+    "resolution": "800x400",
+    "framerate": "60 FPS"
+  },
+  "how_to_build": "uv init && uv add pygame-ce",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "kill $PPID or close the window",
+  "how_to_play": "Objective: Survive as long as possible while passing through obstacles. Scoring: +10 points for each hoop passed, +5 points for each fire pot jumped. Controls: Press 'SPACE' or 'UP ARROW' to jump. Long press for a slightly higher jump, short tap for a small hop.",
+  "how_to_cleanup": "rm -rf .venv && rm pyproject.toml uv.lock",
+  "rl_observation_space": "Player Y-coordinate, Player Y-velocity, Distance to next obstacle, Obstacle type (hoop/pot), Obstacle gap height.",
+  "rl_action_space": "0: Do nothing, 1: Jump",
+  "screenshot": "assets/screenshots/circus_charlie_preview.png"
+}

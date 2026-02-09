@@ -1,0 +1,18 @@
+[project]
+name = "vector-circus-charlie-jump"
+version = "0.1.0"
+description = "Master the timing of jumping through flaming hoops in this classic circus-themed arcade challenge"
+requires-python = ">=3.12"
+dependencies = [
+    "pygame-ce>=2.5.0",
+]
+
+[project.scripts]
+vector-circus-charlie-jump = "main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]

@@ -1,0 +1,11 @@
+[project]
+name = "vector-outrun-highway-drive"
+version = "0.1.0"
+description = "Retro pseudo-3D highway racing game focused on high-speed dodging and distance scoring."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["pygame>=2.6.0"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

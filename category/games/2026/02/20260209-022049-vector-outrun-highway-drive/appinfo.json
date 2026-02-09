@@ -1,0 +1,33 @@
+{
+  "app_name": "vector-outrun-highway-drive",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260209-022049-vector-outrun-highway-drive",
+  "description": "Retro pseudo-3D highway racing game focused on high-speed dodging and distance scoring.",
+  "rationale": "This game provides a simplified environment for studying fast-paced obstacle avoidance and perspective-based navigation. It targets players who enjoy classic arcade racers and AI developers interested in high-speed decision making.",
+  "details": "The game simulates a 3D highway using a 2D scaling effect (pseudo-3D). The player controls a car at the bottom of the screen. The road curves dynamically, and other vehicles appear from the horizon and move toward the bottom. The game logic involves managing lateral position (X-axis) while the environment flows at a constant or accelerating speed. Collision with other cars or going off-road reduces speed or ends the game session. The technical implementation focuses on mathematical scaling of sprites and road segments to create the illusion of depth without a full 3D engine.",
+  "requirements": [
+    "python >= 3.10",
+    "pygame-ce >= 2.3.0"
+  ],
+  "game_rules": {
+    "scoring": "Distance traveled is the primary score. Overtaking other cars provides bonus points.",
+    "failure_condition": "Crashing into other vehicles or a timer reaching zero in time-attack mode.",
+    "difficulty_scaling": "Speed increases and traffic density grows as the score increases."
+  },
+  "technical_specs": {
+    "screen_resolution": "800x600",
+    "fps": 60,
+    "state_space": [
+      "player_x_position",
+      "traffic_positions_and_distances",
+      "road_curve_intensity",
+      "current_speed"
+    ]
+  },
+  "how_to_build": "uv venv && uv pip install pygame-ce",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "kill -9 $(pgrep -f 'python main.py') or press ESC",
+  "how_to_play": "Use the LEFT and RIGHT arrow keys to steer the car. Use the UP arrow key to accelerate and the DOWN arrow key to brake. Avoid other cars and stay on the paved road to maintain maximum speed. Points are accumulated based on the distance covered within the time limit.",
+  "how_to_cleanup": "rm -rf .venv",
+  "screenshot": "N/A"
+}
