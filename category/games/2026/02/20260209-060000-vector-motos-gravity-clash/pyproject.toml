@@ -1,0 +1,22 @@
+[project]
+name = "vector-motos-gravity-clash"
+version = "0.1.0"
+description = "Bump enemies off the edge in a high-stakes physics-based arena combat."
+requires-python = ">=3.11"
+dependencies = [
+    "pygame-ce>=2.5.0",
+]
+
+[project.scripts]
+vector-motos-gravity-clash = "main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+exclude = [
+    "*.pyc",
+    "__pycache__",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

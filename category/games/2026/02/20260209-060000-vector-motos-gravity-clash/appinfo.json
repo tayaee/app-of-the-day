@@ -1,0 +1,20 @@
+{
+  "app_name": "vector-motos-gravity-clash",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260209-060000-vector-motos-gravity-clash",
+  "description": "Bump enemies off the edge in a high-stakes physics-based arena combat.",
+  "rationale": "Inspired by the classic arcade game Motos, this project focuses on momentum-based physics and spatial awareness. It targets players who enjoy tactile movement mechanics and offers a clean environment for Reinforcement Learning agents to master collision physics and edge-detection strategies.",
+  "details": "The game consists of a single-screen grid arena without walls. The player controls a circular unit with mass and inertia. Various enemy types populate the arena, each with different mass properties. The objective is to collide with enemies to push them off the edge while maintaining your own position. As rounds progress, the arena configuration changes and enemy density increases. Physics are simplified to 2D elastic collisions. The project uses Python with Pygame for rendering and physics, managed by uv for dependency isolation.",
+  "how_to_build": "uv sync",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "kill $(pgrep -f 'uv run main.py') or press ESC during gameplay",
+  "how_to_play": "Use ARROW KEYS to apply force to the player unit in four directions. Score increases by 100 points for every enemy pushed off the edge. If the player unit falls off the edge, the game ends. Efficiency bonus is awarded based on time remaining. Goal: Clear all enemies to advance to the next level.",
+  "how_to_cleanup": "rm -rf .venv && rm -rf __pycache__",
+  "technical_specs": {
+    "engine": "Pygame",
+    "resolution": "800x600",
+    "physics_engine": "Simplified 2D Momentum",
+    "state_space": "Player (x, y, vx, vy), Enemy_List [(x, y, mass, type)], Arena_Bounds"
+  },
+  "screenshot": "N/A"
+}
