@@ -1,0 +1,36 @@
+{
+  "app_name": "vector-mappy-trampoline-bounce",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260209-151000-vector-mappy-trampoline-bounce",
+  "description": "Master the art of trampoline physics to recover stolen items while dodging pursuing cats.",
+  "rationale": "This game focuses on rhythmic timing and vertical navigation logic. It targets players who enjoy classic arcade physics and serves as an excellent environment for RL agents to learn momentum-based movement and risk assessment.",
+  "details": "A simplified vertical platformer inspired by Mappy. The player controls a mouse in a multi-story house. Key features: 1. Trampolines: Moving across a trampoline bounces the player higher with each consecutive jump. 2. Safety Limit: If a player bounces more than 4 times without landing on a solid floor, the trampoline breaks. 3. Items: Various treasures are placed on floors to be collected. 4. Enemies: One or more cats chase the player. Enemies cannot hurt the player while they are mid-air on a trampoline, only on the floors.",
+  "technical_specs": {
+    "engine": "Pygame",
+    "resolution": "400x600",
+    "frame_rate": 60,
+    "input_type": "Keyboard"
+  },
+  "state_space_for_rl": {
+    "player_pos": [
+      "x",
+      "y"
+    ],
+    "player_velocity": [
+      "vx",
+      "vy"
+    ],
+    "trampoline_bounce_count": "integer (0-4)",
+    "enemy_positions": [
+      "x",
+      "y"
+    ],
+    "remaining_items": "list of coordinates"
+  },
+  "how_to_build": "uv sync",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "kill -9 $(pgrep -f main.py)",
+  "how_to_play": "Goal: Collect all items on the floors to advance to the next level. Controls: Use Left and Right arrow keys to move. You automatically bounce on trampolines. Scoring: 100 points per item collected. 1000 points for level clear. Avoid cats on the floors and do not bounce on the same trampoline more than 4 times consecutively.",
+  "how_to_cleanup": "rm -rf .venv && find . -type d -name '__pycache__' -exec rm -rf {} +",
+  "screenshot": "assets/screenshots/mappy_trampoline.png"
+}

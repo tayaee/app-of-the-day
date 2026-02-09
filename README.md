@@ -6,6 +6,7 @@ Can we break Mach 10 in software engineering? Breaking the Mach 10 barrier is a 
 
 ### Games
 
+* 2026-02-09 | [Vector Mappy Trampoline Bounce](category/games/2026/02/20260209-151000-vector-mappy-trampoline-bounce/) | Master trampoline physics to recover stolen items while dodging pursuing cats.
 * 2026-02-09 | [Vector Super Mario Bros Jump](category/games/2026/02/20260209-143522-vector-super-mario-bros-jump-infinite/) | Precision-based vertical platformer with Mario-style jump physics and procedurally generated platforms.
 * 2026-02-09 | [Vector Snow Bros Platform Clear](category/games/2026/02/20260209-083015-vector-snowbros-platform-clear/) | Turn enemies into snowballs and roll them to clear the floor in this classic arcade platformer.
 * 2026-02-09 | [Vector Heian-Kyo Alien Trap](category/games/2026/02/20260209-074052-vector-heian-kyo-alien-trap/) | Strategic pitfall trapping game - dig holes, lure aliens, and bury them before they escape.
