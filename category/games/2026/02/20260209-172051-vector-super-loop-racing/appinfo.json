@@ -1,0 +1,27 @@
+{
+  "app_name": "vector-super-loop-racing",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260209-172051-vector-super-loop-racing",
+  "description": "High-speed 2D racing game where you maintain momentum through complex loops and sharp turns.",
+  "rationale": "This game focuses on physics-based speed management and precise steering. It targets players who enjoy classic arcade racers like Super Hang-On or F-Zero but simplified for grid-based or vector environments. It is ideal for testing AI agents on continuous control and path optimization.",
+  "details": "The game features a top-down perspective of a racing track with a continuous loop. The player controls a vehicle that must stay within the track boundaries. The speed of the vehicle increases over time, and the player must decelerate or drift during sharp turns to avoid hitting the walls. Hitting a wall significantly reduces speed and health. The track includes speed boosters (green zones) and oil slicks (blue zones) that affect friction. The goal is to complete as many laps as possible within a time limit.",
+  "technical_specs": {
+    "engine": "Pygame",
+    "resolution": "800x600",
+    "physics": "Momentum-based acceleration and centrifugal force on curves",
+    "input_type": "Discrete or Continuous keyboard events"
+  },
+  "how_to_build": "uv init && uv add pygame",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "kill the process or press 'ESC' key",
+  "how_to_play": "Use the 'UP' arrow key to accelerate, 'LEFT' and 'RIGHT' arrow keys to steer, and 'DOWN' to brake. Score increases based on the distance traveled and the speed maintained. Crossing the finish line adds bonus points and extends the time limit. Avoid hitting the red track borders.",
+  "observation_space": {
+    "position": "[x, y] coordinates of the vehicle",
+    "velocity": "current speed and direction vector",
+    "distance_to_walls": "8-way raycasting to detect track boundaries",
+    "next_checkpoint": "vector to the next target point"
+  },
+  "reward_function": "Positive reward for distance covered and high speed; Negative reward for wall collisions and time expiration.",
+  "how_to_cleanup": "rm -rf .venv && rm pyproject.toml",
+  "screenshot": "No URL provided"
+}
