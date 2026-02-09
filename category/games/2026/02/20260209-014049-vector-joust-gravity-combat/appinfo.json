@@ -1,0 +1,26 @@
+{
+  "app_name": "vector-joust-gravity-combat",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260209-014049-vector-joust-gravity-combat",
+  "description": "Engage in a simplified gravity-defying aerial duel where height and timing determine the victor.",
+  "rationale": "This game focuses on physics-based combat mechanics and momentum management. It targets players who enjoy classic arcade competition and provides a clear environment for AI agents to learn strategic positioning and reaction timing.",
+  "details": "Vector Joust is a simplified version of classic aerial combat games. Two knights on winged mounts (represented by vector shapes) fly in a 2D arena. The core mechanic is 'Height Dominance': when two players collide, the one whose vertical position is higher wins the exchange. The arena features wrap-around screen edges (left to right). Gravity constantly pulls players down, requiring active flapping to maintain altitude. Collision with platforms or the ground results in a bounce, but being struck from above by an opponent results in a lost life.",
+  "technical_specs": {
+    "language": "Python 3.10+",
+    "framework": "Pygame-ce",
+    "resolution": "800x600",
+    "physics": "Constant gravity (g), upward thrust (impulse), horizontal inertia",
+    "entities": [
+      "Player",
+      "Enemy_AI",
+      "Platforms",
+      "Score_Board"
+    ]
+  },
+  "how_to_build": "uv run pip install pygame-ce",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "kill -9 $(pgrep -f main.py) or press ESC key",
+  "how_to_play": "Goal: Gain the highest score by knocking out the opponent. Control your agent using the UP arrow key (flap) and LEFT/RIGHT arrow keys (horizontal movement). Scoring: +100 points for colliding with an opponent from a higher position. -50 points if hit from above. Game ends when a player loses 3 lives. AI agents should maximize vertical advantage before engaging in horizontal contact.",
+  "how_to_cleanup": "rm -rf .venv && find . -type d -name '__pycache__' -exec rm -rf {} +",
+  "screenshot": "assets/screenshots/vector_joust_combat.png"
+}
