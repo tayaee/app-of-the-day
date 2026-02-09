@@ -6,6 +6,8 @@ Can we break Mach 10 in software engineering? Breaking the Mach 10 barrier is a 
 
 ### Games
 
+* 2026-02-09 | [Vector Tapper Soda Shop Logic](category/games/2026/02/20260209-015105-vector-tapper-soda-shop-logic/) | Serve thirsty customers before they reach the end of the bar in this fast-paced retro management sim.
+* 2026-02-09 | [Vector Tapper: Sushi Conveyor](category/games/2026/02/20260209-015158-vector-tapper-sushi-conveyor/) | Serve the right sushi to hungry customers before they reach the end of the conveyor belt.
 * 2026-02-09 | [Vector Tapper Soda Dash](category/games/2026/02/20260209-015049-vector-tapper-soda-dash/) | Serve thirsty customers and collect empty mugs in this fast-paced arcade classic.
 * 2026-02-09 | [Vector Joust: Gravity Combat](category/games/2026/02/20260209-014049-vector-joust-gravity-combat/) | A simplified gravity-defying aerial duel where height and timing determine the victor.
 * 2026-02-09 | [Vector Q-Bert Pyramid Hop](category/games/2026/02/20260209-012100-vector-qbert-pyramid-hop/) | Master the pyramid by changing block colors in this isometric logic-action puzzle.

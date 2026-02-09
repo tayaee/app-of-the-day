@@ -1,0 +1,32 @@
+{
+  "app_name": "vector-tapper-sushi-conveyor",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260209-015158-vector-tapper-sushi-conveyor",
+  "description": "Serve the right sushi to hungry customers before they reach the end of the conveyor belt.",
+  "rationale": "This game tests pattern matching and reaction time. It is designed for players who enjoy time-management puzzles and serves as an excellent environment for AI agents to practice discrete action selection under temporal pressure.",
+  "details": "The game is a simplified version of classic arcade service games. Customers appear on the right side of four horizontal conveyor belts, each requesting a specific sushi type (represented by a unique color/shape). The player controls a chef who can move vertically between the belts. The player must press a key corresponding to the requested sushi to 'throw' it down the belt. If the sushi reaches the customer, they disappear and points are awarded. If a customer reaches the left end of the belt without being served, or if the wrong sushi is thrown, the player loses a life. The speed of customers increases as the score rises.",
+  "tech_stack": {
+    "language": "Python 3.11+",
+    "library": "pygame-ce",
+    "manager": "uv"
+  },
+  "game_rules": {
+    "lanes": 4,
+    "sushi_types": 3,
+    "lives": 3,
+    "scoring": "100 points per correct dish, -50 points for wrong dish"
+  },
+  "how_to_build": "uv sync",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "kill -9 $(pgrep -f main.py) or press ESC in game window",
+  "how_to_play": "Use UP and DOWN arrow keys to switch between the 4 lanes. Press '1', '2', or '3' keys to serve the specific sushi type requested by the customer in your current lane. Score increases by serving customers quickly and accurately. Game ends when 3 customers are missed.",
+  "how_to_cleanup": "rm -rf .venv && rm -rf __pycache__",
+  "screenshot": "assets/screenshots/sushi-conveyor-preview.png",
+  "agent_observations": [
+    "current_lane_index",
+    "customer_positions_per_lane",
+    "customer_request_types",
+    "remaining_lives",
+    "game_speed"
+  ]
+}
