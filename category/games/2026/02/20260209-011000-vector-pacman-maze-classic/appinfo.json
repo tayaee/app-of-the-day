@@ -1,0 +1,27 @@
+{
+  "app_name": "vector-pacman-maze-classic",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260209-011000-vector-pacman-maze-classic",
+  "description": "Navigate a minimalist maze to collect dots while outsmarting tactical ghost agents.",
+  "rationale": "This game focuses on pathfinding, spatial awareness, and strategic avoidance. It targets developers and AI researchers interested in grid-based navigation and multi-agent systems where the player must optimize movement to maximize score while minimizing risk.",
+  "details": "The game consists of a 2D grid maze containing 180 dots and 4 power pellets. The player (Pacman) starts in the lower-middle section. Four ghosts (Blinky, Pinky, Inky, Clyde) start in a central box. Ghosts have two modes: Chase and Frightened. Power pellets turn ghosts blue (Frightened), allowing Pacman to eat them for bonus points. The game ends if a ghost touches Pacman unless the ghost is in Frightened mode. The maze layout includes warp tunnels on the left and right edges. Logic must be implemented for ghost AI: Blinky targets Pacman's current cell, Pinky targets 4 cells ahead, Inky uses a vector between Blinky and Pacman, and Clyde moves randomly if too close to Pacman.",
+  "how_to_build": "uv sync",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "kill the process using Ctrl+C or closing the pygame window",
+  "how_to_play": "Objective: Eat all dots in the maze. Use Arrow Keys (Up, Down, Left, Right) to change direction. Scoring: 10 points per dot, 50 points per power pellet, and 200, 400, 800, 1600 points for consecutive ghost captures during a single power pellet effect. Total score is displayed on the top-left corner. Game Over occurs if Pacman loses all 3 lives.",
+  "how_to_cleanup": "rm -rf .venv",
+  "technical_requirements": {
+    "language": "Python 3.12+",
+    "libraries": [
+      "pygame",
+      "numpy"
+    ],
+    "resolution": "600x800",
+    "frame_rate": 60
+  },
+  "state_space_for_rl": {
+    "observation": "2D integer array representing the grid (0: empty, 1: wall, 2: dot, 3: power pellet, 4: Pacman, 5-8: Ghosts)",
+    "reward_function": "Positive for eating dots/ghosts, negative for collisions with active ghosts, small negative penalty per step to encourage efficiency"
+  },
+  "screenshot": "assets/screenshots/vector-pacman-maze.png"
+}

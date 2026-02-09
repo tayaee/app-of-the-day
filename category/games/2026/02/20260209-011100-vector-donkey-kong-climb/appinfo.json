@@ -1,0 +1,25 @@
+{
+  "app_name": "vector-donkey-kong-climb",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260209-011100-vector-donkey-kong-climb",
+  "description": "Navigate a construction site to rescue the target while dodging rolling barrels and climbing ladders.",
+  "rationale": "This game targets fans of retro arcade platformers and serves as a primary environment for training AI agents in vertical navigation, timing-based obstacle avoidance, and pathfinding in a multi-level grid.",
+  "details": "The game is a simplified 2D platformer inspired by the arcade classic. The player starts at the bottom of a multi-tiered construction scaffold. The objective is to reach the top platform where a rescue target is located. An antagonist at the top periodically releases barrels that roll down the platforms and fall down ladders. Platforms have a slight incline. The player can walk left/right, jump over barrels, and climb up or down ladders. The game ends if the player touches a barrel or falling object. The game state is represented by a 2D coordinate system for all entities (Player, Barrels, Ladders, Platforms).",
+  "how_to_build": "uv init --app && uv add pygame && touch main.py pyproject.toml",
+  "how_to_start": "uv run python main.py",
+  "how_to_stop": "killall python",
+  "how_to_play": "Use the Left and Right arrow keys to move horizontally. Use the Up and Down arrow keys to climb ladders when positioned over them. Press the Spacebar to jump over rolling barrels. Score increases by 100 points for every barrel jumped over and 1000 points for reaching the top platform. The game level resets with increased barrel frequency upon success.",
+  "how_to_cleanup": "rm -rf .venv",
+  "technical_specs": {
+    "resolution": "800x600",
+    "frame_rate": 60,
+    "input_type": "keyboard",
+    "state_space": "discrete_grid_or_continuous_coords",
+    "reward_structure": {
+      "jump_barrel": 100,
+      "reach_top": 1000,
+      "collision_death": -500
+    }
+  },
+  "screenshot": "assets/screenshots/donkey-kong-climb.png"
+}

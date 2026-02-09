@@ -6,6 +6,8 @@ Can we break Mach 10 in software engineering? Breaking the Mach 10 barrier is a 
 
 ### Games
 
+* 2026-02-09 | [Vector Donkey Kong Climb](category/games/2026/02/20260209-011100-vector-donkey-kong-climb/) | Navigate a construction site to rescue the target while dodging rolling barrels and climbing ladders.
+* 2026-02-09 | [Vector Pac-Man Maze Classic](category/games/2026/02/20260209-011000-vector-pacman-maze-classic/) | Navigate the neon maze, collect all dots, and outsmart the chasing ghosts in this arcade masterpiece.
 * 2026-02-09 | [Vector Boulder Dash Logic](category/games/2026/02/20260209-010100-vector-boulder-dash-logic/) | Navigate a hazardous cave to collect diamonds while avoiding falling rocks.
 * 2026-02-09 | [Vector Mario Platformer Lite](category/games/2026/02/20260209-005800-vector-mario-platformer-lite/) | Side-scrolling platformer with physics-based movement, enemies, coins, and a goal flag.
 * 2026-02-08 | [Vector Pinball Gravity Physics](category/games/2026/02/20260208-181000-vector-pinball-gravity-physics/) | A high-stakes minimalist pinball simulation with realistic physics and score multipliers.
