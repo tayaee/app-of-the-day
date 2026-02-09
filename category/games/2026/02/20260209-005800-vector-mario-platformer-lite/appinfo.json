@@ -1,0 +1,21 @@
+{
+  "app_name": "vector-mario-platformer-lite",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260209-005800-vector-mario-platformer-lite",
+  "description": "A minimalist side-scrolling platformer inspired by classic 2D adventure games.",
+  "rationale": "Platforming is a fundamental genre for testing spatial reasoning and timing in AI agents. This app provides a clean, vector-based environment for reinforcement learning agents to master jump trajectories, collision detection, and enemy avoidance without complex textures.",
+  "details": "The game consists of a 2D side-scrolling world with physics-based movement. The player controls a rectangular agent that must navigate through platforms, gaps, and moving enemies to reach a goal flag at the end of the level. Key features include horizontal acceleration, friction, gravity, and variable jump height based on key press duration. Enemies move in fixed patterns and can be defeated by jumping on top of them. Collecting coins increases the score. The game engine uses a simple grid-based collision system and a fixed camera that follows the player.",
+  "technical_specs": {
+    "engine": "Pygame",
+    "resolution": "800x600",
+    "frame_rate": 60,
+    "input_type": "Keyboard",
+    "reward_structure": "Positive for moving right, collecting coins, and reaching the flag. Negative for falling off cliffs or colliding with enemies from the side/bottom."
+  },
+  "how_to_build": "uv init --app && uv add pygame",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "killall python",
+  "how_to_play": "Goal: Reach the flag at the right end of the map. Controls: Left/Right Arrow keys for horizontal movement, Spacebar or Up Arrow for jumping. Score: Gain 100 points per coin collected, 200 points per enemy defeated, and 1000 points for reaching the goal. Avoid: Falling into pits or touching enemies (loses one life).",
+  "how_to_cleanup": "rm -rf .venv && rm pyproject.toml uv.lock",
+  "screenshot": "assets/gameplay_preview.png"
+}
