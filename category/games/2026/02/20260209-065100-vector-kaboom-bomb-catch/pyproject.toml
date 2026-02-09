@@ -1,0 +1,8 @@
+[project]
+name = "20260209-065100-vector-kaboom-bomb-catch"
+version = "0.1.0"
+description = "Catch falling bombs from the Mad Bomber to save the city in this high-speed reaction challenge."
+requires-python = ">=3.10"
+dependencies = [
+    "pygame",
+]

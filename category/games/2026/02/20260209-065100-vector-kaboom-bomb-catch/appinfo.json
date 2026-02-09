@@ -1,0 +1,25 @@
+{
+  "app_name": "vector-kaboom-bomb-catch",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260209-065100-vector-kaboom-bomb-catch",
+  "description": "Catch falling bombs from the Mad Bomber to save the city in this high-speed reaction challenge.",
+  "rationale": "This game targets players who enjoy classic arcade reaction-based gameplay. It provides a perfect environment for RL agents to train on high-speed object tracking and precise horizontal positioning with increasing difficulty levels.",
+  "details": "The game is a simplified version of the classic 'Kaboom!'. A 'Mad Bomber' moves horizontally at the top of the screen, dropping bombs at random intervals. The player controls a set of three buckets stacked vertically at the bottom. If a bomb touches a bucket, it is defused and the player gains points. If a bomb hits the ground, it explodes, and the player loses one bucket. The game ends when all buckets are lost. As the score increases, the bomber moves faster and drops bombs more frequently. The graphics use a clean, professional vector style with high-contrast colors (Black background, White bomber, Red bombs, and Cyan buckets).",
+  "technical_specs": {
+    "engine": "Pygame",
+    "resolution": "800x600",
+    "fps": 60,
+    "input_type": "Discrete or Continuous Horizontal Movement"
+  },
+  "rl_environment_info": {
+    "observation_space": "Player X position, Bomber X position, Falling Bomb coordinates (X, Y list), Current Score, Buckets Remaining",
+    "action_space": "Move Left, Move Right, Stay",
+    "reward_system": "+10 for catching a bomb, -50 for losing a bucket, +1 per frame survived"
+  },
+  "how_to_build": "uv venv && uv pip install pygame",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "kill -9 $(pgrep -f 'python main.py') or press ESC key",
+  "how_to_play": "Use the Left and Right arrow keys or Mouse movement to position the buckets under falling bombs. Catching a bomb increases the score. If a bomb reaches the bottom without being caught, a bucket is lost. The game concludes when all three buckets are destroyed.",
+  "how_to_cleanup": "rm -rf .venv && find . -type d -name '__pycache__' -exec rm -rf {} +",
+  "screenshot": "assets/screenshots/vector-kaboom-preview.png"
+}
