@@ -1,0 +1,17 @@
+{
+  "app_name": "vector-tapper-soda-dash",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260209-015049-vector-tapper-soda-dash",
+  "description": "Serve thirsty customers and collect empty mugs in this fast-paced arcade classic.",
+  "rationale": "This game focuses on resource management and spatial awareness. It targets casual gamers and provides a structured environment for AI agents to learn multi-tasking and priority-based decision making.",
+  "details": "A simplified version of the arcade classic Tapper. The player controls a bartender across four horizontal bars. Customers appear at the left side of each bar and slowly advance toward the right. The player must pour a drink and send it sliding down the bar to push the customer back and eventually make them leave. If a drink reaches the end of the bar without a customer, it breaks. If a customer reaches the right end of the bar, the player loses. Customers also slide empty mugs back toward the right, which the player must catch before they fall.",
+  "how_to_build": "uv sync",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "kill the process or press the ESC key within the game window",
+  "how_to_play": "Goal: Survive as long as possible while maximizing score. Scoring: 50 points for serving a customer, 100 points for catching an empty mug. Controls: UP/DOWN arrow keys to change bars, SPACE to pour and throw a drink, LEFT arrow key to move toward the right end of the bar to catch mugs. Fail conditions: A customer reaches the bartender's end, a drink is thrown with no customer present (breaks at the end), or an empty mug is not caught.",
+  "how_to_cleanup": "rm -rf .venv && rm -rf __pycache__",
+  "game_engine": "pygame",
+  "state_space": "Customer positions per bar, empty mug positions, bartender current bar, bartender horizontal position",
+  "action_space": "MOVE_UP, MOVE_DOWN, MOVE_LEFT, MOVE_RIGHT, THROW_DRINK",
+  "screenshot": "assets/screenshots/tapper_dash_preview.png"
+}

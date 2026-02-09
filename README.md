@@ -6,6 +6,7 @@ Can we break Mach 10 in software engineering? Breaking the Mach 10 barrier is a 
 
 ### Games
 
+* 2026-02-09 | [Vector Tapper Soda Dash](category/games/2026/02/20260209-015049-vector-tapper-soda-dash/) | Serve thirsty customers and collect empty mugs in this fast-paced arcade classic.
 * 2026-02-09 | [Vector Joust: Gravity Combat](category/games/2026/02/20260209-014049-vector-joust-gravity-combat/) | A simplified gravity-defying aerial duel where height and timing determine the victor.
 * 2026-02-09 | [Vector Q-Bert Pyramid Hop](category/games/2026/02/20260209-012100-vector-qbert-pyramid-hop/) | Master the pyramid by changing block colors in this isometric logic-action puzzle.
 * 2026-02-09 | [Vector Donkey Kong Climb](category/games/2026/02/20260209-011100-vector-donkey-kong-climb/) | Navigate a construction site to rescue the target while dodging rolling barrels and climbing ladders.
