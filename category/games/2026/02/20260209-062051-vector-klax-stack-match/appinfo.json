@@ -1,0 +1,34 @@
+{
+  "app_name": "vector-klax-stack-match",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260209-062051-vector-klax-stack-match",
+  "description": "Catch falling colored tiles and stack them to create matching sequences in this high-speed logic puzzle.",
+  "rationale": "This game challenges spatial awareness and quick decision-making. It serves as an excellent environment for RL agents to learn priority queue management and pattern recognition under time pressure, filling a niche not covered by Tetris or Puyo Puyo.",
+  "details": "A 2D simplified version of the arcade classic Klax. Colored tiles roll down a conveyor belt towards a paddle controlled by the player. The player must catch the tiles and drop them into one of five vertical bins. When three or more tiles of the same color align vertically, horizontally, or diagonally, they disappear and points are awarded. The game ends if the paddle misses a tile (it falls into the 'abyss') and the drop counter reaches its limit, or if a bin overflows. The physics are grid-based with constant gravity for falling tiles.",
+  "game_rules": {
+    "grid_size": "5 columns by 5 rows for the bins",
+    "colors": [
+      "Red",
+      "Green",
+      "Blue",
+      "Yellow"
+    ],
+    "win_condition": "Score as many points as possible by clearing tiles",
+    "lose_condition": "3 missed tiles (drops) or any bin exceeding 5 tiles",
+    "scoring": "3-tile match: 100 pts, 4-tile match: 500 pts, 5-tile match: 1000 pts, Combo: 2x multiplier"
+  },
+  "technical_specs": {
+    "language": "Python 3.12+",
+    "library": "Pygame-ce",
+    "manager": "uv",
+    "resolution": "800x600"
+  },
+  "how_to_build": "uv sync",
+  "how_to_start": "uv run python main.py",
+  "how_to_stop": "kill the process or press ESC to exit",
+  "how_to_play": "Use LEFT and RIGHT arrow keys to move the paddle under the conveyor belt. Press SPACE to drop the currently held tile(s) into the bin. Match 3 tiles of the same color in any direction to score points and clear space.",
+  "how_to_cleanup": "rm -rf .venv && rm uv.lock",
+  "rl_observation_space": "Paddle position (int), Tiles on conveyor (list of pos/color), Bin states (5x5 matrix of colors), Drop counter (int)",
+  "rl_action_space": "0: Move Left, 1: Move Right, 2: Drop Tile, 3: No Action",
+  "screenshot": "assets/screenshots/gameplay.png"
+}
