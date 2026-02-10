@@ -1,0 +1,39 @@
+{
+  "app_name": "vector-super-mario-bros-jump-platform",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260210-043051-vector-super-mario-bros-jump-platform",
+  "description": "Navigate a series of moving platforms to reach the goal in this physics-based vertical challenge.",
+  "rationale": "This game targets developers and AI agents interested in platformer physics and collision detection. It focuses on the core mechanic of the Mario series—precise jumping—within a simplified, high-stakes environment.",
+  "details": "The game is a 2D side-scrolling platformer. The player controls a character who must move from the left side of the screen to a flagpole on the right. The terrain consists of static ground and multiple horizontally and vertically moving platforms of varying speeds. Falling off the screen or missing a platform results in an immediate game over. The game environment uses a grid-based collision system with gravity and friction constants to ensure realistic movement.",
+  "technical_specs": {
+    "resolution": "800x600",
+    "frame_rate": "60 FPS",
+    "physics_engine": "Custom 2D AABB collision",
+    "language": "Python 3.12+",
+    "dependencies": [
+      "pygame-ce"
+    ]
+  },
+  "entities": [
+    {
+      "name": "Player",
+      "properties": "Gravity-affected, jump-capable, horizontal movement"
+    },
+    {
+      "name": "Moving Platform",
+      "properties": "Cyclic movement, provides momentum to player when standing"
+    },
+    {
+      "name": "Flagpole",
+      "properties": "Goal trigger, ends the level and calculates score based on height"
+    }
+  ],
+  "how_to_build": "uv sync",
+  "how_to_start": "uv run python main.py",
+  "how_to_stop": "kill -9 $(pgrep -f 'python main.py')",
+  "how_to_play": "The goal is to reach the flagpole as quickly as possible without falling. Use 'LEFT' and 'RIGHT' arrow keys to move, and 'SPACE' to jump. Points are awarded for distance traveled and a large bonus is given for touching the flagpole. Score = (Distance * 10) + (Flag Height * 100). Remaining time is also converted to points.",
+  "how_to_cleanup": "rm -rf .venv && find . -type d -name '__pycache__' -exec rm -rf {} +",
+  "rl_observation_space": "Player (x, y, vx, vy), Nearest Platform (x, y, vx, vy), Flagpole (x, y), Ground Status (bool)",
+  "rl_action_space": "[Left, Right, Jump, Idle]",
+  "screenshot": "assets/screenshots/gameplay_preview.png"
+}
