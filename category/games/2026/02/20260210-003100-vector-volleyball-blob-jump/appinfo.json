@@ -1,0 +1,25 @@
+{
+  "app_name": "vector-volleyball-blob-jump",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260210-003100-vector-volleyball-blob-jump",
+  "description": "Engage in a fast-paced 1-on-1 blob volleyball match with physics-based jumping and spiking.",
+  "rationale": "This game focuses on simple physics interactions, timing, and spatial awareness. It targets casual gamers and provides an excellent environment for RL agents to learn trajectory prediction and reactive movement.",
+  "details": "The game features two blob-like characters on a 2D side-view court divided by a central net. A ball bounces off the floor, walls, and players. Players can move left/right and jump. The objective is to hit the ball over the net so that it touches the opponent's ground. Key mechanics include: 1) Velocity-based collision where the blob's movement speed affects the ball's trajectory. 2) A 'spike' mechanic if the blob hits the ball while at the peak of a jump. 3) Boundary detection to prevent players from crossing the net.",
+  "technical_specs": {
+    "engine": "Pygame",
+    "physics": "Semi-rigid body circles",
+    "resolution": "800x400",
+    "fps": 60
+  },
+  "rules": {
+    "win_condition": "First to 11 points",
+    "point_scoring": "Ball touches the opponent's floor or opponent hits the ball out of bounds",
+    "max_touches": "Maximum 3 touches per side before the ball must cross the net"
+  },
+  "how_to_build": "uv venv && uv pip install pygame",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "kill the process or press ESC",
+  "how_to_play": "Player 1 (Left): Use 'A' and 'D' to move, 'W' to jump. Player 2 / AI (Right): Use Arrow keys. Score points by making the ball land on the opponent's side of the court. Gravity and momentum dictate the ball's path, so time your jumps to intercept the ball at the highest point for a powerful return.",
+  "how_to_cleanup": "rm -rf .venv && rm -rf __pycache__",
+  "screenshot": "none"
+}

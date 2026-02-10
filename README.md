@@ -6,6 +6,7 @@ Can we break Mach 10 in software engineering? Breaking the Mach 10 barrier is a 
 
 ### Games
 
+* 2026-02-10 | [Vector Volleyball Blob Jump](category/games/2026/02/20260210-003100-vector-volleyball-blob-jump/) | Fast-paced 1-on-1 blob volleyball with physics-based jumping and spiking.
 * 2026-02-09 | [Vector Super Loop Racing](category/games/2026/02/20260209-172051-vector-super-loop-racing/) | High-speed 2D racing game where you maintain momentum through complex loops and sharp turns.
 * 2026-02-09 | [Vector Qix Area Capture](category/games/2026/02/20260209-171051-vector-qix-area-capture/) | Claim territory while dodging the deadly geometric flicker in this classic arcade reimagining.
 * 2026-02-09 | [Vector Brick Puzzle Tetromino Fit](category/games/2026/02/20260209-165052-vector-brick-puzzle-tetromino-fit/) | Fit classic tetromino shapes into a 10x10 grid to clear lines and score high points.
