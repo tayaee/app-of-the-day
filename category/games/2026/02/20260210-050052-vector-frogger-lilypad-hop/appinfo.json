@@ -1,0 +1,28 @@
+{
+  "app_name": "vector-frogger-lilypad-hop",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260210-050052-vector-frogger-lilypad-hop",
+  "description": "Navigate a rhythmic river crossing challenge by hopping on moving lilypads to reach the goal.",
+  "rationale": "This game provides a simplified yet high-stakes environment for AI agents to learn temporal spatial reasoning and collision avoidance. It targets developers looking for a clean, physics-lite implementation of the classic river crossing mechanic without the complexity of a full traffic system.",
+  "details": "The game consists of a grid-based river environment. The player controls a frog starting at the bottom bank. Multiple rows of lilypads move horizontally at varying speeds and directions (left to right, right to left). The frog must jump onto a lilypad to move across the river. If the frog touches the water (empty space between lilypads) or moves off-screen while on a lilypad, the game ends. The goal is to reach the top bank safely. The game increases in difficulty by increasing lilypad speed and reducing pad density as levels progress.",
+  "technical_specs": {
+    "resolution": "400x600",
+    "fps": 60,
+    "grid_size": 40,
+    "input_type": "Discrete Keyboard",
+    "state_space": "Pixels or Object Coordinates (Frog_X, Frog_Y, Pad_Positions_X_Y)"
+  },
+  "how_to_build": "uv run python -m pip install pygame",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "Press 'ESC' or close the window. For CLI termination, use Ctrl+C.",
+  "how_to_play": "Score increases by 10 points for every forward hop (Up Arrow) and 100 points for reaching the top bank. Controls: 'Up', 'Down', 'Left', 'Right' arrows for movement. The frog moves exactly one grid unit per key press. The frog inherits the velocity of the lilypad it is currently standing on.",
+  "reward_function": {
+    "forward_step": 1.0,
+    "goal_reached": 10.0,
+    "death_water": -5.0,
+    "death_offscreen": -5.0,
+    "time_penalty": -0.01
+  },
+  "how_to_cleanup": "rm -rf .venv",
+  "screenshot": "assets/screenshots/frogger-lilypad.png"
+}
