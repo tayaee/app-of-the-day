@@ -1,0 +1,21 @@
+{
+  "app_name": "vector-super-mario-bros-brick-smash",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260210-093000-vector-super-mario-bros-brick-smash",
+  "description": "Smash bricks and collect hidden power-ups in this precision jumping challenge.",
+  "rationale": "This game focuses on the core mechanics of environmental interaction and reward systems. It provides a controlled environment for AI agents to learn spatial awareness and the concept of 'hidden' rewards within destructible terrain, which is a fundamental aspect of the platformer genre.",
+  "details": "The game features a small-scale platforming level where the primary objective is to break specific blocks. There are two types of blocks: standard bricks (breakable) and question mark blocks (contain rewards). The player controls a character that can move left, right, and jump. Colliding with the bottom of a brick while jumping destroys it. The game tracks the number of bricks destroyed and coins collected. A timer adds a layer of urgency. The physics engine handles gravity and collision detection between the character's head and the static environment blocks.",
+  "technical_specs": {
+    "engine": "Pygame",
+    "resolution": "800x400",
+    "frame_rate": 60,
+    "state_space": "Player position, block coordinates, reward locations, time remaining",
+    "action_space": "Left, Right, Jump, Idle"
+  },
+  "how_to_build": "uv venv && uv pip install pygame",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "Press 'ESC' or close the game window.",
+  "how_to_play": "Score increases by 10 points for every brick smashed and 50 points for hitting a question mark block. Use 'Left/Right Arrow' keys to move and 'Spacebar' or 'Up Arrow' to jump. You must time your jumps so that your character's head hits the blocks from directly underneath. Smash as many as possible before the 60-second timer expires.",
+  "how_to_cleanup": "rm -rf .venv && find . -type d -name '__pycache__' -exec rm -rf {} +",
+  "screenshot": "N/A"
+}

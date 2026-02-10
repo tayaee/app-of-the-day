@@ -1,0 +1,8 @@
+[project]
+name = "vector-super-mario-bros-brick-smash"
+version = "0.1.0"
+description = "Smash bricks and collect hidden power-ups in this precision jumping challenge."
+requires-python = ">=3.11"
+dependencies = [
+    "pygame>=2.6.1",
+]
