@@ -1,0 +1,26 @@
+{
+  "app_name": "vector-super-pang-bubble-split",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260210-034500-vector-super-pang-bubble-split",
+  "description": "Clear the screen by shooting and splitting bouncing bubbles into smaller pieces.",
+  "rationale": "This game targets players who enjoy timing-based arcade shooters. It offers a clear progression system and physics-based challenges that are ideal for training AI agents in spatial reasoning and projectile timing.",
+  "details": "The player controls a character at the bottom of a rectangular 2D arena. Large bubbles bounce around the screen following basic gravity and wall collision physics. The player can move left or right and fire a vertical wire-shot upwards. When the wire hits a bubble, the bubble splits into two smaller bubbles that pop in opposite directions. The smallest bubbles disappear when hit. The game ends if a bubble touches the player or if the time limit expires. Each level introduces different bubble sizes and platform layouts.",
+  "game_rules": {
+    "bubble_physics": "Bubbles follow parabolic trajectories with consistent gravity. Larger bubbles bounce higher than smaller ones.",
+    "scoring_system": "Large bubble split: 100 pts, Medium bubble split: 200 pts, Smallest bubble pop: 500 pts.",
+    "win_condition": "Destroy all bubbles on the screen.",
+    "lose_condition": "Player collision with any bubble or timer reaching zero."
+  },
+  "technical_specs": {
+    "engine": "Pygame",
+    "resolution": "800x600",
+    "frame_rate": 60,
+    "input_type": "Keyboard"
+  },
+  "how_to_build": "uv venv && uv pip install pygame",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "kill -9 $(pgrep -f main.py)",
+  "how_to_play": "Goal: Eliminate all bubbles to score points and advance. Control the player with Left/Right Arrow keys. Press Spacebar to fire the vertical wire. Avoid contact with bubbles. Use the wire to split large bubbles until they are small enough to be removed entirely.",
+  "how_to_cleanup": "rm -rf .venv",
+  "screenshot": "N/A"
+}
