@@ -1,0 +1,21 @@
+{
+  "app_name": "vector-super-mario-bros-coin-collector",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260210-040000-vector-super-mario-bros-coin-collector",
+  "description": "Navigate platforms and collect falling coins while avoiding gaps in this simplified Mario-inspired endurance challenge.",
+  "rationale": "This game focuses on precise platforming and resource collection, providing a foundational environment for RL agents to learn spatial navigation and timing without the complexity of combat.",
+  "details": "The game features a single-screen environment with three floating platforms at different heights. Coins spawn at random intervals at the top of the screen and fall downwards. The player controls a character that can move left, right, and jump. If the player falls off the bottom of the screen (through gaps between platforms), the game ends. The objective is to survive as long as possible while maximizing the coin count. Gravity and basic inertia are applied to the character's movement.",
+  "technical_specs": {
+    "resolution": "800x600",
+    "fps": 60,
+    "physics": "Gravity: 0.8, Jump Impulse: -15.0, Horizontal Speed: 5.0",
+    "observation_space": "Player (x, y, vx, vy), Coin Positions (list of x, y), Platform Rects",
+    "action_space": "Discrete(4): [Left, Right, Jump, Idle]"
+  },
+  "how_to_build": "uv sync",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "kill -9 $(pgrep -f 'python main.py')",
+  "how_to_play": "Use the LEFT and RIGHT arrow keys to move. Press SPACE to jump. Collect yellow coins to increase your score by 10 points each. Do not fall into the gaps between the platforms or off the side of the screen. The score increases by 1 point for every second survived.",
+  "how_to_cleanup": "rm -rf .venv",
+  "screenshot": "N/A"
+}
