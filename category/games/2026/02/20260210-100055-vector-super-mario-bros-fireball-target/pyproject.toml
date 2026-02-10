@@ -1,0 +1,8 @@
+[project]
+name = "vector-super-mario-bros-fireball-target"
+version = "0.1.0"
+description = "Master the arc of the legendary fireball to defeat moving targets in this precision timing challenge."
+requires-python = ">=3.11"
+dependencies = [
+    "pygame>=2.5.0",
+]

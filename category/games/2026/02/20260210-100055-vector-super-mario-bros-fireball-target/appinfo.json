@@ -1,0 +1,32 @@
+{
+  "app_name": "vector-super-mario-bros-fireball-target",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260210-100055-vector-super-mario-bros-fireball-target",
+  "description": "Master the arc of the legendary fireball to defeat moving targets in this precision timing challenge.",
+  "rationale": "Focuses on projectile physics and predictive timing, providing a high-value environment for AI agents to learn ballistic trajectories and moving target interception within the familiar Mario universe.",
+  "details": "A single-screen skill game where the player character (Mario) is fixed on a left-side platform. Targets (Goombas, Koopas, or floating blocks) move at varying speeds from right to left or vertically. The player can only throw fireballs with a fixed bounce physics. The game simulates gravity-affected projectiles that bounce once or twice before disappearing. Difficulty increases as targets become smaller, faster, and follow unpredictable patterns. The environment is rendered using vector graphics for clean performance.",
+  "how_to_build": "uv init && uv add pygame && uv lock",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "kill -9 $(pgrep -f 'python main.py') or press the ESC key",
+  "how_to_play": "Score points by hitting enemies with fireballs. Use the 'SPACE' key to launch a fireball. The fireball follows a parabolic trajectory and bounces on the ground. Timing is critical as you must predict where the target will be when the fireball reaches it. Hitting multiple enemies with a single bounce grants bonus points. Game over occurs if 3 enemies pass the left boundary without being hit.",
+  "how_to_cleanup": "rm -rf .venv && rm pyproject.toml && rm uv.lock",
+  "game_rules": {
+    "fireball_velocity": [
+      400,
+      -200
+    ],
+    "gravity": 9.8,
+    "max_fireballs_on_screen": 2,
+    "scoring_hit": 100,
+    "scoring_multi_hit": 500,
+    "win_condition": "Reach 5000 points",
+    "lose_condition": "Miss 3 targets"
+  },
+  "technical_specs": {
+    "resolution": "800x600",
+    "frame_rate": "60fps",
+    "input_type": "Discrete (Spacebar)",
+    "observation_space": "Pixel data or [target_x, target_y, target_speed, fireball_x, fireball_y]"
+  },
+  "screenshot": "No screenshot available"
+}
