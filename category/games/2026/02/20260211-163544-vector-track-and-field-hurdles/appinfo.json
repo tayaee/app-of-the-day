@@ -1,0 +1,26 @@
+{
+  "app_name": "vector-track-and-field-hurdles",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260211-163544-vector-track-and-field-hurdles",
+  "description": "A high-speed rhythmic hurdle race challenging your timing and reaction speed.",
+  "rationale": "Inspired by the classic Konami Track and Field, this game focuses on the core mechanics of speed maintenance and obstacle avoidance. It serves as an excellent environment for RL agents to learn rhythmic input patterns and precise timing for jumping based on object proximity.",
+  "details": "The player controls an athlete in a side-scrolling hurdle race. The game environment consists of a linear track with hurdles placed at various intervals. The athlete's speed increases as the player alternates two run keys. Jumping over a hurdle requires pressing a separate jump key at the correct distance. Failing to jump or jumping too early/late results in a collision, which resets the athlete's speed to zero and triggers a recovery animation. The goal is to reach the finish line in the shortest time possible. The game uses a minimalist vector aesthetic with high-contrast elements for clear visual processing.",
+  "game_rules": {
+    "speed_mechanic": "Speed is gained by alternating 'Left' and 'Right' arrow keys rapidly. Pressing the same key twice in a row provides no speed boost.",
+    "jump_mechanic": "The 'Space' key triggers a jump. The trajectory is fixed based on the current speed.",
+    "collision_penalty": "Hitting a hurdle stops all forward momentum and costs 1.5 seconds of recovery time.",
+    "win_condition": "Cross the finish line (1000m mark) as fast as possible."
+  },
+  "technical_specs": {
+    "framework": "Pygame",
+    "resolution": "800x400",
+    "state_space": "Athlete velocity, distance to the next hurdle, athlete's current vertical position.",
+    "action_space": "Run Left, Run Right, Jump, Idle"
+  },
+  "how_to_build": "uv run python -m pip install pygame",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "Press 'ESC' or close the game window.",
+  "how_to_play": "Increase your score by reaching the finish line quickly. Alternately press Left and Right arrow keys to run faster. Press Spacebar to jump over hurdles. Score is calculated based on the total time taken; lower time equals higher performance rank.",
+  "how_to_cleanup": "rm -rf .venv",
+  "screenshot": "N/A"
+}

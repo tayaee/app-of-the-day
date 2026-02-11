@@ -1,0 +1,176 @@
+{
+  "test_name": "vector-track-and-field-hurdles",
+  "timestamp": "2026-02-11T16:51:02.065797",
+  "start_time": 1770846662.0657976,
+  "tests": [
+    {
+      "test": "pygame_init",
+      "status": "PASSED",
+      "details": "Pygame initialized successfully",
+      "timestamp": 0.1297135353088379
+    },
+    {
+      "test": "display_mode",
+      "status": "PASSED",
+      "details": "Display mode set to 800x400",
+      "timestamp": 0.17393136024475098
+    },
+    {
+      "test": "state_init",
+      "status": "PASSED",
+      "details": "State initialized with distance=0.0",
+      "timestamp": 0.17393136024475098
+    },
+    {
+      "test": "hurdle_generation",
+      "status": "PASSED",
+      "details": "Generated 20 hurdles",
+      "timestamp": 0.17393136024475098
+    },
+    {
+      "test": "hurdles_init",
+      "status": "PASSED",
+      "details": "Hurdles manager initialized",
+      "timestamp": 0.17393136024475098
+    },
+    {
+      "test": "athlete_init",
+      "status": "PASSED",
+      "details": "Athlete initialized",
+      "timestamp": 0.17393136024475098
+    },
+    {
+      "test": "renderer_init",
+      "status": "PASSED",
+      "details": "Renderer initialized",
+      "timestamp": 0.1824023723602295
+    },
+    {
+      "test": "initial_state",
+      "status": "PASSED",
+      "details": "Game starts in MENU state",
+      "timestamp": 0.2351841926574707
+    },
+    {
+      "test": "state_to_running",
+      "status": "PASSED",
+      "details": "State transition to RUNNING",
+      "timestamp": 0.2351841926574707
+    },
+    {
+      "test": "collision_state",
+      "status": "PASSED",
+      "details": "Collision triggered, timer=1.5",
+      "timestamp": 0.2351841926574707
+    },
+    {
+      "test": "finished_state",
+      "status": "PASSED",
+      "details": "Finished state set correctly",
+      "timestamp": 0.2351841926574707
+    },
+    {
+      "test": "acceleration",
+      "status": "PASSED",
+      "details": "Velocity increased: 0.0 -> 1.0",
+      "timestamp": 0.2351841926574707
+    },
+    {
+      "test": "same_key_penalty",
+      "status": "PASSED",
+      "details": "Same key gives no speed boost",
+      "timestamp": 0.2351841926574707
+    },
+    {
+      "test": "jump_initiation",
+      "status": "PASSED",
+      "details": "Jump velocity: -175.0",
+      "timestamp": 0.2351841926574707
+    },
+    {
+      "test": "jump_detection",
+      "status": "PASSED",
+      "details": "is_jumping() returns True",
+      "timestamp": 0.2351841926574707
+    },
+    {
+      "test": "physics_update",
+      "status": "PASSED",
+      "details": "Distance after update: 0.02",
+      "timestamp": 0.2351841926574707
+    },
+    {
+      "test": "hurdle_count",
+      "status": "PASSED",
+      "details": "Generated 18 hurdles",
+      "timestamp": 0.2351841926574707
+    },
+    {
+      "test": "hurdle_spacing",
+      "status": "PASSED",
+      "details": "All hurdles properly spaced",
+      "timestamp": 0.2351841926574707
+    },
+    {
+      "test": "next_hurdle",
+      "status": "PASSED",
+      "details": "Next hurdle at 50.0m",
+      "timestamp": 0.2351841926574707
+    },
+    {
+      "test": "distance_to_hurdle",
+      "status": "PASSED",
+      "details": "Distance: 50.0m",
+      "timestamp": 0.2351841926574707
+    },
+    {
+      "test": "no_collision_far",
+      "status": "PASSED",
+      "details": "No collision when far from hurdle",
+      "timestamp": 0.2351841926574707
+    },
+    {
+      "test": "collision_at_hurdle",
+      "status": "PASSED",
+      "details": "Collision triggered at hurdle",
+      "timestamp": 0.2351841926574707
+    },
+    {
+      "test": "camera_update",
+      "status": "PASSED",
+      "details": "Camera at 0.0",
+      "timestamp": 0.32950711250305176
+    },
+    {
+      "test": "world_to_screen",
+      "status": "PASSED",
+      "details": "World 100m -> Screen 70.0",
+      "timestamp": 0.32950711250305176
+    },
+    {
+      "test": "rendering",
+      "status": "PASSED",
+      "details": "All draw methods executed",
+      "timestamp": 0.345508337020874
+    },
+    {
+      "test": "menu_render",
+      "status": "PASSED",
+      "details": "Menu rendered",
+      "timestamp": 0.35951995849609375
+    },
+    {
+      "test": "finished_render",
+      "status": "PASSED",
+      "details": "Finish screen rendered",
+      "timestamp": 0.36252760887145996
+    }
+  ],
+  "end_time": 1770846662.4903116,
+  "duration_seconds": 0.4245140552520752,
+  "overall_status": "PASSED",
+  "failed_test_count": 0,
+  "passed_test_count": 27,
+  "errors": [],
+  "warnings": []
+}
