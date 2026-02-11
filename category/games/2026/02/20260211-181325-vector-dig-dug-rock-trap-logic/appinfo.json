@@ -1,0 +1,36 @@
+{
+  "app_name": "vector-dig-dug-rock-trap-logic",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260211-181325-vector-dig-dug-rock-trap-logic",
+  "description": "Outsmart monsters by strategically dropping rocks in this classic underground tactical puzzle.",
+  "rationale": "This game focuses on environmental interaction and timing rather than just combat. It is designed for researchers testing AI pathfinding and hazard anticipation in a destructible grid environment.",
+  "details": "The game consists of a 2D grid representing underground soil. The player controls a character that can move in four directions, digging tunnels as they move. Two types of enemies (Pookas and Fygars) chase the player through tunnels. The core mechanic is the Rock: rocks are located in the soil and will fall if the soil beneath them is removed. A falling rock crushes anything in its path, including the player. Enemies are eliminated by being crushed by rocks or by being inflated using the player's pump (though rock traps yield higher scores). The level is cleared when all enemies are defeated.",
+  "game_rules": {
+    "grid_size": "20x15 cells",
+    "entities": [
+      "Player",
+      "Pooka",
+      "Fygar",
+      "Rock"
+    ],
+    "physics": "Gravity affects rocks only when the cell directly below is an empty tunnel.",
+    "scoring": {
+      "dig_soil": 10,
+      "pump_kill": 200,
+      "rock_kill_1_enemy": 1000,
+      "rock_kill_2_enemies": 2500
+    }
+  },
+  "technical_specs": {
+    "language": "Python 3.12+",
+    "library": "pygame-ce",
+    "input_mode": "Discrete",
+    "state_representation": "Multi-dimensional array (grid) + entity coordinates"
+  },
+  "how_to_build": "uv venv && uv pip install pygame-ce",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "kill $PPID",
+  "how_to_play": "Use ARROW KEYS to move and dig. Press SPACE to fire the pump at enemies to stun or inflate them. To use a rock trap, dig a tunnel directly underneath a rock when an enemy is following you, then move out of the way before the rock falls. High scores are achieved by crushing multiple enemies with a single rock.",
+  "how_to_cleanup": "rm -rf .venv",
+  "screenshot": "assets/screenshots/gameplay_preview.png"
+}

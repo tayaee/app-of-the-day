@@ -1,0 +1,11 @@
+[project]
+name = "vector-dig-dug-rock-trap-logic"
+version = "0.1.0"
+description = "Outsmart monsters by strategically dropping rocks in this classic underground tactical puzzle"
+requires-python = ">=3.12"
+dependencies = [
+    "pygame>=2.5.0",
+]
+
+[project.scripts]
+start = "main:main"
