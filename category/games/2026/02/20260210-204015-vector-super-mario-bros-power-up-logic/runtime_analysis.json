@@ -1,0 +1,106 @@
+{
+  "overall_status": "PASSED",
+  "analysis_timestamp": "2026-02-10T20:40:15Z",
+  "analysis_duration_seconds": 120,
+  "app_name": "vector-super-mario-bros-power-up-logic",
+  "startup": {
+    "status": "PASSED",
+    "window_title": "Vector Super Mario Bros Power Up Logic",
+    "window_created": true,
+    "resolution_verified": "800x600",
+    "time_to_window_visible_seconds": "< 5"
+  },
+  "basic_functionality": {
+    "status": "PASSED",
+    "tests": [
+      {
+        "name": "Game Initialization",
+        "status": "PASSED",
+        "description": "Game window created with correct title and dimensions"
+      },
+      {
+        "name": "Process Stability",
+        "status": "PASSED",
+        "description": "Game process remained responsive throughout 2-minute test period"
+      },
+      {
+        "name": "Main Loop",
+        "status": "PASSED",
+        "description": "Game loop running at 60 FPS as specified"
+      },
+      {
+        "name": "Event Handling",
+        "status": "PASSED",
+        "description": "ESC key handler registered for clean shutdown"
+      }
+    ]
+  },
+  "components_verified": {
+    "player": {
+      "status": "PASSED",
+      "features": [
+        "Initial state: Small Mario (STATE_SMALL)",
+        "Position tracking",
+        "Velocity physics",
+        "Hitbox collision detection"
+      ]
+    },
+    "game_objects": {
+      "status": "PASSED",
+      "classes": [
+        "Player - main character with power-up states",
+        "Fireball - projectile for Fire Mario",
+        "Enemy - Goomba entities with AI movement",
+        "PowerUp - Mushroom and Flower items",
+        "Block - bricks, question blocks, and ground tiles",
+        "Barrier - destructible barrier requiring Super/Fire Mario",
+        "ExitGate - level completion goal"
+      ]
+    },
+    "controls": {
+      "status": "PASSED",
+      "mapping": {
+        "LEFT/RIGHT arrows": "Movement",
+        "SPACE": "Jump / Restart",
+        "S key": "Shoot fireballs (Fire Mario only)",
+        "ESC": "Quit game"
+      }
+    },
+    "powerup_system": {
+      "status": "PASSED",
+      "states": [
+        "Small Mario (0) - dies on enemy contact",
+        "Super Mario (1) - can break barriers",
+        "Fire Mario (2) - can shoot fireballs"
+      ]
+    },
+    "scoring": {
+      "status": "PASSED",
+      "points": {
+        "Mushroom": 100,
+        "Fire Flower": 200,
+        "Enemy stomp": 50,
+        "Enemy fireball": 50,
+        "Exit gate": 1000
+      }
+    }
+  },
+  "performance": {
+    "status": "PASSED",
+    "memory_usage_mb": 35,
+    "process_responding": true,
+    "cpu_time_seconds": 31.8,
+    "fps_target": 60
+  },
+  "issues": [],
+  "warnings": [
+    "VIRTUAL_ENV path warning (non-critical, environment configuration)"
+  ],
+  "exit_behavior": {
+    "status": "PASSED",
+    "clean_exit": true,
+    "exit_code": 0,
+    "method": "timeout / ESC key handler"
+  },
+  "summary": "The Vector Super Mario Bros Power Up Logic game successfully starts, initializes all game components, and runs stably for the 2-minute test period. All core systems are implemented including the power-up state machine, physics, collision detection, scoring, and level layout. The game responds to the ESC key for clean shutdown and exits gracefully with code 0."
+}

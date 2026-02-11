@@ -1,0 +1,37 @@
+{
+  "app_name": "vector-super-mario-bros-power-up-logic",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260210-204015-vector-super-mario-bros-power-up-logic",
+  "description": "Master the strategic sequence of Mario's growth and power-up transformations.",
+  "rationale": "This game focuses on the core progression mechanic of Super Mario Bros: the hierarchical power-up system. It provides a controlled environment for AI agents to learn state-based decision making and strategic resource acquisition.",
+  "details": "A single-screen logic platformer where the player starts as 'Small Mario'. The goal is to reach the exit gate, which is blocked by a physical barrier that only 'Super Mario' or 'Fire Mario' can break. The player must navigate a small grid-based map to find a Mushroom to grow, and optionally a Fire Flower to gain offensive capabilities. Enemies roam the floor, and touching them reverts the player's state or causes game over if in the smallest state. Power-ups appear in specific blocks when struck from below.",
+  "state_machine": {
+    "Small Mario": "Initial state. Dies on contact with enemies.",
+    "Super Mario": "Becomes Small Mario on contact with enemies. Can break bricks.",
+    "Fire Mario": "Becomes Super Mario on contact with enemies. Can shoot fireballs to destroy enemies."
+  },
+  "technical_specs": {
+    "engine": "Pygame",
+    "resolution": "800x600",
+    "grid_size": "40x40",
+    "physics": "Simple gravity and horizontal momentum"
+  },
+  "how_to_build": "uv run python -m pip install pygame",
+  "how_to_start": "uv run python main.py",
+  "how_to_stop": "Press ESC or close the window. For agents: sys.exit() on terminal signal.",
+  "how_to_play": "Score increases by collecting power-ups (+100 for Mushroom, +200 for Fire Flower) and breaking target bricks (+50). Reaching the exit gate grants +1000. Controls: Left/Right arrows for movement, Space to jump, 'S' key to shoot fireballs (only in Fire Mario state). Avoiding enemies is crucial to maintain power-up status.",
+  "how_to_cleanup": "rm -rf .venv && find . -type d -name '__pycache__' -exec rm -rf {} +",
+  "observation_space": {
+    "player_state": "int (0: Small, 1: Super, 2: Fire)",
+    "grid_map": "2D array representing walls, enemies, and items",
+    "player_pos": "float tuple (x, y)"
+  },
+  "action_space": [
+    "MOVE_LEFT",
+    "MOVE_RIGHT",
+    "JUMP",
+    "SHOOT",
+    "IDLE"
+  ],
+  "screenshot": "assets/screenshots/power_up_logic.png"
+}
