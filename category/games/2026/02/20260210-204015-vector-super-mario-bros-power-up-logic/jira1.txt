@@ -1,0 +1,19 @@
+% run
+Using CPython 3.12.12
+Creating virtual environment at: .venv
+Installed 1 package in 243ms
+pygame 2.6.1 (SDL 2.28.4, Python 3.12.12)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+Traceback (most recent call last):
+  File "f:\src\mach-ten-project-artifacts\category\games\2026\02\20260210-204015-vector-super-mario-bros-power-up-logic\main.py", line 705, in <module>
+    main()
+  File "f:\src\mach-ten-project-artifacts\category\games\2026\02\20260210-204015-vector-super-mario-bros-power-up-logic\main.py", line 701, in main
+    game.run()
+  File "f:\src\mach-ten-project-artifacts\category\games\2026\02\20260210-204015-vector-super-mario-bros-power-up-logic\main.py", line 692, in run
+    self.draw()
+  File "f:\src\mach-ten-project-artifacts\category\games\2026\02\20260210-204015-vector-super-mario-bros-power-up-logic\main.py", line 619, in draw
+    self.player.draw(self.screen)
+  File "f:\src\mach-ten-project-artifacts\category\games\2026\02\20260210-204015-vector-super-mario-bros-power-up-logic\main.py", line 167, in draw
+    pygame.draw.circle(surface, COLOR_FIREBALL, (int(self.x) + 5, int(self.y) + 20, 3))
+TypeError: function missing required argument 'radius' (pos 4)
+
