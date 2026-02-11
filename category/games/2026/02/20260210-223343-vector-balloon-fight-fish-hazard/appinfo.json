@@ -1,0 +1,40 @@
+{
+  "app_name": "vector-balloon-fight-fish-hazard",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260210-223343-vector-balloon-fight-fish-hazard",
+  "description": "Master the art of buoyancy and avoid the giant fish from the deep in this gravity-defying duel.",
+  "rationale": "This game targets users interested in physics-based combat and precise movement control. It provides a unique challenge for RL agents to manage momentum, flap frequency, and spatial awareness of hazards both above and below the water line.",
+  "details": "A simplified tribute to Balloon Fight's water stage. Players control a character with two balloons. Gravity is constantly pulling the player down. Flapping (upward thrust) must be timed to stay airborne. The stage consists of a platform and a body of water at the bottom. A giant fish lurks in the water and will jump to eat the player if they fly too low. Enemy agents also fly around, and the player must pop their balloons by colliding from above. If the player's balloons are popped or they are eaten by the fish, the game ends. The physics engine handles inertia, drag, and gravity.",
+  "state_space": {
+    "player_pos": [
+      "x",
+      "y"
+    ],
+    "player_velocity": [
+      "vx",
+      "vy"
+    ],
+    "balloons_remaining": "integer (0-2)",
+    "enemy_positions": "list of [x, y]",
+    "fish_state": "active/idle",
+    "fish_pos_x": "float"
+  },
+  "action_space": {
+    "flap": "boolean",
+    "move_left": "boolean",
+    "move_right": "boolean"
+  },
+  "reward_function": {
+    "enemy_popped": "+100",
+    "survival_per_frame": "+1",
+    "balloon_lost": "-50",
+    "game_over_fish": "-200",
+    "game_over_fall": "-200"
+  },
+  "how_to_build": "uv sync",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "kill signal or close window",
+  "how_to_play": "Press 'Up' or 'Space' to flap and gain altitude. Use 'Left' and 'Right' arrow keys to move horizontally. Collide with enemies from above to pop their balloons. Avoid flying too close to the water surface at the bottom to stay safe from the giant fish. Score increases by defeating enemies and staying alive.",
+  "how_to_cleanup": "rm -rf .venv",
+  "screenshot": "N/A"
+}

@@ -1,0 +1,11 @@
+"""Entry point for Vector Balloon Fight: Fish Hazard."""
+
+from game import Game
+
+def main():
+    """Run the game."""
+    game = Game()
+    game.run()
+
+if __name__ == "__main__":
+    main()
