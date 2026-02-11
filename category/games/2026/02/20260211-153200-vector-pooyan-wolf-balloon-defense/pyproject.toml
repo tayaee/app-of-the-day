@@ -1,0 +1,12 @@
+[project]
+name = "vector-pooyan-wolf-balloon-defense"
+version = "0.1.0"
+description = "A fixed-axis shooter with gravity and projectile physics inspired by Pooyan"
+requires-python = ">=3.12"
+dependencies = [
+    "pygame>=2.5.0",
+    "numpy>=1.24.0",
+]
+
+[project.scripts]
+start = "main:main"

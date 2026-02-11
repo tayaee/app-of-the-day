@@ -1,0 +1,31 @@
+{
+  "app_name": "vector-pooyan-wolf-balloon-defense",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260211-153200-vector-pooyan-wolf-balloon-defense",
+  "description": "Defend the piglet base from rising wolves by popping their balloons with arrows.",
+  "rationale": "This game provides a simplified implementation of a fixed-axis shooter with gravity and projectile physics. It is ideal for training reinforcement learning agents to understand lead-target shooting and vertical timing against varied enemy movement patterns.",
+  "details": "The game is a simplified 2D arcade defense game inspired by Pooyan. The player controls a piglet in a gondola that moves vertically along the right side of the screen. Wolves spawn at the bottom-left and float upward using balloons. The player's objective is to shoot arrows horizontally to pop the wolves' balloons before they reach the top ledge. If a wolf reaches the top, it occupies a slot on the ledge; if four wolves reach the top, the game is over. Projectiles move at a constant velocity, requiring the player to time shots based on the wolf's vertical position and the arrow's travel time.",
+  "technical_specs": {
+    "resolution": "800x600",
+    "fps": 60,
+    "input_type": "keyboard",
+    "dependencies": [
+      "pygame",
+      "numpy"
+    ]
+  },
+  "game_rules": {
+    "player_movement": "Vertical movement only (Y-axis).",
+    "projectile_limit": "Maximum 2 arrows on screen at once.",
+    "enemy_types": "Regular wolves (1 hit) and shielded wolves (2 hits).",
+    "game_over_condition": "4 wolves successfully reaching the top ledge or player colliding with a thrown projectile."
+  },
+  "how_to_build": "uv run python -m pip install pygame numpy",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "Press 'ESC' or close the window.",
+  "how_to_play": "Use UP/DOWN arrow keys to move the gondola. Press SPACE to fire an arrow. Earn 100 points for popping a regular balloon and 200 for a shielded one. If a wolf reaches the top, points are deducted. The goal is to maximize the score before 4 wolves reach the top.",
+  "how_to_cleanup": "rm -rf .venv && find . -type d -name '__pycache__' -exec rm -rf {} +",
+  "rl_observation_space": "Player Y position, Array of active Wolf (X, Y, type) positions, Array of active Arrow (X, Y) positions, Count of wolves on ledge.",
+  "rl_action_space": "0: Stay, 1: Move Up, 2: Move Down, 3: Shoot",
+  "screenshot": "assets/screenshots/gameplay.png"
+}
