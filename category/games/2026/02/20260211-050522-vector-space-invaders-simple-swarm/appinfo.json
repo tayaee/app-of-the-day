@@ -1,0 +1,33 @@
+{
+  "app_name": "vector-space-invaders-simple-swarm",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260211-050522-vector-space-invaders-simple-swarm",
+  "description": "Defend the Earth from rhythmic descending alien swarms in this vector-style arcade shooter.",
+  "rationale": "This classic shooter provides a perfect environment for AI agents to learn spatial awareness, timing, and threat prioritization. It targets fans of retro arcade games and developers interested in swarm logic and collision detection.",
+  "details": "The game features a player-controlled tank at the bottom of the screen that can move left and right. A grid of alien invaders moves horizontally across the screen, shifting down one level whenever they hit a side boundary. The goal is to destroy all aliens before any alien reaches the player's y-coordinate. Aliens occasionally fire projectiles downwards. The player has a single-shot cannon that must hit a target or leave the screen before firing again. Simplified mechanics exclude destructible bunkers to focus on movement and accuracy.",
+  "game_rules": {
+    "player_speed": 5,
+    "bullet_speed": 7,
+    "alien_horizontal_speed": 2,
+    "alien_vertical_drop": 20,
+    "alien_fire_rate_probability": 0.01,
+    "grid_size": "5x8 aliens"
+  },
+  "technical_stack": {
+    "language": "Python 3.12+",
+    "package_manager": "uv",
+    "graphics_library": "pygame-ce",
+    "config_file": "pyproject.toml"
+  },
+  "how_to_build": "uv venv && uv pip install pygame-ce",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "Press 'ESC' or close the window.",
+  "how_to_play": "Move the tank using LEFT/RIGHT arrow keys. Press SPACE to shoot. Scoring: 10 points per bottom row alien, 20 points per middle row, 30 points per top row. Game ends if hit by an alien bullet or if an alien touches the player's line. High score is achieved by clearing the wave as fast as possible without dying.",
+  "how_to_cleanup": "rm -rf .venv && rm -rf __pycache__",
+  "ai_agent_info": {
+    "observation_space": "Player X position, Alien grid bounding box, Nearest bullet coordinates",
+    "action_space": "0: Stay, 1: Left, 2: Right, 3: Shoot",
+    "reward_function": "+1 per alien hit, -10 per life lost, +50 for wave clear"
+  },
+  "screenshot": "assets/screenshots/gameplay_preview.png"
+}
