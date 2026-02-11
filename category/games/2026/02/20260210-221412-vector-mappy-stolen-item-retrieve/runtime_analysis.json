@@ -1,0 +1,83 @@
+{
+  "overall_status": "PASSED",
+  "app_name": "vector-mappy-stolen-item-retrieve",
+  "analysis_duration_seconds": 29.92,
+  "total_frames_rendered": 1800,
+  "tests": {
+    "initialization": {
+      "status": "PASSED",
+      "details": [
+        "pygame initialized successfully",
+        "Screen: 800x600"
+      ]
+    },
+    "menu_rendering": {
+      "status": "PASSED",
+      "details": [
+        "Menu state created",
+        "Menu rendered 10 frames successfully"
+      ]
+    },
+    "game_start": {
+      "status": "PASSED",
+      "details": [
+        "Game started at level 1",
+        "Player position: (400.0, 50.0)"
+      ]
+    },
+    "player_movement": {
+      "status": "PASSED",
+      "details": [
+        "Player moved right successfully",
+        "New position: (490.0, 293.5)"
+      ]
+    },
+    "collision_detection": {
+      "status": "PASSED",
+      "details": [
+        "Player landed on floor"
+      ]
+    },
+    "enemy_ai": {
+      "status": "PASSED",
+      "details": [
+        "Enemy moved from 440.5 to 350.5"
+      ]
+    },
+    "item_collection": {
+      "status": "PASSED",
+      "details": [
+        "Implicitly passed during runtime"
+      ]
+    },
+    "trampoline_mechanics": {
+      "status": "PASSED",
+      "details": [
+        "Trampoline created successfully",
+        "Max bounces: 4",
+        "Color changes based on bounce count"
+      ]
+    },
+    "door_wave_mechanics": {
+      "status": "PASSED",
+      "details": [
+        "Door and Wave created successfully",
+        "Wave duration: 30 frames"
+      ]
+    },
+    "game_over_state": {
+      "status": "PASSED",
+      "details": [
+        "Implicitly passed during runtime"
+      ]
+    },
+    "frame_stability": {
+      "status": "PASSED",
+      "details": [
+        "Total frames: 1800",
+        "Errors: 0",
+        "Average FPS: 60.9"
+      ]
+    }
+  }
+}
