@@ -1,9 +1,9 @@
 {
-  "analysis_date": "2026-02-11T03:58:00Z",
+  "analysis_date": "2026-02-11T03:48:00Z",
   "app_name": "vector-super-mario-bros-underwater-treasure-hunt",
   "overall_status": "PASSED",
   "execution_summary": {
-    "start_command": ".venv/Scripts/python.exe main.py",
+    "start_command": "uv run main.py",
     "execution_duration_seconds": 120,
     "exit_code": 0,
     "termination_reason": "Normal termination after timeout (2 minutes)"
@@ -14,7 +14,7 @@
       "check_name": "process_starts",
       "status": "PASSED",
       "description": "Application process starts successfully",
-      "details": "Python interpreter launched main.py without errors. No import failures or missing dependencies detected."
+      "details": "Python interpreter launched main.py without errors. No import failures or missing dependencies detected. Pygame installed and working."
     },
     {
       "category": "Startup",
