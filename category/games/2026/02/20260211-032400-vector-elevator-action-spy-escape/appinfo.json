@@ -1,0 +1,34 @@
+{
+  "app_name": "vector-elevator-action-spy-escape",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260211-032400-vector-elevator-action-spy-escape",
+  "description": "Navigate through a high-security building using elevators and tactical movement to retrieve documents and escape.",
+  "rationale": "This game focuses on timing and spatial logic rather than just reflex. It targets players who enjoy retro arcade mechanics and provides a structured environment for AI agents to learn multi-floor navigation and enemy avoidance patterns.",
+  "details": "The player controls a spy starting at the top of a 10-floor building. The objective is to reach the basement garage. Each floor contains doors; some are blue (neutral) and some are red (contain secret documents). The player must collect all documents from red doors to trigger the escape vehicle. Movement includes walking left/right, jumping, and crouching. Elevators move vertically automatically or via player input. Enemies appear from doors and patrol floors. If the player touches an enemy or is shot, a life is lost. The game uses a 2D vector-style grid system for collision and entity management.",
+  "game_rules": {
+    "scoring": "100 points per document, 50 points per defeated enemy, 1000 points for reaching the escape car.",
+    "win_condition": "Collect all red door documents and reach the basement.",
+    "lose_condition": "Loss of 3 lives (hit by bullets or enemies).",
+    "entities": [
+      "Player",
+      "Elevator",
+      "Security Guard",
+      "Red Door",
+      "Blue Door",
+      "Escape Car"
+    ]
+  },
+  "technical_specs": {
+    "resolution": "800x600",
+    "framework": "Pygame",
+    "input_type": "Keyboard",
+    "state_representation": "Grid-based coordinates and entity velocity vectors"
+  },
+  "pyproject_toml": "Required dependencies: pygame. Use uv for environment management.",
+  "how_to_build": "uv sync",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "Press 'ESC' key or close the window.",
+  "how_to_play": "Use LEFT/RIGHT arrow keys to walk. Use UP/DOWN arrow keys to enter elevators or crouch. Use SPACE to jump. Collect documents by passing in front of red doors. Avoid or shoot guards to survive until the bottom floor.",
+  "how_to_cleanup": "rm -rf .venv && rm -f *.pyc",
+  "screenshot": "No screenshot available"
+}
