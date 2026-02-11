@@ -8,6 +8,7 @@ mach-ten-project itself is a private repo.
 
 ### Games
 
+* 2026-02-11 | [Vector Urban Champion Street Brawl](category/games/2026/02/20260211-170000-vector-urban-champion-street-brawl/) | A simplified 2D street fighting game focused on timing, spacing, and tactical stamina management.
 * 2026-02-11 | [Vector Track and Field Hurdles](category/games/2026/02/20260211-163544-vector-track-and-field-hurdles/) | A high-speed rhythmic hurdle race challenging your timing and reaction speed.
 * 2026-02-11 | [Vector Super Mario Bros Infinite Bridge Sprint](category/games/2026/02/20260211-162000-vector-super-mario-bros-infinite-bridge-sprint/) | An endless running challenge across a decaying bridge while dodging fireballs and Cheep Cheeps.
 * 2026-02-11 | [Vector Super Mario Bros Paratroopa Stomp](category/games/2026/02/20260211-154530-vector-super-mario-bros-paratroopa-stomp/) | Master mid-air precision by stomping flying Koopa Paratroopas to stay aloft and build combos.

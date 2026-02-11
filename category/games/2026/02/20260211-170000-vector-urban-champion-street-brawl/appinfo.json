@@ -1,0 +1,20 @@
+{
+  "app_name": "vector-urban-champion-street-brawl",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260211-170000-vector-urban-champion-street-brawl",
+  "description": "A simplified 2D street fighting game focused on timing, spacing, and tactical stamina management.",
+  "rationale": "This game provides a perfect environment for AI agents to learn decision-making under pressure. It targets fans of retro fighting games and developers looking for a clean implementation of hit-box logic and state-machine based combat.",
+  "details": "The game is a 1vs1 side-view brawler set on a single-screen street. Players can move left and right, block, and perform high or low punches. A stamina bar limits continuous attacking. Health decreases upon successful hits. The environment includes a 'border' at each end of the screen; pushing the opponent off the edge wins the round. AI agents must manage the distance (spacing) and predict the opponent's high/low guard status.",
+  "technical_specs": {
+    "resolution": "800x400",
+    "framework": "pygame",
+    "state_space": "player_pos, enemy_pos, player_health, enemy_health, player_stamina, enemy_stamina, player_action_state",
+    "action_space": "move_left, move_right, punch_high, punch_low, block_high, block_low, idle"
+  },
+  "how_to_build": "uv sync",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "killall python",
+  "how_to_play": "Goal: Reduce opponent health to zero or push them off the screen edge. Use LEFT/RIGHT arrows to move. Press 'A' for high punch, 'Z' for low punch. Hold 'S' for high block, 'X' for low block. Each punch consumes stamina. Successful hits increase score by 100. Pushing opponent out of bounds gives 500 bonus points.",
+  "how_to_cleanup": "rm -rf .venv",
+  "screenshot": "category/games/2026/02/screenshots/urban-champion-brawl.png"
+}
