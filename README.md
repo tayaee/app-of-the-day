@@ -127,6 +127,7 @@ Each app is self-contained with its own dependencies. Navigate to the app's fold
 
 ```bash
 # Run the game
+uv sync
 uv run --no-active --python 3.12 python main.py
 ```
 
