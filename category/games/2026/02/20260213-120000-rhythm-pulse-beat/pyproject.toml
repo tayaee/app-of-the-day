@@ -1,0 +1,18 @@
+[project]
+name = "rhythm-pulse-beat"
+version = "1.0.0"
+description = "Hit the beat at the perfect moment in this minimalist rhythm reaction game"
+requires-python = ">=3.10"
+dependencies = [
+    "pygame>=2.0",
+]
+
+[project.scripts]
+rhythm-pulse-beat = "main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
