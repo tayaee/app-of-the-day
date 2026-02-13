@@ -1,0 +1,18 @@
+[project]
+name = "reaction-reflex-test"
+version = "1.0.0"
+description = "Test your reaction speed by clicking targets as they appear on screen"
+requires-python = ">=3.12"
+dependencies = [
+    "pygame-ce>=2.5.0",
+]
+
+[project.scripts]
+reaction-reflex-test = "main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

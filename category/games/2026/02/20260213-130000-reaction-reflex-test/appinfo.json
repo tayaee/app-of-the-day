@@ -1,0 +1,14 @@
+{
+  "app_name": "reaction-reflex-test",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260213-130000-reaction-reflex-test",
+  "description": "Test your reaction speed by clicking targets as quickly as possible before they disappear.",
+  "rationale": "This game provides a pure measure of reaction time and visual processing speed. It targets anyone interested in measuring and improving their reflexes, as well as AI agents learning to respond to visual stimuli with minimal latency.",
+  "details": "A circular target appears at a random location on screen. The player must click it before it shrinks to nothing. Each successful click scores points based on how quickly the target was clicked. The target shrinks over time, and clicking while it's large yields more points. As the game progresses, targets appear faster and shrink more quickly. The game ends when the player misses three targets.",
+  "how_to_build": "uv sync",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "Press ESC or close the window",
+  "how_to_play": "Click the appearing circles with your mouse as quickly as possible. Clicking while the circle is large gives more points. You can miss up to 3 circles before the game ends.",
+  "how_to_cleanup": "rm -rf .venv uv.lock",
+  "screenshot": "N/A"
+}
