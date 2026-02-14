@@ -1,0 +1,115 @@
+{
+  "test_name": "Runtime Analysis",
+  "app_name": "vector-super-mario-bros-infinite-koopa-shell-bounce",
+  "start_time": 1771097787.1326046,
+  "test_duration_seconds": 120,
+  "checks": [
+    {
+      "check": "Pygame Initialization",
+      "status": "PASSED",
+      "message": "Pygame initialized successfully"
+    },
+    {
+      "check": "Game Instance Creation",
+      "status": "PASSED",
+      "message": "Game instance created successfully"
+    },
+    {
+      "check": "Initial State Verification",
+      "status": "PASSED",
+      "details": {
+        "player_position": {
+          "x": 100,
+          "y": 460
+        },
+        "shell_position": {
+          "x": 400,
+          "y": 426
+        },
+        "score": 0,
+        "combo": 0,
+        "game_over": false,
+        "waiting_to_kick": true
+      }
+    },
+    {
+      "check": "Observation Space",
+      "status": "PASSED",
+      "details": {
+        "player_x": 100,
+        "player_y": 460,
+        "shell_x": 400,
+        "shell_y": 426,
+        "is_grounded": false
+      }
+    },
+    {
+      "check": "Action Space",
+      "status": "PASSED",
+      "details": {
+        "expected": [
+          "LEFT",
+          "RIGHT",
+          "JUMP",
+          "NONE"
+        ],
+        "actual": [
+          "LEFT",
+          "RIGHT",
+          "JUMP",
+          "NONE"
+        ]
+      }
+    },
+    {
+      "check": "Game Loop Execution",
+      "status": "PASSED",
+      "details": {
+        "frames_processed": 7200,
+        "runtime_seconds": 118.2334680557251
+      }
+    },
+    {
+      "check": "RL Step Function",
+      "status": "PASSED",
+      "details": {
+        "observation_keys": [
+          "player_x",
+          "player_y",
+          "is_grounded",
+          "shell_x",
+          "shell_y",
+          "shell_velocity_x",
+          "shell_velocity_y"
+        ],
+        "reward": 0.01,
+        "done": false,
+        "info": {
+          "score": 0,
+          "combo": 0
+        }
+      }
+    },
+    {
+      "check": "Final State",
+      "status": "PASSED",
+      "details": {
+        "player_alive": true,
+        "shell_active": false,
+        "final_score": 0
+      }
+    },
+    {
+      "check": "Game Reset",
+      "status": "PASSED",
+      "details": {
+        "score_after_reset": 0,
+        "combo_after_reset": 0,
+        "game_over_after_reset": false
+      }
+    }
+  ],
+  "overall_status": "PASSED",
+  "end_time": 1771097905.3660727,
+  "total_duration_seconds": 118.2334680557251
+}

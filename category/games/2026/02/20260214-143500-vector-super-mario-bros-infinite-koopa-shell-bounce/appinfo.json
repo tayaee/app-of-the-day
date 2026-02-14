@@ -1,0 +1,41 @@
+{
+  "app_name": "vector-super-mario-bros-infinite-koopa-shell-bounce",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260214-143500-vector-super-mario-bros-infinite-koopa-shell-bounce",
+  "description": "Master the art of infinite shell bouncing to achieve the highest combo score.",
+  "rationale": "This game focuses on precision timing and rhythmic input, a core mechanic of classic platformers. It provides a perfect environment for Reinforcement Learning agents to learn sequential action timing and physics-based prediction.",
+  "details": "The game features a single platform where a player character (Mario-style) and a Koopa shell reside. Once the shell is kicked, it bounces off walls. The player must jump and land on the shell repeatedly without touching the ground or letting the shell escape. Each consecutive bounce increases a multiplier. The game simplifies the world into a 2D vector space with gravity and horizontal friction. Obstacles or smaller platforms may appear as the score increases to challenge the agent's positioning.",
+  "technologies": [
+    "python",
+    "pygame",
+    "uv"
+  ],
+  "specifications": {
+    "screen_resolution": "800x600",
+    "frame_rate": 60,
+    "input_type": "keyboard"
+  },
+  "how_to_build": "uv sync",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "pkill -f main.py",
+  "how_to_play": "Use the 'Left' and 'Right' arrow keys to move. Press 'Space' to jump. Gain points by landing on the moving shell while in the air. Each bounce without hitting the ground increments the 'Combo' counter, which multiplies the base score. Game ends if the player touches the shell from the side (collision) or falls off the platform.",
+  "how_to_cleanup": "rm -rf .venv && rm uv.lock",
+  "reinforcement_learning": {
+    "action_space": [
+      "Left",
+      "Right",
+      "Jump",
+      "None"
+    ],
+    "observation_space": [
+      "Player_X",
+      "Player_Y",
+      "Shell_X",
+      "Shell_Y",
+      "Shell_Velocity_X",
+      "Is_Grounded"
+    ],
+    "reward_function": "+10 for shell bounce, +1 per frame survived, -100 for game over"
+  },
+  "screenshot": "assets/screenshots/infinite-koopa-bounce.png"
+}
