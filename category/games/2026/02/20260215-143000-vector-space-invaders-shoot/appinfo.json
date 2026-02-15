@@ -1,0 +1,31 @@
+{
+  "app_name": "vector-space-invaders-shoot",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260215-143000-vector-space-invaders-shoot",
+  "description": "Classic space invaders where you defend Earth from descending alien waves.",
+  "rationale": "This game focuses on the core mechanics of aim, timing, and positioning. It targets players who enjoy classic arcade shooters and provides a structured environment for AI agents to learn target prioritization and projectile avoidance.",
+  "details": "The game consists of waves of aliens arranged in a 5x11 grid formation. The player controls a ship at the bottom that can move horizontally and shoot upward. Aliens move horizontally across the screen and descend when reaching the edge. Each alien row has different point values (30, 20, 10 from top to bottom). Aliens randomly shoot back at the player. Four bunkers provide cover but degrade with each hit. Clear all aliens to advance to the next level with increased alien speed and fire rate. Game ends if all lives are lost or aliens reach the player's level.",
+  "technical_specs": {
+    "framework": "Pygame",
+    "resolution": "800x600",
+    "fps": 60,
+    "python_version": "3.12+",
+    "dependencies": [
+      "pygame"
+    ]
+  },
+  "how_to_build": "uv init && uv add pygame",
+  "how_to_start": "uv run --no-active --python 3.12 main.py",
+  "how_to_stop": "kill the process or press ESC key",
+  "how_to_play": "Goal: Destroy all aliens before they reach your level. Scoring: Top row aliens = 30 pts, Middle rows = 20 pts, Bottom rows = 10 pts. Controls: LEFT/RIGHT arrow keys to move ship, SPACE bar to shoot. Use bunkers for cover - they degrade after 4 hits. Each level increases alien speed and aggression.",
+  "how_to_cleanup": "rm -rf .venv",
+  "rl_observation_space": {
+    "player_pos": "[x, y]",
+    "aliens": "[[x, y, type, alive], ...]",
+    "bullets": "[[x, y, owner], ...]",
+    "bunkers": "[[x, health], ...]",
+    "level": "int",
+    "lives": "int"
+  },
+  "screenshot": ""
+}

@@ -1,0 +1,160 @@
+{
+  "analysis_date": "2026-02-15T14:30:00Z",
+  "project_name": "vector-space-invaders-shoot",
+  "overall_status": "PASSED",
+  "checks": {
+    "project_structure": {
+      "status": "PASSED",
+      "details": {
+        "appinfo_json_exists": true,
+        "pyproject_toml_exists": true,
+        "main_entry_point": "main.py",
+        "source_modules": ["config.py", "entities.py", "game.py"],
+        "virtual_environment_exists": true,
+        "expected_files": ["appinfo.json", "pyproject.toml", "main.py", "game.py", "entities.py", "config.py", "README.md", "run.sh", "run.bat"],
+        "unexpected_files": ["__pycache__", ".venv"]
+      }
+    },
+    "build_analysis": {
+      "status": "PASSED",
+      "details": {
+        "python_version_required": ">=3.12,<3.14",
+        "python_version_found": "3.12.12",
+        "version_match": true,
+        "dependencies": [
+          {
+            "name": "pygame",
+            "version_spec": ">=2.5.0",
+            "installed": "2.6.1",
+            "status": "SATISFIED"
+          }
+        ],
+        "build_command": "uv init && uv add pygame",
+        "build_backend": "hatchling"
+      }
+    },
+    "syntax_analysis": {
+      "status": "PASSED",
+      "files_checked": [
+        {
+          "file": "main.py",
+          "status": "PASSED",
+          "lines": 13,
+          "imports": ["pygame", "sys", "game"],
+          "entry_point": "main()",
+          "issues": []
+        },
+        {
+          "file": "game.py",
+          "status": "PASSED",
+          "lines": 265,
+          "imports": ["pygame", "random", "entities", "config"],
+          "classes": ["Game"],
+          "issues": []
+        },
+        {
+          "file": "entities.py",
+          "status": "PASSED",
+          "lines": 127,
+          "imports": ["pygame", "random", "config"],
+          "classes": ["Player", "Bullet", "Alien", "Bunker", "Particle"],
+          "issues": []
+        },
+        {
+          "file": "config.py",
+          "status": "PASSED",
+          "lines": 40,
+          "imports": [],
+          "defines_constants": true,
+          "issues": []
+        }
+      ],
+      "total_files": 4,
+      "passed_files": 4,
+      "failed_files": 0
+    },
+    "module_import_analysis": {
+      "status": "PASSED",
+      "details": {
+        "all_modules_importable": true,
+        "module_classes": {
+          "game.Game": "FOUND",
+          "entities.Player": "FOUND",
+          "entities.Bullet": "FOUND",
+          "entities.Alien": "FOUND",
+          "entities.Bunker": "FOUND",
+          "entities.Particle": "FOUND"
+        },
+        "import_chain_valid": true,
+        "circular_dependencies": false
+      }
+    },
+    "runtime_startup_analysis": {
+      "status": "PASSED",
+      "details": {
+        "main_entry_point": "if __name__ == '__main__': main()",
+        "initialization_sequence": [
+          "pygame.init()",
+          "pygame.display.set_mode()",
+          "pygame.font.Font()",
+          "Game() instantiation",
+          "game.run()",
+          "pygame.quit()",
+          "sys.exit()"
+        ],
+        "potential_issues": [],
+        "cleanup_handlers": ["pygame.quit()", "sys.exit()"]
+      }
+    },
+    "code_quality_checks": {
+      "status": "PASSED",
+      "details": {
+        "has_docstrings": false,
+        "has_type_hints": false,
+        "error_handling": "minimal (game exits on QUIT)",
+        "resource_management": "pygame.quit() called on exit",
+        "potential_edge_cases": [
+          {
+            "category": "List modification during iteration",
+            "severity": "LOW",
+            "description": "Lists modified during iteration using [:] copy pattern",
+            "mitigation": "Code uses slice copies (list[:]) to safely iterate"
+          }
+        ]
+      }
+    },
+    "game_logic_analysis": {
+      "status": "PASSED",
+      "details": {
+        "expected_resolution": "800x600",
+        "target_fps": 60,
+        "input_handling": "Arrow keys for movement, SPACE for shooting, ESC to quit",
+        "game_states": ["playing", "game_over", "won"],
+        "collision_detection": "pygame.Rect.colliderect()",
+        "potential_infinite_loops": false
+      }
+    },
+    "security_analysis": {
+      "status": "PASSED",
+      "details": {
+        "external_network_calls": false,
+        "file_operations": "none (no file I/O)",
+        "eval_or_exec_usage": false,
+        "sql_injection_risk": false,
+        "command_injection_risk": false,
+        "user_input_sanitization": "N/A (only pygame key events)"
+      }
+    }
+  },
+  "summary": {
+    "total_checks": 7,
+    "passed_checks": 7,
+    "failed_checks": 0,
+    "warnings": 0,
+    "critical_issues": 0,
+    "recommendations": [
+      "Consider adding docstrings for better code documentation",
+      "Consider adding type hints for better IDE support and code clarity"
+    ]
+  }
+}
