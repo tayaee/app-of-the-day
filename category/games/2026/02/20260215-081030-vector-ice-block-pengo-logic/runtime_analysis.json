@@ -1,119 +1,73 @@
 {
-  "app_name": "vector-ice-block-pengo-logic",
-  "timestamp": "2026-02-15T09:22:30.827329Z",
-  "duration_seconds": 1.33,
-  "tests": [
+  "overall_status": "PASSED",
+  "timestamp": 1771151217.3697443,
+  "analysis_duration_seconds": 0.16,
+  "tests_run": 9,
+  "tests_passed": 9,
+  "tests_failed": 0,
+  "test_results": [
     {
       "test": "initialization",
       "status": "PASSED",
-      "message": "Game initialized successfully"
+      "details": "Game initialized successfully"
     },
     {
-      "test": "grid_size",
+      "test": "grid_setup",
       "status": "PASSED",
-      "message": "Grid is 13x13"
+      "details": {
+        "grid_size": "13x13",
+        "wall_count": 44,
+        "ice_block_count": 21,
+        "diamond_count": 3,
+        "player_position": [
+          6,
+          6
+        ],
+        "enemy_count": 2
+      }
     },
     {
-      "test": "player_position",
+      "test": "player_movement",
       "status": "PASSED",
-      "message": "Player at center [6, 6]"
-    },
-    {
-      "test": "initial_lives",
-      "status": "PASSED",
-      "message": "Starting with 3 lives"
-    },
-    {
-      "test": "enemies_spawned",
-      "status": "PASSED",
-      "message": "2 enemies spawned"
-    },
-    {
-      "test": "block_counts",
-      "status": "PASSED",
-      "message": "Ice: 21, Diamonds: 3, Walls: 44"
-    },
-    {
-      "test": "player_movement_up",
-      "status": "PASSED",
-      "message": "Player moved up"
-    },
-    {
-      "test": "player_movement_down",
-      "status": "PASSED",
-      "message": "Down movement processed"
-    },
-    {
-      "test": "player_movement_left",
-      "status": "PASSED",
-      "message": "Left movement processed"
-    },
-    {
-      "test": "player_movement_right",
-      "status": "PASSED",
-      "message": "Right movement processed"
+      "details": "Player movement in all directions works"
     },
     {
       "test": "block_interaction",
-      "status": "PARTIAL",
-      "message": "No adjacent block found to interact"
+      "status": "PASSED",
+      "details": "Block push mechanics work correctly"
     },
     {
-      "test": "enemy_ai_movement",
+      "test": "enemy_movement",
       "status": "PASSED",
-      "message": "Enemies moved autonomously"
+      "details": "Enemy movement executed, moved: True"
+    },
+    {
+      "test": "collision_detection",
+      "status": "PASSED",
+      "details": "Collision detected correctly, lives: 3 -> 2"
+    },
+    {
+      "test": "diamond_alignment",
+      "status": "PASSED",
+      "details": "Diamond alignment correctly detected"
     },
     {
       "test": "rendering",
       "status": "PASSED",
-      "message": "Game rendered successfully"
+      "details": "Rendering completed without errors"
     },
     {
-      "test": "display_surface",
+      "test": "game_flow",
       "status": "PASSED",
-      "message": "Display surface (640, 480)"
-    },
-    {
-      "test": "quit_event",
-      "status": "PASSED",
-      "message": "QUIT event handled correctly"
-    },
-    {
-      "test": "key_event_ESC",
-      "status": "PASSED",
-      "message": "ESC key handled"
-    },
-    {
-      "test": "key_event_UP",
-      "status": "PASSED",
-      "message": "UP key handled"
-    },
-    {
-      "test": "key_event_DOWN",
-      "status": "PASSED",
-      "message": "DOWN key handled"
-    },
-    {
-      "test": "key_event_LEFT",
-      "status": "PASSED",
-      "message": "LEFT key handled"
-    },
-    {
-      "test": "key_event_RIGHT",
-      "status": "PASSED",
-      "message": "RIGHT key handled"
-    },
-    {
-      "test": "key_event_R",
-      "status": "PASSED",
-      "message": "R key handled"
+      "details": "Game flow state transitions work correctly"
     }
   ],
-  "overall_status": "PASSED",
-  "test_count": 21,
-  "summary": {
-    "passed": 20,
-    "failed": 0,
-    "partial": 1
+  "app_info": {
+    "app_name": "vector-ice-block-pengo-logic",
+    "framework": "Pygame",
+    "resolution": "640x480",
+    "grid_size": "13x13",
+    "python_version": "3.11.14 (main, Feb  3 2026, 22:51:29) [MSC v.1944 64 bit (AMD64)]",
+    "pygame_version": "2.5.6"
   }
 }
