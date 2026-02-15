@@ -8,6 +8,7 @@ mach-ten-project itself is a private repo.
 
 ### Games
 
+* 2026-02-15 | [Vector Klotski Block Escape](category/games/2026/02/20260215-063520-vector-klotski-block-escape/) | Master the classic sliding block puzzle to guide the main red block to freedom.
 * 2026-02-15 | [Vector Ice Block Pengo Logic](category/games/2026/02/20260215-081030-vector-ice-block-pengo-logic/) | Strategic ice-block sliding puzzle where you crush enemies and align goals.
 * 2026-02-15 | [Vector Mario Bros Platform Climb](category/games/2026/02/20260215-122249-vector-mario-bros-platform-climb/) | A precision platforming challenge where you climb shifting tiers to reach the top while avoiding fireball obstacles.
 * 2026-02-14 | [Vector Reversi Othello Logic](category/games/2026/02/20260214-221055-vector-reversi-othello-logic/) | Strategic board game of territory and conversion where one move can flip the entire board.

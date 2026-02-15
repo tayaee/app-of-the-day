@@ -1,0 +1,30 @@
+{
+  "app_name": "vector-klotski-block-escape",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260215-063520-vector-klotski-block-escape",
+  "description": "Master the classic sliding block puzzle to guide the main red block to freedom.",
+  "rationale": "This game focuses on spatial reasoning and pathfinding. It is ideal for training AI agents in long-term planning and state-space search algorithms, as every move counts towards an optimal solution.",
+  "details": "The game consists of a 4x5 grid containing various rectangular blocks. One 2x2 block (the King block) must be moved to the bottom-center exit. Other blocks of sizes 1x1, 1x2, and 2x1 act as obstacles. Blocks can only slide into adjacent empty spaces. The game state is represented as a 2D array, and the challenge lies in the limited maneuvering space.",
+  "tech_stack": {
+    "language": "Python",
+    "library": "Pygame",
+    "manager": "uv"
+  },
+  "game_rules": {
+    "grid_size": [
+      4,
+      5
+    ],
+    "win_condition": "2x2 block reaches coordinates (1, 3) at the bottom exit",
+    "move_limit": "None, but lower moves yield higher efficiency ratings",
+    "collision": "Blocks cannot overlap or move outside the 4x5 boundary"
+  },
+  "how_to_build": "uv sync",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "kill $(pgrep -f 'uv run main.py') or press ESC in the game window",
+  "how_to_play": "Click and drag blocks using the mouse or use arrow keys to move the selected block. Each successful move increases the move counter. The score is calculated as 10000 / total_moves upon reaching the exit. Lower moves result in a higher final score.",
+  "how_to_cleanup": "rm -rf .venv",
+  "observation_space": "4x5 integer matrix representing block IDs and positions",
+  "action_space": "Select block (0-9) and Direction (Up, Down, Left, Right)",
+  "screenshot": "none"
+}
