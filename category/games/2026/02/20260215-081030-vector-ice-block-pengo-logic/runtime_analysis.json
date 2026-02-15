@@ -1,156 +1,119 @@
 {
-  "overall_status": "PASSED",
   "app_name": "vector-ice-block-pengo-logic",
-  "analysis_timestamp": "2025-02-15T03:14:00Z",
-  "analysis_duration_seconds": 120,
-  "test_results": {
-    "game_initialization": {
+  "timestamp": "2026-02-15T09:22:30.827329Z",
+  "duration_seconds": 1.33,
+  "tests": [
+    {
+      "test": "initialization",
       "status": "PASSED",
-      "description": "Game initializes without errors",
-      "details": {
-        "resolution": "640x480",
-        "grid_size": "13x13",
-        "fps_target": 60,
-        "framework": "Pygame-ce 2.5.6"
-      }
+      "message": "Game initialized successfully"
     },
-    "player_movement": {
+    {
+      "test": "grid_size",
       "status": "PASSED",
-      "description": "Player can move in all four cardinal directions",
-      "details": {
-        "controls": "Arrow keys",
-        "movement_modes": ["UP", "DOWN", "LEFT", "RIGHT"]
-      }
+      "message": "Grid is 13x13"
     },
-    "block_sliding": {
+    {
+      "test": "player_position",
       "status": "PASSED",
-      "description": "Ice blocks slide when pushed until hitting obstacles",
-      "details": {
-        "mechanic": "Player pushing block initiates slide animation",
-        "slide_speed": "8 pixels per frame",
-        "stop_conditions": ["wall", "another block", "enemy"]
-      }
+      "message": "Player at center [6, 6]"
     },
-    "enemy_ai": {
+    {
+      "test": "initial_lives",
       "status": "PASSED",
-      "description": "Enemies move autonomously with tracking behavior",
-      "details": {
-        "move_interval": "1000ms",
-        "behavior": "70% chance to track player, 30% random",
-        "initial_enemies": 2
-      }
+      "message": "Starting with 3 lives"
     },
-    "collision_detection": {
+    {
+      "test": "enemies_spawned",
       "status": "PASSED",
-      "description": "Player-enemy collision reduces lives",
-      "details": {
-        "starting_lives": 3,
-        "collision_result": "Lose one life, reset positions"
-      }
+      "message": "2 enemies spawned"
     },
-    "block_breaking": {
+    {
+      "test": "block_counts",
       "status": "PASSED",
-      "description": "Blocks break when pushed against immovable objects",
-      "details": {
-        "score_per_break": 10,
-        "break_conditions": ["against wall", "against another block"]
-      }
+      "message": "Ice: 21, Diamonds: 3, Walls: 44"
     },
-    "diamond_alignment": {
+    {
+      "test": "player_movement_up",
       "status": "PASSED",
-      "description": "Diamond alignment detection works correctly",
-      "details": {
-        "alignment_bonus": 5000,
-        "requirement": "3 diamonds in a row (horizontal or vertical)"
-      }
+      "message": "Player moved up"
     },
-    "victory_condition": {
+    {
+      "test": "player_movement_down",
       "status": "PASSED",
-      "description": "Victory triggers when all enemies eliminated",
-      "details": {
-        "trigger": "After block slide animation completes with no enemies",
-        "level_clear_bonus": 1000
-      }
+      "message": "Down movement processed"
     },
-    "game_over_condition": {
+    {
+      "test": "player_movement_left",
       "status": "PASSED",
-      "description": "Game over triggers correctly when lives reach zero",
-      "details": {
-        "lives_threshold": 0,
-        "restart_option": "Press R key"
-      }
+      "message": "Left movement processed"
     },
-    "scoring_system": {
+    {
+      "test": "player_movement_right",
       "status": "PASSED",
-      "description": "Scoring system works as specified",
-      "details": {
-        "break_block": 10,
-        "crush_enemy": 400,
-        "align_diamonds": 5000,
-        "level_clear": 1000
-      }
+      "message": "Right movement processed"
     },
-    "rendering": {
-      "status": "PASSED",
-      "description": "Rendering executes without errors using dummy driver",
-      "details": {
-        "color_scheme": "Dark vector-style",
-        "player_color": "Green (50, 200, 50)",
-        "enemy_color": "Red (220, 60, 60)",
-        "ice_block_color": "Light blue (100, 180, 220)",
-        "diamond_color": "Yellow (220, 220, 100)"
-      }
+    {
+      "test": "block_interaction",
+      "status": "PARTIAL",
+      "message": "No adjacent block found to interact"
     },
-    "event_handling": {
+    {
+      "test": "enemy_ai_movement",
       "status": "PASSED",
-      "description": "Event handling works correctly",
-      "details": {
-        "quit_events": ["QUIT event", "ESC key"],
-        "restart": "R key",
-        "movement": "Arrow keys"
-      }
+      "message": "Enemies moved autonomously"
+    },
+    {
+      "test": "rendering",
+      "status": "PASSED",
+      "message": "Game rendered successfully"
+    },
+    {
+      "test": "display_surface",
+      "status": "PASSED",
+      "message": "Display surface (640, 480)"
+    },
+    {
+      "test": "quit_event",
+      "status": "PASSED",
+      "message": "QUIT event handled correctly"
+    },
+    {
+      "test": "key_event_ESC",
+      "status": "PASSED",
+      "message": "ESC key handled"
+    },
+    {
+      "test": "key_event_UP",
+      "status": "PASSED",
+      "message": "UP key handled"
+    },
+    {
+      "test": "key_event_DOWN",
+      "status": "PASSED",
+      "message": "DOWN key handled"
+    },
+    {
+      "test": "key_event_LEFT",
+      "status": "PASSED",
+      "message": "LEFT key handled"
+    },
+    {
+      "test": "key_event_RIGHT",
+      "status": "PASSED",
+      "message": "RIGHT key handled"
+    },
+    {
+      "test": "key_event_R",
+      "status": "PASSED",
+      "message": "R key handled"
     }
-  },
-  "verified_features": {
-    "grid_based_gameplay": true,
-    "block_sliding_mechanic": true,
-    "enemy_ai": true,
-    "scoring_system": true,
-    "lives_system": true,
-    "victory_condition": true,
-    "game_over_condition": true,
-    "diamond_bonus": true,
-    "rendering": true,
-    "controls": true
-  },
-  "state_space_verification": {
-    "grid_size": "13x13 = 169 cells",
-    "cell_types": {
-      "0": "Empty",
-      "1": "Wall",
-      "2": "Ice Block",
-      "3": "Diamond Block"
-    },
-    "verified_counts": {
-      "walls": 44,
-      "ice_blocks": 21,
-      "diamond_blocks": 3,
-      "empty_cells": 101
-    }
-  },
-  "action_space_verification": {
-    "actions": ["0: Up", "1: Down", "2: Left", "3: Right"],
-    "space_type": "Discrete 4-directional movement",
-    "additional_input": "Automatic block pushing on collision"
-  },
-  "notes": [
-    "Game runs correctly with pygame-ce 2.5.6",
-    "All core mechanics function as specified in appinfo.json",
-    "Victory condition triggers properly during block slide completion",
-    "Enemy AI exhibits expected tracking behavior",
-    "Rendering works in headless mode with SDL_VIDEODRIVER=dummy"
   ],
-  "recommendations": [
-    "None - all basic functionality works as expected"
-  ]
+  "overall_status": "PASSED",
+  "test_count": 21,
+  "summary": {
+    "passed": 20,
+    "failed": 0,
+    "partial": 1
+  }
 }
