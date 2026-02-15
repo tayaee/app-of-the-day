@@ -1,0 +1,29 @@
+{
+  "app_name": "vector-mario-bros-platform-climb",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260215-122249-vector-mario-bros-platform-climb",
+  "description": "A precision platforming challenge where you climb shifting tiers to reach the top.",
+  "rationale": "This game focuses on the core mechanics of timing and vertical navigation. It targets players who enjoy classic arcade platformers and provides a structured environment for AI agents to learn jump timing and collision avoidance.",
+  "details": "The game consists of 5 vertical tiers (platforms) and a goal area at the very top. The player starts at the bottom. Obstacles (fireballs) move horizontally across each tier at varying speeds. Some platforms have gaps that move or disappear periodically. The player must jump from one level to the next using specialized 'ladder' zones or by timing jumps onto moving elevators. The game ends if the player touches an obstacle or falls off the bottom screen. The difficulty increases as the player reaches higher tiers by increasing obstacle speed.",
+  "technical_specs": {
+    "framework": "Pygame",
+    "resolution": "800x600",
+    "fps": 60,
+    "python_version": "3.12+",
+    "dependencies": [
+      "pygame"
+    ]
+  },
+  "how_to_build": "uv init && uv add pygame",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "kill the process or press ESC key",
+  "how_to_play": "Goal: Reach the top platform to score. Scoring: +100 for each tier climbed, +1000 for reaching the top. Controls: LEFT/RIGHT arrow keys for movement, SPACE bar to jump. Avoid red circle obstacles. Use UP arrow to climb ladders when positioned correctly.",
+  "how_to_cleanup": "rm -rf .venv",
+  "rl_observation_space": {
+    "player_pos": "[x, y]",
+    "nearest_obstacle": "[x, y, velocity]",
+    "current_tier": "int",
+    "distance_to_goal": "float"
+  },
+  "screenshot": "assets/gameplay_preview.png"
+}
