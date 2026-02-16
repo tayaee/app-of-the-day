@@ -1,0 +1,27 @@
+{
+  "app_name": "vector-donkey-kong-jr-climb",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260216-133000-vector-donkey-kong-jr-climb",
+  "description": "Rescue the captured giant by climbing vines and avoiding mechanical traps in this vertical platformer.",
+  "rationale": "This game focuses on vertical navigation and multi-tasking logic. It challenges AI agents to coordinate climbing mechanics with obstacle timing, providing a classic arcade experience that tests spatial awareness and precision.",
+  "details": "The game consists of a single vertical screen with several hanging vines. The player character (Junior) must climb from the bottom to the top to reach a key. Mechanics include: 1. Climbing: Junior moves faster when holding two vines simultaneously. 2. Gravity: Falling from a high altitude results in a game over. 3. Enemies: Snapjaws move along vines and birds fly horizontally across the screen. 4. Interaction: Junior can drop fruit (collectible) onto enemies below to clear them for bonus points. 5. Goal: Grab the key at the top left/right to unlock the cage.",
+  "technical_specs": {
+    "resolution": "800x600",
+    "frame_rate": 60,
+    "input_type": "Keyboard",
+    "state_representation": "Pixel matrix or Coordinate-based Vector"
+  },
+  "reward_structure": {
+    "enemy_avoidance": 5,
+    "climbing_progress": 10,
+    "fruit_drop_hit": 50,
+    "key_collect": 500,
+    "collision_penalty": -100
+  },
+  "how_to_build": "uv run python -m build",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "killall python",
+  "how_to_play": "Use the Arrow Keys to move and climb. UP/DOWN to move along vines, LEFT/RIGHT to shift between vines or walk on platforms. Hold two vines (overlap) to climb up faster. Press SPACE to drop fruit when positioned above an enemy. Reach the key at the top to win. Avoid contact with Snapjaws (mechanical traps) and Birds.",
+  "how_to_cleanup": "rm -rf .venv",
+  "screenshot": "N/A"
+}
