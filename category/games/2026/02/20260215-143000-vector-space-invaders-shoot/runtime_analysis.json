@@ -1,7 +1,7 @@
 {
   "overall_status": "PASSED",
   "timestamp": "2026-02-15T14:30:00Z",
-  "analysis_duration_seconds": 120,
+  "analysis_duration_seconds": 105,
   "application": {
     "name": "vector-space-invaders-shoot",
     "category": "games",
@@ -14,7 +14,7 @@
       "virtual_environment": "Successfully created at .venv",
       "dependencies_installed": true,
       "packages_installed_count": 2,
-      "installation_time_ms": 403,
+      "installation_time_ms": 353,
       "entry_point": "main.py",
       "execution_command": "uv run --no-active --python 3.12 main.py"
     }
