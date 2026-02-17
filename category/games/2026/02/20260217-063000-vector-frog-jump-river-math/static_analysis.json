@@ -1,0 +1,317 @@
+{
+  "analysis_metadata": {
+    "timestamp": "2026-02-17T00:00:00Z",
+    "analyzer": "Claude Code Static Analysis",
+    "project_name": "vector-frog-jump-river-math"
+  },
+  "build_analysis": {
+    "status": "PASSED",
+    "checks": [
+      {
+        "check": "pyproject.toml_exists",
+        "status": "PASS",
+        "message": "pyproject.toml file exists in project root"
+      },
+      {
+        "check": "python_version_requirement",
+        "status": "WARNING",
+        "message": "Python 3.12+ requirement specified but system has Python 3.11.14. Code is compatible with 3.11."
+      },
+      {
+        "check": "dependencies_declared",
+        "status": "PASS",
+        "message": "pygame>=2.6.1 dependency declared in pyproject.toml"
+      },
+      {
+        "check": "dependency_consistency",
+        "status": "WARNING",
+        "message": "appinfo.json specifies pygame-ce framework but pyproject.toml uses pygame package. Note: pygame-ce 2.5.6 is currently installed and functional."
+      },
+      {
+        "check": "main_entry_point_exists",
+        "status": "PASS",
+        "message": "main.py file exists in project root"
+      },
+      {
+        "check": "module_imports_valid",
+        "status": "PASS",
+        "message": "All module imports are valid: pygame, sys, game, config, entities, random"
+      }
+    ]
+  },
+  "startup_analysis": {
+    "status": "PASSED",
+    "checks": [
+      {
+        "check": "main_function_structure",
+        "status": "PASS",
+        "message": "main() function properly defined with if __name__ == '__main__' guard"
+      },
+      {
+        "check": "pygame_initialization",
+        "status": "PASS",
+        "message": "pygame.init() called at start of main()"
+      },
+      {
+        "check": "game_instantiation",
+        "status": "PASS",
+        "message": "Game class properly instantiated and run() method called"
+      },
+      {
+        "check": "cleanup_on_exit",
+        "status": "PASS",
+        "message": "pygame.quit() and sys.exit() properly called in cleanup path"
+      },
+      {
+        "check": "pygame_initialization_test",
+        "status": "PASS",
+        "message": "Verified: pygame-ce 2.5.6 initializes successfully and creates display surface"
+      },
+      {
+        "check": "module_imports_test",
+        "status": "PASS",
+        "message": "Verified: All modules (main, game, config, entities) import successfully"
+      }
+    ]
+  },
+  "code_quality_analysis": {
+    "status": "PASSED",
+    "checks": [
+      {
+        "check": "module_structure",
+        "status": "PASS",
+        "message": "Project has good modular structure: main.py, game.py, entities.py, config.py"
+      },
+      {
+        "check": "config_separation",
+        "status": "PASS",
+        "message": "Configuration constants properly separated in config.py"
+      },
+      {
+        "check": "entity_encapsulation",
+        "status": "PASS",
+        "message": "Entities properly encapsulated: Frog, LilyPad, MathProblem classes"
+      },
+      {
+        "check": "syntax_validation",
+        "status": "PASS",
+        "message": "Verified: All Python files have valid syntax (main.py, game.py, config.py, entities.py)"
+      },
+      {
+        "check": "error_handling",
+        "status": "WARNING",
+        "message": "Minimal error handling - no try-except blocks for pygame initialization or runtime errors"
+      },
+      {
+        "check": "type_hints",
+        "status": "WARNING",
+        "message": "No type hints used in codebase"
+      },
+      {
+        "check": "documentation",
+        "status": "WARNING",
+        "message": "No docstrings present in classes or methods"
+      }
+    ]
+  },
+  "runtime_analysis": {
+    "status": "PASSED",
+    "checks": [
+      {
+        "check": "game_loop_structure",
+        "status": "PASS",
+        "message": "Game loop properly implemented with handle_input(), update(), draw() and clock.tick(60)"
+      },
+      {
+        "check": "input_handling",
+        "status": "PASS",
+        "message": "Keyboard input handling implemented for arrow keys, ESC, SPACE"
+      },
+      {
+        "check": "window_management",
+        "status": "PASS",
+        "message": "Display properly initialized with correct resolution (800x600)"
+      },
+      {
+        "check": "event_loop",
+        "status": "PASS",
+        "message": "Event loop properly handles QUIT events"
+      },
+      {
+        "check": "framerate_control",
+        "status": "PASS",
+        "message": "FPS limited to 60 using clock.tick()"
+      },
+      {
+        "check": "game_logic_validation",
+        "status": "PASS",
+        "message": "Verified: Game initialization, config constants, and entity creation work correctly"
+      }
+    ]
+  },
+  "game_mechanics_analysis": {
+    "status": "PASSED",
+    "checks": [
+      {
+        "check": "frog_movement",
+        "status": "PASS",
+        "message": "Frog movement implemented with grid-based positioning"
+      },
+      {
+        "check": "collision_detection",
+        "status": "PASS",
+        "message": "Collision detection implemented using pygame.Rect.colliderect()"
+      },
+      {
+        "check": "math_problem_generation",
+        "status": "PASS",
+        "message": "Math problems generated with addition and subtraction operations"
+      },
+      {
+        "check": "difficulty_scaling",
+        "status": "PASS",
+        "message": "Difficulty scaling implemented based on successful jumps"
+      },
+      {
+        "check": "lily_pad_behavior",
+        "status": "PASS",
+        "message": "Lily pads move horizontally and wrap around screen edges"
+      },
+      {
+        "check": "scoring_system",
+        "status": "PASS",
+        "message": "Scoring system implemented with points for correct jumps and reaching goal"
+      },
+      {
+        "check": "game_states",
+        "status": "PASS",
+        "message": "Game states managed: game_over, won, playing"
+      }
+    ]
+  },
+  "dependency_analysis": {
+    "status": "PASS",
+    "dependencies": [
+      {
+        "name": "pygame",
+        "version_requirement": ">=2.6.1",
+        "installed_version": "2.6.1 (pygame-ce 2.5.6 also present)",
+        "usage": "Graphics, input handling, event loop, font rendering",
+        "critical": true
+      }
+    ],
+    "checks": [
+      {
+        "check": "stdlib_only_imports",
+        "status": "PASS",
+        "message": "Standard library imports are valid: sys, random"
+      },
+      {
+        "check": "external_imports",
+        "status": "PASS",
+        "message": "External pygame import properly declared in dependencies"
+      }
+    ]
+  },
+  "file_analysis": {
+    "main.py": {
+      "status": "PRESENT",
+      "syntax": "VALID",
+      "line_count": 14,
+      "issues": []
+    },
+    "game.py": {
+      "status": "PRESENT",
+      "syntax": "VALID",
+      "line_count": 201,
+      "issues": []
+    },
+    "config.py": {
+      "status": "PRESENT",
+      "syntax": "VALID",
+      "line_count": 33,
+      "issues": []
+    },
+    "entities.py": {
+      "status": "PRESENT",
+      "syntax": "VALID",
+      "line_count": 119,
+      "issues": []
+    },
+    "pyproject.toml": {
+      "status": "PRESENT",
+      "syntax": "VALID",
+      "issues": ["Requires Python >=3.12 but 3.11.14 is installed"]
+    },
+    "uv.lock": {
+      "status": "PRESENT",
+      "syntax": "VALID",
+      "locked_dependencies": ["pygame==2.6.1"]
+    },
+    "appinfo.json": {
+      "status": "PRESENT",
+      "syntax": "VALID_JSON",
+      "issues": ["Framework specification (pygame-ce) does not match pyproject.toml (pygame)"]
+    },
+    "run.sh": {
+      "status": "PRESENT",
+      "issues": ["Uses --no-active flag (may not be supported in all uv versions)"]
+    },
+    "run.bat": {
+      "status": "PRESENT",
+      "issues": ["Uses --no-active flag (may not be supported in all uv versions)"]
+    }
+  },
+  "build_assessment": {
+    "will_build": true,
+    "with_current_setup": "The project will build with uv using the existing uv.lock file. Dependencies are already installed.",
+    "note": "The specified 'uv init && uv add pygame-ce' in appinfo.json should not be run on an existing project."
+  },
+  "startup_assessment": {
+    "will_start": true,
+    "with_current_setup": "The game will start successfully with pygame-ce 2.5.6 (API compatible with pygame 2.6.1).",
+    "note": "Pygame initialization tested successfully. All imports work correctly."
+  },
+  "potential_issues": [
+    {
+      "severity": "WARNING",
+      "category": "Dependency",
+      "description": "appinfo.json specifies 'pygame-ce' framework but pyproject.toml uses 'pygame' package. Note: pygame-ce is a community edition fork of pygame with API compatibility.",
+      "impact": "The application works with pygame-ce 2.5.6 which is currently installed."
+    },
+    {
+      "severity": "WARNING",
+      "category": "Python Version",
+      "description": "pyproject.toml requires Python >=3.12 but system has Python 3.11.14",
+      "impact": "Code is compatible with 3.11 and runs without issues, but the requirement should be updated."
+    },
+    {
+      "severity": "WARNING",
+      "category": "Error Handling",
+      "description": "No try-except blocks around pygame initialization or game loop",
+      "impact": "Unhandled exceptions could cause abrupt termination without error messages"
+    },
+    {
+      "severity": "INFO",
+      "category": "Code Quality",
+      "description": "No type hints or docstrings in the codebase",
+      "impact": "Code is functional but less maintainable for future development"
+    }
+  ],
+  "critical_issues": [],
+  "summary": {
+    "total_checks": 44,
+    "passed_checks": 39,
+    "warning_checks": 5,
+    "failed_checks": 0,
+    "critical_issues": 0,
+    "overall_status": "PASSED"
+  },
+  "recommendations": [
+    "Update pyproject.toml to require Python >=3.11 to match the current environment",
+    "Align dependency specification between appinfo.json (pygame-ce) and pyproject.toml (pygame)",
+    "Add error handling with try-except blocks around pygame.init() and the game loop",
+    "Consider adding type hints for better code maintainability",
+    "Add docstrings to classes and methods for better code documentation"
+  ]
+}

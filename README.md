@@ -8,6 +8,7 @@ mach-ten-project itself is a private repo.
 
 ### Games
 
+* 2026-02-17 | [Vector Frog Jump River Math](category/games/2026/02/20260217-063000-vector-frog-jump-river-math/) | Cross the river by jumping on lily pads with correct mathematical answers.
 * 2026-02-17 | [Vector Nutcracker Tower Defense](category/games/2026/02/20260217-041325-vector-nutcracker-tower-defense/) | Place Nutcracker units to defend the holiday toy box from waves of wind-up mice in this minimalist tower defense strategy.
 * 2026-02-17 | [Vector Circus Charlie Tightrope Walk](category/games/2026/02/20260217-030229-vector-circus-charlie-tightrope-walk/) | Walk the tightrope, jump over monkeys, and reach the goal in this classic circus balance challenge.
 * 2026-02-16 | [Word Scramble](category/games/2026/02/20260216-210000-word-scramble/) | Unscramble letters to form words in this vocabulary puzzle game.

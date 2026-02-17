@@ -1,0 +1,39 @@
+{
+  "app_name": "vector-frog-jump-river-math",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260217-063000-vector-frog-jump-river-math",
+  "description": "Cross the river by jumping on lily pads with correct mathematical answers.",
+  "rationale": "This game combines classic Frogger mechanics with educational mental math, targeting young learners and casual gamers who enjoy brain-teasing arcade action. It provides a structured environment for AI agents to learn both spatial navigation and symbolic logic.",
+  "details": "The player controls a frog at the bottom of the screen. A river flows horizontally with rows of moving lily pads. Each lily pad has a number. A math problem (e.g., 5 + 3) is displayed at the top. The player must jump only on the lily pad containing the correct answer (8) to move forward. Incorrect lily pads cause the frog to sink. Lily pads in the same row move at consistent speeds, and new rows appear as the player advances. The game ends if the frog touches the water, moves off-screen, or hits a wrong number.",
+  "game_mechanics": {
+    "grid_size": "8x10 abstract units",
+    "entities": [
+      "Frog",
+      "Lily Pad",
+      "River",
+      "Math Problem"
+    ],
+    "math_operations": [
+      "addition",
+      "subtraction"
+    ],
+    "difficulty_scaling": "Speed of lily pads and complexity of numbers increase every 5 successful jumps."
+  },
+  "technical_specs": {
+    "language": "Python 3.12+",
+    "framework": "Pygame-ce",
+    "dependency_management": "uv",
+    "resolution": "800x600"
+  },
+  "how_to_build": "uv self update && uv init && uv add pygame-ce",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "kill $(pgrep -f main.py) or press ESC in the game window",
+  "how_to_play": "Goal: Cross as many rows as possible. Controls: Use Arrow Keys (Up, Down, Left, Right) to move the frog. Scoring: +10 points for each correct lily pad jump, +50 points for reaching the opposite bank. Punishment: Game over on water contact or wrong answer.",
+  "how_to_cleanup": "rm -rf .venv && rm uv.lock",
+  "state_space_for_rl": {
+    "observation": "Frog coordinates (x, y), relative positions of lily pads in the next 3 rows, current math problem string, values on visible lily pads.",
+    "action_space": "0: Stay, 1: Up, 2: Down, 3: Left, 4: Right",
+    "reward_function": "Positive reward for moving closer to the target lily pad; Large positive reward for landing on correct pad; Large negative reward for death/wrong answer."
+  },
+  "screenshot": "category/games/2026/02/assets/vector-frog-math-preview.png"
+}
