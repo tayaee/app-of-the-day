@@ -8,6 +8,7 @@ mach-ten-project itself is a private repo.
 
 ### Games
 
+* 2026-02-17 | [Vector Flip Flop Tile Logic](category/games/2026/02/20260217-122000-vector-flip-flop-tile-logic/) | A strategic tile-flipping puzzle game inspired by the classic Lights Out mechanics.
 * 2026-02-17 | [Vector Volfied Area Capture](category/games/2026/02/20260217-085248-vector-volfied-area-capture/) | Navigate the void and claim your territory while dodging lethal cosmic entities.
 * 2026-02-17 | [Vector Frog Jump River Math](category/games/2026/02/20260217-063000-vector-frog-jump-river-math/) | Cross the river by jumping on lily pads with correct mathematical answers.
 * 2026-02-17 | [Vector Nutcracker Tower Defense](category/games/2026/02/20260217-041325-vector-nutcracker-tower-defense/) | Place Nutcracker units to defend the holiday toy box from waves of wind-up mice in this minimalist tower defense strategy.

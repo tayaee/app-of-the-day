@@ -1,0 +1,18 @@
+[project]
+name = "vector-flip-flop-tile-logic"
+version = "0.1.0"
+description = "A strategic tile-flipping puzzle game inspired by the classic Lights Out mechanics"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "pygame>=2.6.0",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["main", "game", "grid", "config"]
+
+[project.scripts]
+start = "main:main"

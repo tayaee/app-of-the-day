@@ -1,0 +1,22 @@
+{
+  "app_name": "vector-flip-flop-tile-logic",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260217-122000-vector-flip-flop-tile-logic",
+  "description": "A strategic tile-flipping puzzle game inspired by the classic Lights Out mechanics.",
+  "rationale": "This game targets puzzle enthusiasts and logic learners. It provides a clean, mathematical challenge that is ideal for AI agents to learn state-space search and optimization strategies, while being simple enough for any human player to understand instantly.",
+  "details": "The game consists of a 5x5 grid of tiles. Each tile has two states: On (White) and Off (Black). When a tile is clicked (or selected by an agent), it flips its own state and the states of its four adjacent neighbors (Up, Down, Left, Right). The objective is to turn all tiles from the 'On' state to the 'Off' state in the minimum number of moves. The game includes a level generator that ensures every puzzle is solvable. The visual style is strictly monochromatic to maintain a professional, vector-based look.",
+  "grid_size": "5x5",
+  "target_state": "All tiles Black (Off)",
+  "initial_state": "Randomized solvable configuration",
+  "technologies": [
+    "Python",
+    "Pygame",
+    "uv"
+  ],
+  "how_to_build": "uv sync",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "kill $PPID",
+  "how_to_play": "The score is calculated based on (1000 - moves * 10). The player must click a tile using the Mouse Left Button. Each click toggles the state of the target tile and its neighbors. To maximize the score, the agent must find the shortest sequence of clicks to reach the state where every tile in the grid is black. Keyboard 'R' can be used to reset the current level.",
+  "how_to_cleanup": "rm -rf .venv",
+  "screenshot": "N/A"
+}

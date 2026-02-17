@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: vector-flip-flop-tile-logic
+Version: 0.1.0
+Summary: A strategic tile-flipping puzzle game inspired by the classic Lights Out mechanics
+Requires-Python: <3.14,>=3.12
+Requires-Dist: pygame>=2.6.0
