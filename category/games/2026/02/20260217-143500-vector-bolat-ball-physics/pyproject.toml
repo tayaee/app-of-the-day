@@ -1,0 +1,11 @@
+[project]
+name = "vector-bolat-ball-physics"
+version = "0.1.0"
+description = "Physics-based ball navigation game"
+requires-python = ">=3.12"
+dependencies = [
+    "pygame-ce>=2.5.0",
+]
+
+[project.scripts]
+vector-ball = "main:main"

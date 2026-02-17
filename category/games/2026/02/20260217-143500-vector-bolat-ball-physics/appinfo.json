@@ -1,0 +1,26 @@
+{
+  "app_name": "vector-bolat-ball-physics",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260217-143500-vector-bolat-ball-physics",
+  "description": "Navigate a bouncing ball through a minimalist vector maze using momentum and physics.",
+  "rationale": "This game focuses on physics-based movement and momentum management. It targets players who enjoy skill-based precision games and provides a perfect environment for Reinforcement Learning agents to learn trajectory prediction and continuous control in a constrained 2D space.",
+  "details": "The game consists of a circular ball (player) in a rectangular arena with various static and moving vector obstacles. The goal is to reach a green exit portal. The ball has inertia and gravity. When the ball hits a wall, it bounces with a coefficient of restitution. Friction is applied over time to simulate air resistance. Level progression increases obstacle complexity and adds moving hazards that reset the ball to the starting point upon contact.",
+  "technical_specs": {
+    "engine": "Pygame-ce",
+    "physics_model": "Verlet integration or basic Euler momentum",
+    "state_space": "Ball position (x, y), velocity (vx, vy), distance to nearest 8 obstacles, target relative position",
+    "action_space": "Continuous (force vector in range [-1, 1] for x and y) or Discrete (Up, Down, Left, Right impulses)"
+  },
+  "how_to_build": "uv venv && uv pip install pygame-ce",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "kill $(pgrep -f 'python main.py') or press ESC key",
+  "how_to_play": "Use the Arrow Keys or WASD to apply directional force to the ball. Your score increases based on how quickly you reach the exit portal. Collecting yellow vector dots provides bonus points. Avoid red obstacles; hitting them decreases score and resets the level. The ball is subject to constant gravity, so you must pulse the 'Up' key to maintain height.",
+  "how_to_cleanup": "rm -rf .venv",
+  "reward_function": {
+    "reach_goal": "+100",
+    "collect_dot": "+10",
+    "hit_hazard": "-50",
+    "time_penalty": "-0.1 per frame"
+  },
+  "screenshot": "assets/screenshots/vector-bolat-ball-physics.png"
+}
