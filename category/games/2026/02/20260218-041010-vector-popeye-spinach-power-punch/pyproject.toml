@@ -1,0 +1,20 @@
+[project]
+name = "vector-popeye-spinach-power-punch"
+version = "0.1.0"
+description = "Defend Olive Oyl by punching away approaching obstacles and Brutus with spinach-powered timing."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pygame>=2.6.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+exclude = [
+    "*.pyc",
+    "__pycache__",
+]

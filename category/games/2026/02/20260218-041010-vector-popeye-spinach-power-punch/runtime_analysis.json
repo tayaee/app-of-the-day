@@ -1,0 +1,24 @@
+{
+  "overall_status": "PASSED",
+  "duration_seconds": 120.16649556159973,
+  "events_tested": {
+    "game_init": true,
+    "player_spawn": true,
+    "enemy_spawn": true,
+    "projectile_spawn": true,
+    "spinach_spawn": true,
+    "punch_action": true,
+    "power_mode": false,
+    "game_loop": true,
+    "game_over": false,
+    "collision_detection": false
+  },
+  "errors": [],
+  "frame_count": 7322,
+  "average_fps": 61.02081805369893,
+  "final_score": 0,
+  "final_lives": 3,
+  "final_wave": 13,
+  "total_enemies_spawned": 4,
+  "total_projectiles_spawned": 1
+}

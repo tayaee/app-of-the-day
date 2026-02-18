@@ -1,0 +1,20 @@
+{
+  "app_name": "vector-popeye-spinach-power-punch",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260218-041010-vector-popeye-spinach-power-punch",
+  "description": "Defend Olive Oyl by punching away approaching obstacles and Brutus with spinach-powered timing.",
+  "rationale": "This game focuses on timing and prioritization, providing a classic arcade experience that is ideal for training RL agents in rhythmic pattern recognition and threat assessment.",
+  "details": "The game is a fixed-screen defense action game. The player controls Popeye in the center of the screen. Enemies (Brutus) and projectiles (bottles/anchors) approach from the left and right edges. Popeye can punch left or right. A spinach can appears at random intervals; consuming it grants temporary invincibility and double point gain. The objective is to prevent any enemy or projectile from reaching the center area where Olive Oyl stands. The difficulty increases as the frequency of spawns accelerates over time.",
+  "how_to_build": "uv run python -m pip install pygame",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "Press the 'ESC' key or close the game window.",
+  "how_to_play": "Use the Left Arrow Key to punch left and the Right Arrow Key to punch right. Timing is critical: punching too early or too late results in a miss. Hit Brutus for 100 points and projectiles for 50 points. When a Spinach Can falls, move into it to activate Power Mode. If an enemy reaches Olive Oyl, you lose one of three lives. Game over occurs when all lives are lost.",
+  "how_to_cleanup": "rm -rf .venv && rm -rf __pycache__",
+  "technical_specs": {
+    "resolution": "800x600",
+    "framework": "Pygame",
+    "state_space": "Player position, Enemy positions, Projectile vectors, Spinach status",
+    "action_space": "Punch Left, Punch Right, Idle"
+  },
+  "screenshot": "No image available"
+}
