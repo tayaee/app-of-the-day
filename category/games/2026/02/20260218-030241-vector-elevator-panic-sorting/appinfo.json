@@ -1,0 +1,25 @@
+{
+  "app_name": "vector-elevator-panic-sorting",
+  "category": "games",
+  "folder_name": "category/games/2026/02/20260218-030241-vector-elevator-panic-sorting",
+  "description": "Master the rush hour by managing elevators to transport passengers to their target floors in a race against time.",
+  "rationale": "This game targets fans of time-management and logistics puzzles. It challenges the player's prioritization skills and reaction speed, providing a clean environment for AI agents to learn optimal scheduling and pathfinding algorithms.",
+  "details": "The game consists of a building with 5 floors and 2 elevators. Passengers appear on random floors with a specific destination floor indicated above their heads. The player must move elevators to the passenger's floor, pick them up, and deliver them to their destination. Each elevator has a capacity limit of 3 passengers. Points are awarded for successful deliveries, and the game speed increases over time. If a passenger waits too long (indicated by a color-changing timer), they disappear and the player loses a life. The game ends when all lives are lost.",
+  "technical_specs": {
+    "language": "Python 3.12+",
+    "display": "Pygame (Vector-based minimalist graphics)",
+    "resolution": "800x600",
+    "state_space": "Elevator positions, passenger locations, passenger destinations, wait timers, current capacity.",
+    "action_space": "Elevator 1 Up/Down/Stop, Elevator 2 Up/Down/Stop."
+  },
+  "project_management": {
+    "package_manager": "uv",
+    "config_file": "pyproject.toml"
+  },
+  "how_to_build": "uv sync",
+  "how_to_start": "uv run main.py",
+  "how_to_stop": "Press 'ESC' or close the window.",
+  "how_to_play": "Goal: Deliver passengers to their target floors to earn points. Controls: Use 'W/S' keys to move the left elevator and 'Up/Down' arrows to move the right elevator. Elevators automatically pick up and drop off passengers when stopping at a floor where a passenger is waiting or needs to exit. Scoring: +100 points per delivery. Penalty: Lose 1 life if a passenger's wait timer reaches zero.",
+  "how_to_cleanup": "rm -rf .venv && rm uv.lock",
+  "screenshot": "assets/screenshots/gameplay_preview.png"
+}
