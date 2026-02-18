@@ -8,6 +8,7 @@ mach-ten-project itself is a private repo.
 
 ### Games
 
+* 2026-02-18 | [Vector Super Mario Bros Jump and Squash](category/games/2026/02/20260218-064000-vector-super-mario-bros-jump-and-squash/) | Master the art of precision jumping to defeat rhythmic waves of Goombas.
 * 2026-02-18 | [Vector Popeye Spinach Power Punch](category/games/2026/02/20260218-041010-vector-popeye-spinach-power-punch/) | Defend Olive Oyl by punching away approaching obstacles and Brutus with spinach-powered timing.
 * 2026-02-18 | [Vector Elevator Panic Sorting](category/games/2026/02/20260218-030241-vector-elevator-panic-sorting/) | Manage two elevators to transport passengers to their target floors before their patience runs out.
 * 2026-02-17 | [Vector Fire Extinguish Logic](category/games/2026/02/20260217-191000-vector-fire-extinguish-logic/) | Tactical water-pressure puzzle to extinguish spreading flames in a grid warehouse.

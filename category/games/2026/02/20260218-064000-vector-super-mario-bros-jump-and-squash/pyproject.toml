@@ -1,0 +1,19 @@
+[project]
+name = "vector-super-mario-bros-jump-and-squash"
+version = "0.1.0"
+description = "Master the art of precision jumping to defeat rhythmic waves of Goombas."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pygame>=2.0",
+]
+
+[project.scripts]
+vector-super-mario-bros-jump-and-squash = "main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

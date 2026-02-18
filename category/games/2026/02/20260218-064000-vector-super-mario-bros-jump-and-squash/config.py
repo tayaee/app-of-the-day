@@ -1,0 +1,63 @@
+"""Game configuration and constants."""
+
+# Screen settings
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
+FPS = 60
+
+# Physics constants
+GRAVITY = 0.8
+JUMP_FORCE = -15
+MOVE_ACCEL = 0.5
+MOVE_DECEL = 0.3
+MAX_SPEED = 6
+
+# Player settings
+PLAYER_SIZE = 32
+PLAYER_START_X = SCREEN_WIDTH // 2 - PLAYER_SIZE // 2
+PLAYER_START_Y = SCREEN_HEIGHT - 150
+
+# Enemy settings
+ENEMY_SIZE = 32
+ENEMY_SPEED_MIN = 1.0
+ENEMY_SPEED_MAX = 3.0
+INITIAL_SPAWN_RATE = 120  # Frames between spawns (2.0 seconds at 60 FPS)
+MIN_SPAWN_RATE = 40  # Minimum frames between spawns
+
+# Platform settings
+PLATFORM_HEIGHT = 20
+PLATFORM_Y = SCREEN_HEIGHT - 100
+
+# Game settings
+POINTS_PER_STOMP = 100
+POINTS_PER_SECOND = 10
+INITIAL_SPAWN_RATE_SECONDS = 2.0
+
+# Colors
+COLOR_BG = (30, 35, 40)
+COLOR_PLATFORM = (200, 200, 200)
+COLOR_PLAYER = (255, 100, 100)
+COLOR_PLAYER_EYES = (255, 255, 255)
+COLOR_ENEMY = (150, 100, 50)
+COLOR_ENEMY_EYES = (0, 0, 0)
+COLOR_TEXT = (255, 255, 255)
+COLOR_UI = (100, 100, 100)
+COLOR_ACCENT = (255, 200, 50)
+
+# Key codes
+KEY_LEFT = 1073741904  # pygame.K_LEFT
+KEY_RIGHT = 1073741903  # pygame.K_RIGHT
+KEY_JUMP = 32  # pygame.K_SPACE
+KEY_EXIT = 27  # pygame.K_ESCAPE
+
+# Action space for AI
+ACTION_STAY = 0
+ACTION_LEFT = 1
+ACTION_RIGHT = 2
+ACTION_JUMP = 3
+
+# Game states
+STATE_MENU = 0
+STATE_PLAYING = 1
+STATE_GAMEOVER = 2
+STATE_PAUSED = 3
